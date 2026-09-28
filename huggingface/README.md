@@ -45,6 +45,17 @@ guarantee for a new wearer.
 - Candidate frequencies are loaded from dataset metadata, not embedded as
   application-specific labels in the data pipeline.
 
+## Loading a checkpoint
+
+```python
+from src.checkpoint import load_checkpoint_model
+
+model, metadata = load_checkpoint_model("model_deploy.pt")
+```
+
+The release contains a training-form checkpoint for further research and a
+structurally reparameterized checkpoint for lower-latency inference.
+
 ## Attribution
 
 The local-first and structural-reparameterization design is inspired by Apple
