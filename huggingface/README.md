@@ -20,6 +20,8 @@ This is a noncommercial research preview. It is not peer reviewed, is not a
 medical product, and is not evidence of unrestricted thought or inner-speech
 decoding.
 
+Source code: https://github.com/XzStark/FastSSVEPFusionNet
+
 ## Model details
 
 - Framework: PyTorch

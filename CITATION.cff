@@ -4,6 +4,7 @@ title: "FastSSVEPFusionNet"
 type: software
 version: 0.1.0
 date-released: 2026-09-29
+repository-code: "https://github.com/XzStark/FastSSVEPFusionNet"
 authors:
   - family-names: "Kong"
     given-names: "Xiangzhe"

@@ -179,6 +179,8 @@ Noncommercial License 1.0.0. Model weights and documentation are available for
 noncommercial use under CC BY-NC 4.0. This is a source-available noncommercial
 research release rather than an OSI-approved open-source release.
 
+Source repository: https://github.com/XzStark/FastSSVEPFusionNet
+
 ## 9. References
 
 1. H. Kim, K. Won, M. Ahn, and S. C. Jun, “A 40-Class SSVEP Speller Dataset:
