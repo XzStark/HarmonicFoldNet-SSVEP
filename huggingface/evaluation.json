@@ -1,0 +1,83 @@
+{
+  "subjects": [
+    {
+      "subject": "33",
+      "split": "validation",
+      "fixed_harmonic_accuracy": 0.8,
+      "learned_evidence_accuracy": 0.8958333333333334,
+      "fusion_accuracy": 0.925
+    },
+    {
+      "subject": "34",
+      "split": "validation",
+      "fixed_harmonic_accuracy": 0.5666666666666667,
+      "learned_evidence_accuracy": 0.6916666666666667,
+      "fusion_accuracy": 0.7791666666666667
+    },
+    {
+      "subject": "35",
+      "split": "validation",
+      "fixed_harmonic_accuracy": 0.48333333333333334,
+      "learned_evidence_accuracy": 0.7083333333333334,
+      "fusion_accuracy": 0.6833333333333333
+    },
+    {
+      "subject": "36",
+      "split": "validation",
+      "fixed_harmonic_accuracy": 0.24583333333333332,
+      "learned_evidence_accuracy": 0.3541666666666667,
+      "fusion_accuracy": 0.4708333333333333
+    },
+    {
+      "subject": "37",
+      "split": "test",
+      "fixed_harmonic_accuracy": 0.6791666666666667,
+      "learned_evidence_accuracy": 0.8,
+      "fusion_accuracy": 0.8083333333333333
+    },
+    {
+      "subject": "38",
+      "split": "test",
+      "fixed_harmonic_accuracy": 1.0,
+      "learned_evidence_accuracy": 1.0,
+      "fusion_accuracy": 0.9958333333333333
+    },
+    {
+      "subject": "39",
+      "split": "test",
+      "fixed_harmonic_accuracy": 0.6375,
+      "learned_evidence_accuracy": 0.8416666666666667,
+      "fusion_accuracy": 0.85
+    },
+    {
+      "subject": "40",
+      "split": "test",
+      "fixed_harmonic_accuracy": 0.8458333333333333,
+      "learned_evidence_accuracy": 0.8875,
+      "fusion_accuracy": 0.8916666666666667
+    }
+  ],
+  "aggregate": {
+    "validation": {
+      "fixed_harmonic_accuracy": 0.5239583333333333,
+      "learned_evidence_accuracy": 0.6625,
+      "fusion_accuracy": 0.7145833333333333
+    },
+    "test": {
+      "fixed_harmonic_accuracy": 0.7906249999999999,
+      "learned_evidence_accuracy": 0.8822916666666667,
+      "fusion_accuracy": 0.8864583333333333
+    }
+  },
+  "parameters": {
+    "train": 890570,
+    "deploy": 888266
+  },
+  "latency_ms_batch1": {
+    "cuda_train": 8.006317000060031,
+    "cuda_deploy": 5.203583333447265,
+    "cpu_1thread_train": 8.366929999707887,
+    "cpu_1thread_deploy": 6.009668666714181
+  },
+  "reparameterization_equivalence": "passed"
+}

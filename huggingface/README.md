@@ -1,72 +1,92 @@
 ---
-license: cc-by-4.0
+license: cc-by-nc-4.0
 library_name: pytorch
 tags:
   - eeg
   - ssvep
   - brain-computer-interface
   - time-series
+  - cross-subject
   - structural-reparameterization
 ---
 
-# FastSSVEPFusionNet
+# FastSSVEPFusionNet v0.1
 
-FastSSVEPFusionNet is a compact research model for 40-class SSVEP decoding. It
-combines configurable candidate-frequency evidence with local-first time and
-frequency encoders, late attention, and train/deploy structural
-reparameterization.
+FastSSVEPFusionNet is a compact research model for 40-class SSVEP decoding.
+It combines frequency-candidate evidence, local-first time/frequency encoders,
+late attention and train-to-deploy structural reparameterization.
 
-## Intended use
+This is a noncommercial research preview. It is not peer reviewed, is not a
+medical product, and is not evidence of unrestricted thought or inner-speech
+decoding.
 
-Research on synchronized SSVEP EEG recorded from posterior scalp channels. It
-is not a medical device, does not decode unrestricted thoughts or inner speech,
-and should not be used for diagnosis or safety-critical control.
+## Model details
+
+- Framework: PyTorch
+- Training graph: 890,570 parameters
+- Deploy graph: 888,266 parameters
+- Input: float EEG tensor shaped `[batch, 8, 1250]`
+- Sampling rate: 250 Hz
+- Window: 5 seconds
+- Channels: `PO7, PO3, POz, PO4, PO8, O1, Oz, O2`
+- Output: 40 class logits
+
+`model.pt` is the training-form checkpoint. `model_deploy.pt` contains the
+structurally fused inference form.
 
 ## Training data
 
-The initial checkpoint was trained on Kim2025BetaRange / NEMAR `nm000127`
-v1.0.2 under CC BY 4.0. Raw EEG is not redistributed. Users should obtain the
-dataset from its official host and retain the original citation and license.
+The checkpoint was trained on Kim2025BetaRange / NEMAR `nm000127` v1.0.2,
+distributed by its authors under CC BY 4.0. Raw EEG is not included. Obtain the
+dataset from its official host and retain its citation and license.
 
-## Evaluation
+- 40 participants, 6 sessions, 9,600 trials
+- train participants 1-32: 7,680 trials
+- validation participants 33-36: 960 trials
+- test participants 37-40: 960 trials
+- preprocessing: 6-45 Hz filtering and per-window standardization
 
-The fixed split used participants 1-32 for training, 33-36 for validation, and
-37-40 for held-out testing. The first checkpoint reached 88.65% test Top-1 and
-95.73% test Top-5 on 960 held-out trials. Individual test-participant Top-1
-ranged from 80.83% to 99.58%, so the aggregate should not be interpreted as a
-guarantee for a new wearer.
+## Frozen evaluation
 
-## Input
+| System | Validation Top-1 | Test Top-1 | Test Top-5 |
+|---|---:|---:|---:|
+| Fixed two-harmonic evidence | 52.40% | 79.06% | - |
+| Learned candidate evidence | 66.25% | 88.23% | 95.73% |
+| Full fusion model | 71.46% | **88.65%** | **95.73%** |
 
-- Channels: PO7, PO3, POz, PO4, PO8, O1, Oz, O2.
-- Sampling rate: 250 Hz.
-- Window: 5 seconds / 1,250 samples.
-- Preprocessing: 6-45 Hz band-pass and per-window channel standardization.
-- Candidate frequencies are loaded from dataset metadata, not embedded as
-  application-specific labels in the data pipeline.
+Batch-1 model-forward latency after a full input window is available:
 
-## Loading a checkpoint
+| Device | Training graph | Deploy graph | Reduction |
+|---|---:|---:|---:|
+| CUDA GPU | 8.01 ms | 5.20 ms | 35.0% |
+| CPU, one thread | 8.37 ms | 6.01 ms | 28.2% |
 
-```python
-from src.checkpoint import load_checkpoint_model
+Exact values are provided in `evaluation.json`.
 
-model, metadata = load_checkpoint_model("model_deploy.pt")
-```
+## Intended use
 
-The release contains a training-form checkpoint for further research and a
-structurally reparameterized checkpoint for lower-latency inference.
+- Reproduction of the frozen v0.1 experiment
+- Noncommercial research on synchronized posterior-channel SSVEP EEG
+- Study of compact time/frequency fusion and structural reparameterization
 
-## Attribution
+## Limitations and out-of-scope uses
 
-The local-first and structural-reparameterization design is inspired by Apple
-FastViT (Vasu et al., ICCV 2023). The implementation adapts the design to 1-D
-multichannel EEG and adds an EEG-specific candidate-frequency evidence path.
-See `THIRD_PARTY_NOTICES.md` in the source repository.
+- Only one predefined subject-disjoint split is reported.
+- The model has not yet been validated with leave-one-subject-out testing.
+- The reported window is 5 seconds; short-window performance is unknown.
+- Test-participant Top-1 ranges from 80.83% to 99.58%.
+- Peri-auricular/wearable electrodes and end-to-end hardware latency are not
+  validated.
+- Do not use for diagnosis, treatment, emergency response, safety-critical
+  control, identity inference, covert monitoring or claims of thought reading.
 
-## Limitations
+## License
 
-The current result is one subject-disjoint split. Cross-fold evaluation,
-shorter-window experiments, conventional SSVEP baselines, additional deep
-baselines, and real wearable recordings are required before making stronger
-claims. The author's current self-recorded session was not hardware-synchronized
-to the stimulus and is therefore excluded from efficacy results.
+The model weights and this model card are licensed under CC BY-NC 4.0. Source
+code is distributed separately under PolyForm Noncommercial 1.0.0. Commercial
+use requires separate written permission. Dataset terms remain independent.
+
+## Citation
+
+Until a manuscript or DOI exists, cite the software artifact using the
+repository `CITATION.cff`. Do not invent a paper title, venue or DOI.

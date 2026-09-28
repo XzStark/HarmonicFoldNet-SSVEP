@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this research software or its model weights, please cite this software release and the dataset paper."
+title: "FastSSVEPFusionNet"
+type: software
+version: 0.1.0
+date-released: 2026-09-29
+authors:
+  - family-names: "Kong"
+    given-names: "Xiangzhe"
+abstract: >-
+  A compact research implementation for subject-disjoint 40-class SSVEP
+  decoding with candidate-frequency evidence, time/frequency feature fusion,
+  late attention, and train-to-deploy structural reparameterization.
+keywords:
+  - EEG
+  - SSVEP
+  - brain-computer interface
+  - cross-subject decoding
+  - structural reparameterization
+license: PolyForm-Noncommercial-1.0.0
