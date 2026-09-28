@@ -1,0 +1,22 @@
+seed: 20260928
+dataset_root: data/public/ds004745
+cache_path: data/public/ds004745_windows_2s.npz
+sample_rate: 250
+window_seconds: 2.0
+window_stride_seconds: 1.0
+onset_guard_seconds: 1.0
+offset_guard_seconds: 1.0
+bandpass_hz: [0.5, 45.0]
+held_out_subjects: ["006"]
+validation_subjects: ["005"]
+batch_size: 64
+epochs: 30
+learning_rate: 0.0008
+weight_decay: 0.02
+label_smoothing: 0.05
+model:
+  width: 64
+  local_depth: 3
+  attention_depth: 2
+  heads: 4
+  dropout: 0.15

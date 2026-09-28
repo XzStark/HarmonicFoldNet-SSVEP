@@ -1,0 +1,21 @@
+seed: 20260929
+shard_dir: data/processed/Kim2025
+sample_rate: 250
+train_subjects: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32"]
+validation_subjects: ["33", "34", "35", "36"]
+test_subjects: ["37", "38", "39", "40"]
+batch_size: 128
+eval_batch_size: 256
+epochs: 60
+early_stopping_patience: 10
+learning_rate: 0.0005
+weight_decay: 0.02
+label_smoothing: 0.05
+model:
+  width: 64
+  local_depth: 3
+  attention_depth: 2
+  heads: 4
+  dropout: 0.15
+  spectral_bins: 256
+  spectral_band_hz: [6.0, 45.0]

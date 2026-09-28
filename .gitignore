@@ -1,0 +1,15 @@
+.venv/
+data/public/*
+!data/public/.gitkeep
+data/private/*
+!data/private/.gitkeep
+data/metadata/
+data/processed/
+runs/*
+!runs/.gitkeep
+__pycache__/
+.pytest_cache/
+*.pyc
+*.npz
+*.pt
+*.onnx

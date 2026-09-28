@@ -1,0 +1,25 @@
+seed: 20260928
+dataset_root: data/public/ds004745
+cache_path: data/public/ds004745_windows_4s.npz
+sample_rate: 250
+window_seconds: 4.0
+window_stride_seconds: 2.0
+onset_guard_seconds: 1.0
+offset_guard_seconds: 1.0
+bandpass_hz: [0.5, 45.0]
+held_out_subjects: ["006"]
+validation_subjects: ["005"]
+batch_size: 48
+epochs: 40
+learning_rate: 0.0005
+weight_decay: 0.02
+label_smoothing: 0.05
+model:
+  architecture: fusion
+  width: 48
+  local_depth: 2
+  attention_depth: 1
+  heads: 4
+  dropout: 0.15
+  spectral_bins: 128
+  spectral_band_hz: [0.5, 45.0]

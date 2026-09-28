@@ -1,0 +1,10 @@
+torch>=2.5
+numpy>=2.1
+scipy>=1.14
+mne>=1.10
+pandas>=2.2
+scikit-learn>=1.5
+pyyaml>=6.0
+huggingface_hub>=0.35
+openneuro-py>=2026.9.1
+nemar-py>=0.3.1

@@ -1,0 +1,20 @@
+seed: 20260929
+shard_dir: data/processed/Kim2025
+sample_rate: 250
+train_subjects: ["10", "11", "12", "13", "14", "15", "16", "17"]
+validation_subjects: ["18"]
+test_subjects: ["19", "21"]
+batch_size: 96
+eval_batch_size: 192
+epochs: 20
+learning_rate: 0.0005
+weight_decay: 0.02
+label_smoothing: 0.05
+model:
+  width: 64
+  local_depth: 3
+  attention_depth: 2
+  heads: 4
+  dropout: 0.15
+  spectral_bins: 256
+  spectral_band_hz: [6.0, 45.0]
