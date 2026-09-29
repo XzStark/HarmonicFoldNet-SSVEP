@@ -19,8 +19,8 @@
 
 ## Required immediately before public release
 
-- [ ] Add the final public Git repository URL
-- [ ] Add the final Hugging Face model URL
+- [x] Add the final Git repository URL
+- [x] Add the final Hugging Face model URL
 - [ ] Create Git tag and release `v0.1.0`
 - [ ] Archive the release with Zenodo and add the DOI
 - [ ] Add the DOI and URLs to `CITATION.cff`, README, report, and model card

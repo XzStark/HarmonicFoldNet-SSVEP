@@ -181,6 +181,8 @@ research release rather than an OSI-approved open-source release.
 
 Source repository: https://github.com/XzStark/FastSSVEPFusionNet
 
+Model repository: https://huggingface.co/KSTARKX/FastSSVEPFusionNet
+
 ## 9. References
 
 1. H. Kim, K. Won, M. Ahn, and S. C. Jun, “A 40-Class SSVEP Speller Dataset:

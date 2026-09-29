@@ -11,6 +11,8 @@ preview, not a peer-reviewed performance claim or a medical product.
 
 Source repository: https://github.com/XzStark/FastSSVEPFusionNet
 
+Model repository: https://huggingface.co/KSTARKX/FastSSVEPFusionNet
+
 ## Frozen v0.1 result
 
 Dataset: Kim2025BetaRange / NEMAR `nm000127` v1.0.2.
