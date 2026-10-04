@@ -8,8 +8,6 @@ tags:
   - time-series
   - cross-subject
   - structural-reparameterization
-datasets:
-  - BETA SSVEP
 ---
 
 # HarmonicFoldNet
