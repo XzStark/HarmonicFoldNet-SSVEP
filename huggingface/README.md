@@ -97,10 +97,10 @@ see `LICENSE_PROVENANCE_MATRIX.md`.
 
 Source, exact configurations, participant-level derived results, and tests are at:
 
-https://github.com/XzStark/FastSSVEPFusionNet
+https://github.com/XzStark/HarmonicFoldNet-SSVEP
 
-The public repository name is historical; the paper model and release name are
-HarmonicFoldNet. See `paper/REPRODUCIBILITY_CHECKLIST.md` before comparing results.
+The paper model and release name are HarmonicFoldNet. See
+`paper/REPRODUCIBILITY_CHECKLIST.md` before comparing results.
 
 ## License
 

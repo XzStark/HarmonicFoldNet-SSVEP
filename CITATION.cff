@@ -16,5 +16,5 @@ keywords:
   - cross-subject decoding
   - structural reparameterization
 license: PolyForm-Noncommercial-1.0.0
-repository-code: "https://github.com/XzStark/FastSSVEPFusionNet"
-url: "https://huggingface.co/KSTARKX/FastSSVEPFusionNet"
+repository-code: "https://github.com/XzStark/HarmonicFoldNet-SSVEP"
+url: "https://huggingface.co/KSTARKX/HarmonicFoldNet-SSVEP"
