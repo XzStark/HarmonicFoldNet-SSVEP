@@ -1,6 +1,6 @@
 {
   "model": {
-    "name": "FastSSVEPFusionNet",
+    "name": "LegacyFusionNet",
     "parameters": 890570
   },
   "device": "cuda",

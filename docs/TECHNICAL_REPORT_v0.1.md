@@ -1,6 +1,6 @@
-# FastSSVEPFusionNet: A Physics-Guided and Structurally Reparameterized Baseline for Efficient Cross-Subject SSVEP Decoding
+# LegacyFusionNet: A Physics-Guided and Structurally Reparameterized Baseline for Efficient Cross-Subject SSVEP Decoding
 
-**Xiangzhe Kong**
+**XzStark**
 
 Research preview v0.1 - 29 September 2026
 
@@ -161,13 +161,14 @@ performance, or a reduction in battery consumption.
 
 ## 7. Planned evaluation
 
-The next evaluation stage will use 0.4, 0.6, 0.8, 1.0, 1.2, 2.0, and 5.0 second
-windows; subject-wise folds followed by full leave-one-subject-out evaluation;
-CCA, FBCCA, TRCA, TDCA, EEGNet, SSVEPformer, and time/frequency baselines; paired
-participant-level statistics; and P50/P95 latency, memory, temperature, and
-power measurements on a target edge device. Self-recorded EEG with uncertain
-hardware synchronization and substantial drift is excluded from efficacy
-claims.
+The frozen evaluation uses registered windows from 0.4 seconds upward, fixed
+five-fold subject-disjoint outer cross-validation, three training seeds, and
+participant-level statistics. FBCCA, EEGNet, an explicitly labelled
+SSVEPformer reproduction, frozen architecture ablations, and P50/P95 deployment
+latency are evaluated under the same channel, window, and split contract.
+Participant-calibrated methods such as TRCA and TDCA are reported separately
+from the zero-target-user-data track. Self-recorded EEG with uncertain hardware
+synchronization and substantial drift is excluded from efficacy claims.
 
 ## 8. Reproducibility and release
 
@@ -179,9 +180,8 @@ Noncommercial License 1.0.0. Model weights and documentation are available for
 noncommercial use under CC BY-NC 4.0. This is a source-available noncommercial
 research release rather than an OSI-approved open-source release.
 
-Source repository: https://github.com/XzStark/FastSSVEPFusionNet
-
-Model repository: https://huggingface.co/KSTARKX/FastSSVEPFusionNet
+The remote source and model repositories will be renamed before the next
+public release.
 
 ## 9. References
 
@@ -194,7 +194,7 @@ Model repository: https://huggingface.co/KSTARKX/FastSSVEPFusionNet
 3. Y. Dai et al., “A time-frequency feature fusion-based deep learning network
    for SSVEP frequency recognition,” *Frontiers in Neuroscience*, 2025.
    https://doi.org/10.3389/fnins.2025.1679451
-4. P. K. A. Vasu, J. Gabriel, J. Zhu, O. Tuzel, and A. Ranjan, “FastViT: A Fast
+4. P. K. A. Vasu, J. Gabriel, J. Zhu, O. Tuzel, and A. Ranjan, “HarmonicFold: A Fast
    Hybrid Vision Transformer Using Structural Reparameterization,” ICCV, 2023.
    https://doi.org/10.1109/ICCV51070.2023.00532
 5. Kim2025BetaRange / NEMAR nm000127 v1.0.2 dataset record.

@@ -13,7 +13,7 @@ from sklearn.metrics import accuracy_score, balanced_accuracy_score, top_k_accur
 from torch import nn
 from torch.utils.data import DataLoader, TensorDataset
 
-from .model import FastSSVEPFusionNet, parameter_count
+from .model import LegacyFusionNet, parameter_count
 
 
 def _seed(seed: int) -> None:
@@ -87,7 +87,7 @@ def main() -> None:
     val_x, val_y = _load_subjects(shard_dir, [str(x) for x in cfg["validation_subjects"]])
     test_x, test_y = _load_subjects(shard_dir, [str(x) for x in cfg["test_subjects"]])
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model = FastSSVEPFusionNet(
+    model = LegacyFusionNet(
         channels=train_x.shape[1], classes=40, sample_rate=int(cfg["sample_rate"]),
         class_frequencies=_class_frequencies(shard_dir, [str(x) for x in cfg["train_subjects"]]),
         **cfg["model"],

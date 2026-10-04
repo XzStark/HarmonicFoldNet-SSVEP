@@ -8,87 +8,109 @@ tags:
   - time-series
   - cross-subject
   - structural-reparameterization
+datasets:
+  - BETA SSVEP
 ---
 
-# FastSSVEPFusionNet v0.1
+# HarmonicFoldNet
 
-FastSSVEPFusionNet is a compact research model for 40-class SSVEP decoding.
-It combines frequency-candidate evidence, local-first time/frequency encoders,
-late attention and train-to-deploy structural reparameterization.
+HarmonicFoldNet is a compact multi-window PyTorch decoder for cross-subject SSVEP
+recognition. The frozen paper architecture combines foldable local temporal mixing,
+candidate-aligned temporal and complex spectral evidence, reduced spectral tokens,
+and harmonic-biased late attention.
 
-This is a noncommercial research preview. It is not peer reviewed, is not a
-medical product, and is not evidence of unrestricted thought or inner-speech
-decoding.
+This model repository is a noncommercial research release. It is not a medical
+device and does not decode unrestricted thoughts or imagined language.
 
-Source code: https://github.com/XzStark/FastSSVEPFusionNet
+## Evaluation scope
 
-## Model details
+This snapshot contains exactly 15 BETA source-decoder checkpoints: three seeds
+by five participant-disjoint folds. It does not contain Benchmark, component-
+ablation, Wearable, comparator, or participant-adapter checkpoints. The broader
+paper evaluates four public datasets, but that paper-level scope must not be
+mistaken for the weight scope of this model repository.
 
-- Framework: PyTorch
-- Training graph: 890,570 parameters
-- Deploy graph: 888,266 parameters
-- Input: float EEG tensor shaped `[batch, 8, 1250]`
-- Sampling rate: 250 Hz
-- Window: 5 seconds
-- Channels: `PO7, PO3, POz, PO4, PO8, O1, Oz, O2`
-- Output: 40 class logits
+- Four public datasets; 247 unique participants in total
+- Participant-disjoint five-fold evaluation
+- Three training seeds for final neural comparisons
+- Registered windows from 0.4 s to 1.2/1.5 s for headline comparisons
+- One checkpoint handles every registered window within a dataset/fold/seed
+- Optional 113-parameter participant adapter evaluated retrospectively
 
-`model.pt` is the training-form checkpoint. `model_deploy.pt` contains the
-structurally fused inference form.
+At 1.2 s, participant-level balanced accuracy was 78.30% on Benchmark and 68.70%
+on BETA. The model did not lead at 0.4 s. Full confidence intervals, paired tests,
+strong-reference comparisons, and selection-history qualifications are in the
+paper source-data package; isolated headline numbers should not be treated as a
+universal ranking.
 
-## Training data
+## Deployment graph
 
-The checkpoint was trained on Kim2025BetaRange / NEMAR `nm000127` v1.0.2,
-distributed by its authors under CC BY 4.0. Raw EEG is not included. Obtain the
-dataset from its official host and retain its citation and license.
+- Training graph: 435,139 parameters
+- Folded graph: 435,043 parameters
+- Expanded equivalence audit: 20 checkpoints, five windows, 49,000 held-out paired
+  predictions, zero label disagreements
+- Maximum absolute logit error after folding: 1.55e-5
 
-- 40 participants, 6 sessions, 9,600 trials
-- train participants 1-32: 7,680 trials
-- validation participants 33-36: 960 trials
-- test participants 37-40: 960 trials
-- preprocessing: 6-45 Hz filtering and per-window standardization
+Laptop timings are implementation-specific and exclude EEG acquisition time. The
+1.2 s folded graph measured about 3.04 ms median on one CPU thread in the reported
+environment.
 
-## Frozen evaluation
+## Loading a released checkpoint
 
-| System | Validation Top-1 | Test Top-1 | Test Top-5 |
-|---|---:|---:|---:|
-| Fixed two-harmonic evidence | 52.40% | 79.06% | - |
-| Learned candidate evidence | 66.25% | 88.23% | 95.73% |
-| Full fusion model | 71.46% | **88.65%** | **95.73%** |
+The minimal implementation is included, so a downloaded model snapshot does
+not depend on a parent source checkout:
 
-Batch-1 model-forward latency after a full input window is available:
+```python
+from load_model import load_harmonic_fold_checkpoint
 
-| Device | Training graph | Deploy graph | Reduction |
-|---|---:|---:|---:|
-| CUDA GPU | 8.01 ms | 5.20 ms | 35.0% |
-| CPU, one thread | 8.37 ms | 6.01 ms | 28.2% |
+model, metadata = load_harmonic_fold_checkpoint(
+    "checkpoints/beta/seed-20260929/fold-0/model.pt",
+    folded=True,
+)
+```
 
-Exact values are provided in `evaluation.json`.
+Checkpoint loading uses PyTorch's restricted `weights_only=True` path. The
+manifest and `SHA256SUMS.txt` should be verified before loading files obtained
+from an untrusted transport.
 
 ## Intended use
 
-- Reproduction of the frozen v0.1 experiment
-- Noncommercial research on synchronized posterior-channel SSVEP EEG
-- Study of compact time/frequency fusion and structural reparameterization
+- Inspect or re-evaluate the released BETA fold checkpoints
+- Study compact multi-window SSVEP decoding
+- Inspect train-to-deploy structural folding
+- Evaluate calibration and acquisition-domain shifts in noncommercial research
 
-## Limitations and out-of-scope uses
+## Out-of-scope use
 
-- Only one predefined subject-disjoint split is reported.
-- The model has not yet been validated with leave-one-subject-out testing.
-- The reported window is 5 seconds; short-window performance is unknown.
-- Test-participant Top-1 ranges from 80.83% to 99.58%.
-- Peri-auricular/wearable electrodes and end-to-end hardware latency are not
-  validated.
-- Do not use for diagnosis, treatment, emergency response, safety-critical
-  control, identity inference, covert monitoring or claims of thought reading.
+- Medical diagnosis or treatment
+- Emergency or safety-critical control
+- Covert monitoring or identity inference
+- Claims of general thought, intention, or inner-speech decoding
+- Claims about peri-auricular or glasses-mounted EEG without new validation
+
+## Data
+
+Raw EEG is not included. Obtain Benchmark, BETA, Wearable SSVEP, and Kim2025 from
+their original records for paper-level reproduction. The released checkpoints
+were trained on BETA. Dataset licenses remain independent of this model license;
+see `LICENSE_PROVENANCE_MATRIX.md`.
+
+## Code and reproducibility
+
+Source, exact configurations, participant-level derived results, and tests are at:
+
+https://github.com/XzStark/FastSSVEPFusionNet
+
+The public repository name is historical; the paper model and release name are
+HarmonicFoldNet. See `paper/REPRODUCIBILITY_CHECKLIST.md` before comparing results.
 
 ## License
 
-The model weights and this model card are licensed under CC BY-NC 4.0. Source
-code is distributed separately under PolyForm Noncommercial 1.0.0. Commercial
-use requires separate written permission. Dataset terms remain independent.
+Weights and this model card are licensed under CC BY-NC 4.0. Authored source code is
+distributed separately under PolyForm Noncommercial 1.0.0. This is source-available
+research software rather than an OSI-approved open-source release.
 
 ## Citation
 
-Until a manuscript or DOI exists, cite the software artifact using the
-repository `CITATION.cff`. Do not invent a paper title, venue or DOI.
+Use the repository `CITATION.cff` until the arXiv identifier is available. Do not
+invent a venue, DOI, or peer-review status.

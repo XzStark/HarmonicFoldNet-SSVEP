@@ -1,123 +1,132 @@
-# FastSSVEPFusionNet
+# HarmonicFoldNet
 
-FastSSVEPFusionNet is a compact research model for cross-subject, 40-class
-steady-state visual evoked potential (SSVEP) decoding. It combines
-frequency-candidate evidence with local-first time/frequency encoders, late
-attention, and train-to-deploy structural reparameterization.
+HarmonicFoldNet is a compact multi-window decoder for cross-subject steady-state
+visual evoked potential (SSVEP) recognition. It combines foldable local temporal
+mixing, candidate-aligned temporal and complex spectral evidence, reduced spectral
+tokens, harmonic-biased late attention, and an optional 113-parameter participant
+adapter.
 
-This repository is a **noncommercial source-available research release**, not
-an OSI-approved open-source release. It is a reproducible v0.1 research
-preview, not a peer-reviewed performance claim or a medical product.
+This repository is the reproducibility source for the HarmonicFoldNet preprint. It
+is a **public noncommercial research release**, not an OSI-approved open-source
+package, a medical device, or evidence of unrestricted thought decoding.
 
-Source repository: https://github.com/XzStark/FastSSVEPFusionNet
+## Evidence at a glance
 
-Model repository: https://huggingface.co/KSTARKX/FastSSVEPFusionNet
+The paper evaluates four public datasets containing 247 unique participants. All
+neural headline results use participant-disjoint outer folds and three training
+seeds. Benchmark and BETA are explicitly reported as selection-aware because later
+candidate screening consulted them; the Wearable dry/wet analysis was frozen after
+model retention.
 
-## Frozen v0.1 result
+At 1.2 s, HarmonicFoldNet reached 78.30% balanced accuracy on Benchmark and 68.70%
+on BETA. It was not the best method at 0.4 s. On BETA it crossed the ordinary
+spectral Transformer after 0.6 s and was 1.40 percentage points above the
+filter-bank Transformer at 1.2 s. Against the MTSNet protocol reconstruction, the
+1.2 s differences were not significant on either Benchmark or BETA.
 
-Dataset: Kim2025BetaRange / NEMAR `nm000127` v1.0.2.
+The folded deployment graph has 435,043 executable parameters. On the measured
+laptop it required about 3.04 ms median batch-one CPU time at 1.2 s with one thread.
+An expanded audit over 20 checkpoints, five windows, and 49,000 held-out prediction
+pairs produced zero label disagreements between training and folded graphs; maximum
+absolute logit error was 1.55e-5.
 
-- 40 participants, 6 sessions and 9,600 trials
-- 40 stimulus classes
-- 8 posterior channels: `PO7, PO3, POz, PO4, PO8, O1, Oz, O2`
-- 5-second windows sampled at 250 Hz
-- subject-disjoint split: train 1-32, validation 33-36, test 37-40
-- 960 held-out test trials
+These are offline research measurements, not target-device or online BCI latency.
 
-| System | Validation Top-1 | Test Top-1 | Test Top-5 |
-|---|---:|---:|---:|
-| Fixed two-harmonic evidence | 52.40% | 79.06% | - |
-| Learned candidate evidence | 66.25% | 88.23% | 95.73% |
-| Full fusion model | 71.46% | **88.65%** | **95.73%** |
+## What is included
 
-The full model has 890,570 training-graph parameters; the fused deploy graph
-has 888,266 parameters. Algebraic equivalence of the reparameterized blocks is
-covered by tests.
+- `src/harmonic_fold.py`: HarmonicFoldNet implementation
+- `src/paper_train.py`: grouped participant training and evaluation entry point
+- `src/paper_baselines.py` and `src/calibrated_baselines.py`: analytic and calibrated controls
+- `configs/paper_multidataset.yaml`: frozen dataset and model contract
+- `paper/MANUSCRIPT_DRAFT_v1.md`: manuscript source
+- `paper/SUPPLEMENTARY_INFORMATION.md`: supplementary methods and tables
+- `paper/source_data/`: participant-level derived results and provenance
+- `paper/figures/`: publication figures and figure-source tables
+- `paper/REPRODUCIBILITY_CHECKLIST.md`: release and reporting checklist
+- `scripts/`: evidence reconstruction, audit, figure, and release helpers
+- `tests/`: model, statistics, evidence, and deploy-equivalence tests
 
-### Batch-1 model latency
+Raw EEG is not redistributed. Obtain each dataset from its original record and
+retain its license and citation.
 
-These numbers measure model forward time after the complete EEG window is
-available. They are not acquisition-to-feedback latency.
+## Environment
 
-| Device | Training graph | Deploy graph | Reduction |
-|---|---:|---:|---:|
-| CUDA GPU | 8.01 ms | 5.20 ms | 35.0% |
-| CPU, one thread | 8.37 ms | 6.01 ms | 28.2% |
-
-Exact unrounded values and per-subject results are frozen in
-`runs/kim2025_full_v1/evaluation.json`.
-
-## What this result does not establish
-
-- This is one predefined subject split, not leave-one-subject-out validation.
-- The result uses 5-second windows; short-window accuracy remains to be tested.
-- The four held-out test participants vary from 80.83% to 99.58% Top-1.
-- Wearable/peri-auricular layouts, calibration burden and end-to-end device
-  latency have not yet been validated.
-- The repository does not support unrestricted thought or inner-speech
-  decoding.
-
-These limitations are intentionally part of the release so that the v0.1
-artifact cannot be mistaken for the final paper evaluation.
-
-## Reproduce
-
-Create an environment, install the dependencies, and obtain the dataset from
-its official host. Raw EEG is not redistributed.
+The frozen evidence environment used Python 3.11.9 and PyTorch 2.11.0 with CUDA
+12.8. Exact core versions are in `paper/environment-lock.txt`. For a fresh environment:
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
 
-Prepare per-participant shards with `src.kim2025_data` (see `--help`), then:
+## Prepare public datasets
+
+After downloading Benchmark, BETA, or Wearable SSVEP from the official source,
+convert it to the registered shard format:
 
 ```powershell
-.\.venv\Scripts\python.exe -m src.train_kim2025 --config configs/kim2025.yaml --run-dir runs/kim2025_full_v1
-.\.venv\Scripts\python.exe -m src.checkpoint --source runs/kim2025_full_v1/model.pt --destination runs/kim2025_full_v1/model_deploy.pt
-.\.venv\Scripts\python.exe -m src.evaluate_kim2025 --checkpoint runs/kim2025_full_v1/model.pt --output runs/kim2025_full_v1/evaluation.json
-.\.venv\Scripts\python.exe -m unittest discover -s tests -v
+.\.venv\Scripts\python.exe -m src.public_ssvep_data beta `
+  --root D:\datasets\BETA `
+  --output-dir data\processed\BETA
 ```
 
-See `python -m src.kim2025_data --help` for dataset preparation options and
-`docs/TECHNICAL_REPORT_v0.1.md` for the full protocol.
+Use `benchmark` or `wearable` in place of `beta` for the other datasets. Kim2025
+preparation is documented by `python -m src.kim2025_data --help`.
 
-## Release contents
+## Reproduce one outer fold
 
-- `src/`: preprocessing, training, evaluation and deploy export
-- `configs/kim2025.yaml`: frozen v0.1 configuration
-- `runs/kim2025_full_v1/`: checkpoint and machine-readable evaluation record
-- `huggingface/`: staged model-card bundle
-- `docs/TECHNICAL_REPORT_v0.1.md`: technical report source
-- `docs/ENVIRONMENT_v0.1.md`: measured software, hardware and latency protocol
-- `docs/COMPARISON_FIGURE_PROMPT_zh.md`: prompt for the progress graphic
-- `docs/PUBLIC_RELEASE_POLICY.md`: publication-risk boundary
+```powershell
+.\.venv\Scripts\python.exe -m src.paper_train `
+  --config configs\paper_multidataset.yaml `
+  --dataset beta `
+  --architecture harmonic_fold_v4_1 `
+  --mode full `
+  --seed 20260929 `
+  --fold-index 0 `
+  --fold-count 5 `
+  --device cuda `
+  --run-dir runs\reproduce\beta\seed-20260929\fold-0 `
+  --save-checkpoint
+```
 
-## Data and attribution
+The manuscript matrix uses seeds 20260929, 20260930, and 20260931 over all five
+folds. The evidence configuration records every preserved input artifact:
 
-Kim2025BetaRange is hosted by NEMAR as `nm000127` and is distributed under CC
-BY 4.0. Obtain it from the official host and cite the dataset paper. The model
-uses structural-reparameterization ideas described in prior work, while this
-repository contains an original one-dimensional EEG implementation and does
-not use image-model weights. See `THIRD_PARTY_NOTICES.md`.
+```powershell
+.\.venv\Scripts\python.exe -m scripts.build_submission_evidence
+.\.venv\Scripts\python.exe -m scripts.build_supplement
+.\.venv\Scripts\python.exe -m scripts.audit_manuscript
+.\.venv\Scripts\python.exe -m pytest -q
+```
+
+## Comparison boundary
+
+CCA is retained as an interpretable historical lower bound, not the principal
+benchmark. The paper also evaluates FBCCA, TRCA, ensemble TRCA, TDCA,
+SSVEPformer, FB-SSVEPformer, and a pinned-source MTSNet reconstruction. The MTSNet
+repository did not provide a redistribution license when audited; its source is
+therefore not included here. The adapter, commit identifier, and protocol are
+included so users can obtain the upstream source themselves under its owners' terms.
 
 ## License
 
-- Source code: PolyForm Noncommercial License 1.0.0 (`LICENSE`)
-- Model weights and authored documentation: CC BY-NC 4.0
-  (`MODEL_LICENSE.md`)
-- Dataset: its own CC BY 4.0 terms; raw data is not included
+- Authored source code: PolyForm Noncommercial 1.0.0 (`LICENSE`)
+- Model weights and authored documentation: CC BY-NC 4.0 (`MODEL_LICENSE.md`)
+- Public EEG datasets: their original independent terms
 
-Commercial use requires separate written permission. Because the source-code
-license restricts commercial use, describe the project as **noncommercial
-source-available**, not OSI open source.
+Commercial use requires separate written permission. Because the code license
+restricts commercial use, describe this as a **source-available research release**
+rather than OSI open source.
 
-## Safety
+## Safety and limitations
 
-This software is for research. It is not a medical device and must not be used
-for diagnosis, treatment, emergency response or safety-critical control.
+HarmonicFoldNet decodes known visual-stimulation classes from registered posterior
+EEG montages. It has not been validated for diagnosis, treatment, covert monitoring,
+imagined speech, arbitrary mental-state inference, or safety-critical control. The
+Wearable result compares public dry and wet recordings; it does not establish
+performance for a future peri-auricular or glasses-mounted montage.
 
 ## Citation
 
-Use `CITATION.cff` for this v0.1 artifact. A paper citation can replace it only
-after a public manuscript or DOI exists.
+Use `CITATION.cff` for the software release. Replace the software citation with the
+arXiv or journal citation after the preprint identifier is available.

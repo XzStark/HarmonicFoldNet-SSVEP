@@ -15,7 +15,7 @@ from torch.utils.data import DataLoader, TensorDataset
 
 from .baselines import cca_predict
 from .data import FREQUENCIES, build_ds004745_windows, describe, load_windows, save_windows
-from .model import FastSSVEPFusionNet, FastSSVEPNet, parameter_count
+from .model import LegacyFusionNet, LegacyLocalAttentionNet, parameter_count
 
 
 def seed_all(seed: int):
@@ -74,12 +74,12 @@ def main():
     model_cfg = dict(cfg["model"])
     architecture = model_cfg.pop("architecture", "time")
     if architecture == "fusion":
-        model = FastSSVEPFusionNet(
+        model = LegacyFusionNet(
             channels=windows.x.shape[1], classes=len(FREQUENCIES),
             sample_rate=windows.sample_rate, **model_cfg,
         ).to(device)
     elif architecture == "time":
-        model = FastSSVEPNet(
+        model = LegacyLocalAttentionNet(
             channels=windows.x.shape[1], classes=len(FREQUENCIES), **model_cfg,
         ).to(device)
     else:

@@ -5,7 +5,7 @@ from pathlib import Path
 import torch
 
 from src.checkpoint import export_deploy_checkpoint, load_checkpoint_model
-from src.model import FastSSVEPFusionNet
+from src.model import LegacyFusionNet
 
 
 class CheckpointTests(unittest.TestCase):
@@ -18,7 +18,7 @@ class CheckpointTests(unittest.TestCase):
                 "spectral_band_hz": [6.0, 45.0],
             },
         }
-        model = FastSSVEPFusionNet(
+        model = LegacyFusionNet(
             channels=8, classes=4, sample_rate=250,
             class_frequencies=[8.0, 10.0, 12.0, 14.0], **config["model"],
         ).eval()

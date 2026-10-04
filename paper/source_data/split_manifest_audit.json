@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "rows": 210,
+  "checks": [
+    "train, validation and test participants are disjoint within every result",
+    "the partition covers the declared dataset participant count",
+    "test folds cover every participant exactly once per seed and condition",
+    "all conditions within a comparison collection use identical folds"
+  ]
+}

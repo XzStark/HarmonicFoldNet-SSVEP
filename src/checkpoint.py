@@ -4,7 +4,7 @@ from pathlib import Path
 
 import torch
 
-from .model import FastSSVEPFusionNet, reparameterize_model
+from .model import LegacyFusionNet, reparameterize_model
 
 
 def load_checkpoint_model(path: str | Path, *, device: str | torch.device = "cpu"):
@@ -12,7 +12,7 @@ def load_checkpoint_model(path: str | Path, *, device: str | torch.device = "cpu
     state = checkpoint["state_dict"]
     frequencies = state["class_frequencies"].tolist()
     config = checkpoint["config"]
-    model = FastSSVEPFusionNet(
+    model = LegacyFusionNet(
         channels=int(state["time_encoder.projection.0.weight"].shape[1]),
         classes=len(frequencies), sample_rate=int(config["sample_rate"]),
         class_frequencies=frequencies, **config["model"],

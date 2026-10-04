@@ -1,0 +1,60 @@
+{
+  "generated_by": "paper/figures/make_paper_figures.py",
+  "figure_outputs": [
+    "fig1_architecture",
+    "fig2_calibration_free",
+    "fig3_harmonic_mechanism",
+    "fig4_adaptation",
+    "fig5_electrode_transfer",
+    "fig6_deployment_pareto"
+  ],
+  "source_tables": [
+    {
+      "path": "paper/figures/source_data/fig2_calibration_free.csv",
+      "sha256": "a10eff006cea955d0697840c8f7a0e3b07e3923ce2c82c6232adecdf90b65960"
+    },
+    {
+      "path": "paper/figures/source_data/fig3_harmonic_mechanism.csv",
+      "sha256": "add5bb498fe8b87a3aab7616e11c4c0a3914631349546f04220168ba8fd6b58b"
+    },
+    {
+      "path": "paper/figures/source_data/fig4_adaptation.csv",
+      "sha256": "f7a78a74a73c84a0dc1c88ce6693ec3f496205e9228c24b27452826aa4f0030e"
+    },
+    {
+      "path": "paper/figures/source_data/fig5_electrode_transfer.csv",
+      "sha256": "f0375e0e1db48fa301e6f72a8278006253ae25763bd2f85cafbde45907d7ed73"
+    },
+    {
+      "path": "paper/figures/source_data/fig6_deployment_pareto.csv",
+      "sha256": "acdd9164c2fccc802698b27dda6afb8e143dc15af429536598390487a18d3d19"
+    }
+  ],
+  "frozen_result_documents": [
+    {
+      "path": "docs/FINAL_EVIDENCE_SUMMARY_v1.md",
+      "sha256": "f488014eb6985397b802e835fa591fcf91fd5042b76ab4721c81c0a37e998495"
+    },
+    {
+      "path": "docs/DEPLOYMENT_PARETO_RESULTS_v1.md",
+      "sha256": "91f2af56b28b5d5922b6ec66e3fcb1687eeed59748ba610e8e2e637d82dcb95e"
+    },
+    {
+      "path": "docs/HARMONIC_ATTENTION_MECHANISM_RESULTS_v1.md",
+      "sha256": "804f7143112a9651605e0e9e698230c41ae00a2bdad1210a1d9a0013a2113efa"
+    },
+    {
+      "path": "docs/SUBJECT_ADAPTATION_RESULTS_v2.md",
+      "sha256": "18e84c16f13e039547beacd12516335fc0fc80d54369e87530b0ad0b871a3e64"
+    },
+    {
+      "path": "docs/ELECTRODE_TRANSFER_RESULTS_v1.md",
+      "sha256": "e3a308b54ed5c447e93e39c0db1a6bd07e56dfd34e8887882a8485faf74988a3"
+    }
+  ],
+  "participant_source_data": {
+    "path": "paper/source_data/submission_evidence.json",
+    "sha256": "3bfe58a06ffc58f5180e969dc47459e640ca34a34d74ccbf1342bd50ed825306"
+  },
+  "provenance": "Figures 2 and 3 use source tables regenerated from preserved participant-level, three-seed run artifacts and validated against the frozen comparison records. Figures 4-6 retain the frozen result-document sources listed above."
+}

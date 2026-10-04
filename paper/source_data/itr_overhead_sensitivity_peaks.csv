@@ -1,0 +1,17 @@
+dataset,condition,overhead_s,peak_window_s,peak_mean_itr_bits_per_minute
+benchmark,harmonic_fold,0.0,0.8,208.6524276570811
+benchmark,harmonic_fold,0.25,1.0,161.39874910595785
+benchmark,harmonic_fold,0.5,1.0,134.49895758829825
+benchmark,harmonic_fold,1.0,1.0,100.87421819122368
+benchmark,ssvepformer,0.0,0.8,189.96955009251022
+benchmark,ssvepformer,0.25,1.0,147.44420948285293
+benchmark,ssvepformer,0.5,1.0,122.87017456904408
+benchmark,ssvepformer,1.0,1.0,92.15263092678305
+beta,harmonic_fold,0.0,0.8,159.5717035075317
+beta,harmonic_fold,0.25,1.0,124.84058928610403
+beta,harmonic_fold,0.5,1.0,104.0338244050867
+beta,harmonic_fold,1.0,1.2,79.98875275207699
+beta,ssvepformer,0.0,0.8,147.87865799141048
+beta,ssvepformer,0.25,0.8,112.66945370774127
+beta,ssvepformer,0.5,1.0,92.18520439281102
+beta,ssvepformer,1.0,1.0,69.13890329460824

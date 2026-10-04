@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "bootstrap_seed": 20261003,
+  "bootstrap_samples": 10000,
+  "main": {
+    "benchmark": {
+      "dataset_label": "TsinghuaBenchmark",
+      "participants": 35,
+      "classes": 40,
+      "windows": ["0.4", "0.6", "0.8", "1.0", "1.2", "2.0", "3.0", "5.0"],
+      "display_windows": ["0.4", "0.6", "0.8", "1.0", "1.2"],
+      "frozen_comparison": "runs/paper_v37/comparisons/benchmark_harmonic_fold_vs_ssvepformer_3seed.json",
+      "conditions": {
+        "harmonic_fold": [
+          "runs/paper_v9/external_grouped_cv_v4_1/benchmark/harmonic_fold_v4_1/full/seed-20260929/fold-*/result.json",
+          "runs/paper_v12/grouped_cv_v4_1_multiseed/benchmark/harmonic_fold_v4_1/full/seed-2026093*/fold-*/result.json"
+        ],
+        "ssvepformer": [
+          "runs/paper_v4/deep_baselines/benchmark/ssvepformer/full/seed-20260929/fold-*/result.json",
+          "runs/paper_v21/ssvepformer_multiseed/benchmark/ssvepformer/full/seed-2026093*/fold-*/result.json"
+        ]
+      }
+    },
+    "beta": {
+      "dataset_label": "BETA",
+      "participants": 70,
+      "classes": 40,
+      "windows": ["0.4", "0.6", "0.8", "1.0", "1.2", "1.5"],
+      "display_windows": ["0.4", "0.6", "0.8", "1.0", "1.2", "1.5"],
+      "frozen_comparison": "runs/paper_v37/comparisons/beta_harmonic_fold_vs_ssvepformer_3seed.json",
+      "conditions": {
+        "harmonic_fold": [
+          "runs/paper_v9/external_grouped_cv_v4_1/beta/harmonic_fold_v4_1/full/seed-20260929/fold-*/result.json",
+          "runs/paper_v12/grouped_cv_v4_1_multiseed/beta/harmonic_fold_v4_1/full/seed-2026093*/fold-*/result.json"
+        ],
+        "ssvepformer": [
+          "runs/paper_v4/deep_baselines/beta/ssvepformer/full/seed-20260929/fold-*/result.json",
+          "runs/paper_v21/ssvepformer_multiseed/beta/ssvepformer/full/seed-2026093*/fold-*/result.json"
+        ]
+      }
+    }
+  },
+  "ablations": {
+    "dataset": "beta",
+    "dataset_label": "BETA",
+    "participants": 70,
+    "windows": ["0.4", "0.6", "0.8", "1.0", "1.2", "1.5"],
+    "conditions": {
+      "full": [
+        "runs/paper_v15/adaptation_sources/beta/harmonic_fold_v4_1/full/seed-*/fold-*/result.json"
+      ],
+      "no_local": [
+        "runs/paper_v20/ablations/beta/harmonic_fold_v4_1/no_local/seed-*/fold-*/result.json"
+      ],
+      "no_attention": [
+        "runs/paper_v20/ablations/beta/harmonic_fold_v4_1/no_attention/seed-*/fold-*/result.json"
+      ],
+      "no_harmonic_bias": [
+        "runs/paper_v20/ablations/beta/harmonic_fold_v4_1/no_harmonic_bias/seed-*/fold-*/result.json"
+      ]
+    },
+    "frozen_comparisons": {
+      "no_local": "runs/paper_v20/ablations/beta/full_vs_no_local.json",
+      "no_attention": "runs/paper_v20/ablations/beta/full_vs_no_attention.json",
+      "no_harmonic_bias": "runs/paper_v20/ablations/beta/full_vs_no_harmonic_bias.json"
+    }
+  },
+  "attention_mechanism": {
+    "dataset": "beta",
+    "dataset_label": "BETA",
+    "participants": 70,
+    "windows": ["0.4", "0.8", "1.2"],
+    "metrics": [
+      "normalized_entropy",
+      "peak_distance_hz",
+      "peak_within_bias_width_fraction",
+      "harmonic_neighborhood_mass"
+    ],
+    "summary_files": {
+      "0.4": "runs/paper_v18/attention_mechanism/beta/0.4s/summary.json",
+      "0.8": "runs/paper_v18/attention_mechanism/beta/0.8s/summary.json",
+      "1.2": "runs/paper_v18/attention_mechanism/beta/1.2s/summary.json"
+    }
+  },
+  "analytic_baselines": {
+    "benchmark": {
+      "participants": 35,
+      "methods": {
+        "fixed_harmonic": {
+          "result_file": "runs/paper_v4/baselines_analytic/benchmark/result.json",
+          "result_method": "harmonic"
+        },
+        "cca": {
+          "result_file": "runs/paper_v4/baselines_all/benchmark/result.json",
+          "result_method": "cca"
+        },
+        "fbcca": {
+          "result_file": "runs/paper_v4/baselines_all/benchmark/result.json",
+          "result_method": "fbcca"
+        }
+      }
+    },
+    "beta": {
+      "participants": 70,
+      "methods": {
+        "fixed_harmonic": {
+          "result_file": "runs/paper_v4/baselines_analytic/beta/result.json",
+          "result_method": "harmonic"
+        },
+        "cca": {
+          "result_file": "runs/paper_v4/baselines_all/beta/result.json",
+          "result_method": "cca"
+        },
+        "fbcca": {
+          "result_file": "runs/paper_v4/baselines_all/beta/result.json",
+          "result_method": "fbcca"
+        }
+      }
+    }
+  },
+  "strong_filter_bank": {
+    "dataset": "beta",
+    "dataset_label": "BETA",
+    "participants": 70,
+    "windows": ["0.4", "0.6", "0.8", "1.0", "1.2", "1.5"],
+    "frozen_comparison": "runs/paper_v36/comparisons/beta_harmonic_fold_vs_fb_ssvepformer_3seed.json",
+    "conditions": {
+      "harmonic_fold": [
+        "runs/paper_v9/external_grouped_cv_v4_1/beta/harmonic_fold_v4_1/full/seed-20260929/fold-*/result.json",
+        "runs/paper_v12/grouped_cv_v4_1_multiseed/beta/harmonic_fold_v4_1/full/seed-2026093*/fold-*/result.json"
+      ],
+      "fb_ssvepformer": [
+        "runs/paper_v36/fb_ssvepformer_formal/beta/fb_ssvepformer/full/seed-*/fold-*/result.json"
+      ]
+    }
+  },
+  "adaptation": {
+    "dataset": "beta",
+    "dataset_label": "BETA",
+    "participants": 70,
+    "windows": ["0.4", "0.8", "1.2"],
+    "result_files": [
+      "runs/paper_v15/adaptation_confirmatory/beta_spatial_score.json",
+      "runs/paper_v15/adaptation_confirmatory/beta_spatial_score_seed-20260930.json",
+      "runs/paper_v15/adaptation_confirmatory/beta_spatial_score_seed-20260931.json"
+    ],
+    "classical_results": "runs/paper_v18/calibrated/beta_trca_etrca_tdca.json",
+    "frozen_summary": "runs/paper_v18/calibrated/beta_spatial_score_vs_trca_etrca_tdca.json",
+    "method": "spatial_score",
+    "calibration_blocks": ["1", "2"],
+    "classical_methods": ["trca", "etrca", "tdca"],
+    "headline_classical_blocks": "2"
+  },
+  "electrode_transfer": {
+    "dataset": "wearable",
+    "dataset_label": "Wearable SSVEP",
+    "participants": 102,
+    "windows": ["0.4", "0.6", "0.8", "1.0", "1.2", "1.5", "2.0"],
+    "frozen_comparison": "runs/paper_v16/electrode_transfer/3seed_summary.json",
+    "conditions": {
+      "dry_to_dry": [
+        "runs/paper_v16/electrode_transfer/dry_to_dry/wearable/harmonic_fold_v4_1/full/seed-*/fold-*/result.json"
+      ],
+      "dry_to_wet": [
+        "runs/paper_v16/electrode_transfer/dry_to_wet/wearable/harmonic_fold_v4_1/full/seed-*/fold-*/result.json"
+      ],
+      "wet_to_dry": [
+        "runs/paper_v16/electrode_transfer/wet_to_dry/wearable/harmonic_fold_v4_1/full/seed-*/fold-*/result.json"
+      ],
+      "wet_to_wet": [
+        "runs/paper_v16/electrode_transfer/wet_to_wet/wearable/harmonic_fold_v4_1/full/seed-*/fold-*/result.json"
+      ]
+    }
+  },
+  "mtsnet": {
+    "harmonic_fold_sources": {
+      "benchmark": [
+        "runs/paper_v15/adaptation_sources/benchmark/harmonic_fold_v4_1/full/seed-20260929/fold-*/result.json",
+        "runs/paper_v12/grouped_cv_v4_1_multiseed/benchmark/harmonic_fold_v4_1/full/seed-2026093*/fold-*/result.json"
+      ],
+      "beta": [
+        "runs/paper_v15/adaptation_sources/beta/harmonic_fold_v4_1/full/seed-*/fold-*/result.json"
+      ]
+    },
+    "comparison_files": [
+      "runs/paper_v17/mtsnet_formal/benchmark/0.4s/3seed_comparison.json",
+      "runs/paper_v17/mtsnet_formal/benchmark/0.8s/3seed_comparison.json",
+      "runs/paper_v17/mtsnet_formal/benchmark/1.2s/3seed_comparison.json",
+      "runs/paper_v17/mtsnet_formal/beta/0.4s/3seed_comparison.json",
+      "runs/paper_v17/mtsnet_formal/beta/0.8s/3seed_comparison.json",
+      "runs/paper_v17/mtsnet_formal/beta/1.2s/3seed_comparison.json"
+    ]
+  },
+  "deployment": {
+    "files": [
+      "runs/paper_v39/deployment/*.json"
+    ],
+    "checkpoint_files": [
+      "runs/paper_v15/adaptation_sources/beta/harmonic_fold_v4_1/full/seed-20260929/fold-0/model.pt"
+    ],
+    "expected_methods": [
+      "harmonic_fold_v4_1",
+      "ssvepformer",
+      "fb_ssvepformer",
+      "mtsnet_external_protocol_reconstruction"
+    ],
+    "expected_windows": [0.4, 0.8, 1.2],
+    "benchmark_command": "python -m src.benchmark_deployment or python -m src.benchmark_reference_model with batch size 1, float32, 100 warm-up passes, 1000 measured passes, and one timed CPU thread",
+    "session_scope": "single-session empirical latency distribution on one laptop; no independent-session, power-mode, or thermal-state uncertainty estimate"
+  }
+}

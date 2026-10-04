@@ -9,7 +9,7 @@ import numpy as np
 import torch
 from sklearn.metrics import accuracy_score
 
-from .model import FastSSVEPFusionNet, parameter_count, reparameterize_model
+from .model import LegacyFusionNet, parameter_count, reparameterize_model
 from .train_kim2025 import _class_frequencies, _load_subjects
 
 
@@ -60,7 +60,7 @@ def main() -> None:
     shard_dir = Path(cfg["shard_dir"])
     all_subjects = [str(x) for x in cfg["train_subjects"]]
     frequencies = _class_frequencies(shard_dir, all_subjects)
-    model = FastSSVEPFusionNet(
+    model = LegacyFusionNet(
         channels=8, classes=len(frequencies), sample_rate=int(cfg["sample_rate"]),
         class_frequencies=frequencies, **cfg["model"],
     )

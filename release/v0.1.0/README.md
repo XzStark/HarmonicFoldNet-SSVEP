@@ -1,4 +1,4 @@
-# FastSSVEPFusionNet v0.1.0 release bundle
+# LegacyFusionNet v0.1.0 release bundle
 
 This directory is the frozen upload bundle for the noncommercial research
 preview. The checkpoint files are intentionally excluded from normal Git

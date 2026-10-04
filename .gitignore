@@ -9,6 +9,18 @@ runs/*
 !runs/.gitkeep
 __pycache__/
 .pytest_cache/
+.research_refs/
+.hf_cache/
+tmp/
+paper/submission/
+# Submission-only identity metadata. Public code/model releases must not include
+# the author's affiliation, ORCID, or private correspondence details.
+paper/MANUSCRIPT_DRAFT_v1.md
+paper/COVER_LETTER_JNE.md
+paper/PIPELINE_CONFIG.md
+paper/private_identity_terms.txt
+paper/PREPRINT_RELEASE_CHECKLIST.md
+paper/figures/qa/
 *.pyc
 *.npz
 *.pt

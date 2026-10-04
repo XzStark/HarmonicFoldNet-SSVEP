@@ -39,7 +39,7 @@ must not be presented as phone or glasses latency.
 ## Current interpretation
 
 The result supports continued research on physics-guided evidence fusion and
-FastViT-inspired structural reparameterization for efficient SSVEP decoding.
+local-to-global structural reparameterization for efficient SSVEP decoding.
 It does not yet establish a paper-level state of the art. Repeated participant
 folds, FBCCA/TRCA and deep-learning baselines, shorter-window experiments,
 statistical tests, and device-side benchmarks are still required.

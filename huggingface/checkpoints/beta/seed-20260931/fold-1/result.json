@@ -1,0 +1,983 @@
+{
+  "status": "complete",
+  "protocol_version": 1,
+  "dataset": "beta",
+  "split": "group-5-fold-1",
+  "architecture": "harmonic_fold_v4_1",
+  "architecture_revision": "harmonic_fold_v4_1",
+  "mode": "full",
+  "seed": 20260931,
+  "split_seed": 20260929,
+  "subjects": {
+    "train": [
+      "1",
+      "2",
+      "3",
+      "6",
+      "8",
+      "9",
+      "10",
+      "12",
+      "13",
+      "14",
+      "16",
+      "17",
+      "19",
+      "21",
+      "22",
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "35",
+      "37",
+      "40",
+      "42",
+      "44",
+      "45",
+      "46",
+      "48",
+      "49",
+      "50",
+      "51",
+      "52",
+      "53",
+      "54",
+      "55",
+      "56",
+      "57",
+      "58",
+      "60",
+      "62",
+      "65",
+      "66",
+      "67",
+      "68",
+      "69",
+      "70"
+    ],
+    "validation": [
+      "7",
+      "36",
+      "38",
+      "39",
+      "59",
+      "61",
+      "64"
+    ],
+    "test": [
+      "4",
+      "5",
+      "11",
+      "15",
+      "18",
+      "20",
+      "23",
+      "24",
+      "33",
+      "34",
+      "41",
+      "43",
+      "47",
+      "63"
+    ]
+  },
+  "sample_counts": {
+    "train": 7840,
+    "validation": 1120,
+    "test": 2240
+  },
+  "channels": [
+    "PO7",
+    "PO3",
+    "POz",
+    "PO4",
+    "PO8",
+    "O1",
+    "Oz",
+    "O2"
+  ],
+  "windows": [
+    0.4,
+    0.6,
+    0.8,
+    1.0,
+    1.2,
+    1.5
+  ],
+  "selection_windows": [
+    0.4,
+    0.6,
+    0.8,
+    1.0,
+    1.2
+  ],
+  "train_windows": [
+    0.4,
+    0.6,
+    0.8,
+    1.0,
+    1.2
+  ],
+  "model_config": {
+    "width": 48,
+    "local_depths": [
+      1,
+      1
+    ],
+    "heads": 4,
+    "harmonics": 4,
+    "neighborhood_bins": 2,
+    "spectral_resolution_hz": 0.25,
+    "spectral_band_hz": [
+      6.0,
+      45.0
+    ],
+    "harmonic_bias_width_hz": 0.5,
+    "local_domain": "temporal",
+    "dropout": 0.1
+  },
+  "model_parameters": 435139,
+  "trainable_parameters": 435139,
+  "device": "cuda",
+  "best_epoch": 9,
+  "best_selection_score": 0.4516071428571428,
+  "history": [
+    {
+      "epoch": 1,
+      "train_window_seconds": 0.8,
+      "loss": 2.57960513330275,
+      "selection_score": 0.31607142857142856,
+      "validation_balanced_accuracy": {
+        "0.4": 0.14285714285714285,
+        "0.6": 0.24553571428571433,
+        "0.8": 0.33928571428571425,
+        "1.0": 0.4080357142857142,
+        "1.2": 0.4446428571428571
+      },
+      "seconds": 3.371
+    },
+    {
+      "epoch": 2,
+      "train_window_seconds": 1.2,
+      "loss": 1.5814545442981105,
+      "selection_score": 0.3533928571428572,
+      "validation_balanced_accuracy": {
+        "0.4": 0.15714285714285714,
+        "0.6": 0.25982142857142854,
+        "0.8": 0.36339285714285713,
+        "1.0": 0.45625,
+        "1.2": 0.5303571428571429
+      },
+      "seconds": 1.595
+    },
+    {
+      "epoch": 3,
+      "train_window_seconds": 1.0,
+      "loss": 1.5874543170775137,
+      "selection_score": 0.39714285714285713,
+      "validation_balanced_accuracy": {
+        "0.4": 0.17857142857142855,
+        "0.6": 0.3071428571428571,
+        "0.8": 0.41428571428571426,
+        "1.0": 0.5160714285714285,
+        "1.2": 0.5696428571428571
+      },
+      "seconds": 1.592
+    },
+    {
+      "epoch": 4,
+      "train_window_seconds": 0.6,
+      "loss": 2.1888960119216674,
+      "selection_score": 0.41517857142857145,
+      "validation_balanced_accuracy": {
+        "0.4": 0.22142857142857145,
+        "0.6": 0.35178571428571426,
+        "0.8": 0.44732142857142865,
+        "1.0": 0.51875,
+        "1.2": 0.5366071428571428
+      },
+      "seconds": 1.597
+    },
+    {
+      "epoch": 5,
+      "train_window_seconds": 0.4,
+      "loss": 2.6406227465598815,
+      "selection_score": 0.4064285714285714,
+      "validation_balanced_accuracy": {
+        "0.4": 0.2517857142857143,
+        "0.6": 0.34285714285714286,
+        "0.8": 0.42767857142857135,
+        "1.0": 0.49107142857142855,
+        "1.2": 0.51875
+      },
+      "seconds": 1.585
+    },
+    {
+      "epoch": 6,
+      "train_window_seconds": 0.6,
+      "loss": 1.9715843566002385,
+      "selection_score": 0.42928571428571427,
+      "validation_balanced_accuracy": {
+        "0.4": 0.24642857142857144,
+        "0.6": 0.3625,
+        "0.8": 0.46071428571428574,
+        "1.0": 0.5258928571428572,
+        "1.2": 0.5508928571428571
+      },
+      "seconds": 1.582
+    },
+    {
+      "epoch": 7,
+      "train_window_seconds": 1.2,
+      "loss": 1.1622076447932952,
+      "selection_score": 0.4321428571428571,
+      "validation_balanced_accuracy": {
+        "0.4": 0.19553571428571428,
+        "0.6": 0.33303571428571427,
+        "0.8": 0.45892857142857146,
+        "1.0": 0.5571428571428572,
+        "1.2": 0.6160714285714286
+      },
+      "seconds": 1.595
+    },
+    {
+      "epoch": 8,
+      "train_window_seconds": 1.0,
+      "loss": 1.232899756200852,
+      "selection_score": 0.43714285714285717,
+      "validation_balanced_accuracy": {
+        "0.4": 0.2,
+        "0.6": 0.3383928571428571,
+        "0.8": 0.46875,
+        "1.0": 0.5625,
+        "1.2": 0.6160714285714286
+      },
+      "seconds": 1.571
+    },
+    {
+      "epoch": 9,
+      "train_window_seconds": 0.8,
+      "loss": 1.4706318647630754,
+      "selection_score": 0.4516071428571428,
+      "validation_balanced_accuracy": {
+        "0.4": 0.2330357142857143,
+        "0.6": 0.3705357142857143,
+        "0.8": 0.4866071428571428,
+        "1.0": 0.5508928571428571,
+        "1.2": 0.6169642857142857
+      },
+      "seconds": 1.639
+    },
+    {
+      "epoch": 10,
+      "train_window_seconds": 0.4,
+      "loss": 2.469415372417819,
+      "selection_score": 0.4364285714285714,
+      "validation_balanced_accuracy": {
+        "0.4": 0.26607142857142857,
+        "0.6": 0.38482142857142854,
+        "0.8": 0.45,
+        "1.0": 0.5214285714285714,
+        "1.2": 0.5598214285714286
+      },
+      "seconds": 1.657
+    },
+    {
+      "epoch": 11,
+      "train_window_seconds": 1.2,
+      "loss": 0.9824898069904696,
+      "selection_score": 0.4462499999999999,
+      "validation_balanced_accuracy": {
+        "0.4": 0.21696428571428567,
+        "0.6": 0.35,
+        "0.8": 0.4660714285714286,
+        "1.0": 0.5714285714285714,
+        "1.2": 0.6267857142857143
+      },
+      "seconds": 1.576
+    },
+    {
+      "epoch": 12,
+      "train_window_seconds": 0.4,
+      "loss": 2.324626718797991,
+      "selection_score": 0.42910714285714285,
+      "validation_balanced_accuracy": {
+        "0.4": 0.2517857142857143,
+        "0.6": 0.36607142857142855,
+        "0.8": 0.4553571428571429,
+        "1.0": 0.51875,
+        "1.2": 0.5535714285714286
+      },
+      "seconds": 1.606
+    },
+    {
+      "epoch": 13,
+      "train_window_seconds": 0.8,
+      "loss": 1.3449027711345303,
+      "selection_score": 0.44660714285714287,
+      "validation_balanced_accuracy": {
+        "0.4": 0.20625,
+        "0.6": 0.375,
+        "0.8": 0.46964285714285714,
+        "1.0": 0.5642857142857143,
+        "1.2": 0.6178571428571429
+      },
+      "seconds": 1.615
+    },
+    {
+      "epoch": 14,
+      "train_window_seconds": 0.6,
+      "loss": 1.684230475656448,
+      "selection_score": 0.4507142857142856,
+      "validation_balanced_accuracy": {
+        "0.4": 0.25625,
+        "0.6": 0.38482142857142854,
+        "0.8": 0.475,
+        "1.0": 0.5383928571428571,
+        "1.2": 0.5991071428571428
+      },
+      "seconds": 1.598
+    },
+    {
+      "epoch": 15,
+      "train_window_seconds": 1.0,
+      "loss": 1.0044913263090196,
+      "selection_score": 0.44660714285714287,
+      "validation_balanced_accuracy": {
+        "0.4": 0.20803571428571427,
+        "0.6": 0.37142857142857144,
+        "0.8": 0.475,
+        "1.0": 0.5535714285714286,
+        "1.2": 0.625
+      },
+      "seconds": 1.582
+    },
+    {
+      "epoch": 16,
+      "train_window_seconds": 0.4,
+      "loss": 2.1671070360368296,
+      "selection_score": 0.42482142857142857,
+      "validation_balanced_accuracy": {
+        "0.4": 0.24910714285714283,
+        "0.6": 0.36696428571428574,
+        "0.8": 0.4419642857142857,
+        "1.0": 0.5098214285714285,
+        "1.2": 0.55625
+      },
+      "seconds": 1.585
+    },
+    {
+      "epoch": 17,
+      "train_window_seconds": 1.2,
+      "loss": 0.8515707687024148,
+      "selection_score": 0.43464285714285716,
+      "validation_balanced_accuracy": {
+        "0.4": 0.21428571428571427,
+        "0.6": 0.35267857142857145,
+        "0.8": 0.45178571428571435,
+        "1.0": 0.5375,
+        "1.2": 0.6169642857142856
+      },
+      "seconds": 1.587
+    },
+    {
+      "epoch": 18,
+      "train_window_seconds": 0.8,
+      "loss": 1.1272950691561545,
+      "selection_score": 0.4425,
+      "validation_balanced_accuracy": {
+        "0.4": 0.21607142857142855,
+        "0.6": 0.36607142857142855,
+        "0.8": 0.4705357142857142,
+        "1.0": 0.5526785714285714,
+        "1.2": 0.6071428571428571
+      },
+      "seconds": 1.665
+    },
+    {
+      "epoch": 19,
+      "train_window_seconds": 0.6,
+      "loss": 1.4829255938529968,
+      "selection_score": 0.4419642857142857,
+      "validation_balanced_accuracy": {
+        "0.4": 0.23392857142857143,
+        "0.6": 0.36875,
+        "0.8": 0.4714285714285714,
+        "1.0": 0.5366071428571428,
+        "1.2": 0.5991071428571428
+      },
+      "seconds": 1.614
+    }
+  ],
+  "test": {
+    "0.4": {
+      "overall": {
+        "accuracy": 0.24330357142857142,
+        "balanced_accuracy": 0.24330357142857145,
+        "top5_accuracy": 0.5366071428571428,
+        "itr_bits_per_minute": 34.79947569007962
+      },
+      "per_subject": {
+        "4": {
+          "accuracy": 0.26875,
+          "balanced_accuracy": 0.26875,
+          "top5_accuracy": 0.63125,
+          "itr_bits_per_minute": 41.154165431902356
+        },
+        "5": {
+          "accuracy": 0.1625,
+          "balanced_accuracy": 0.1625,
+          "top5_accuracy": 0.4375,
+          "itr_bits_per_minute": 17.00978619394527
+        },
+        "11": {
+          "accuracy": 0.06875,
+          "balanced_accuracy": 0.06875,
+          "top5_accuracy": 0.25,
+          "itr_bits_per_minute": 2.577052809748833
+        },
+        "15": {
+          "accuracy": 0.34375,
+          "balanced_accuracy": 0.34375,
+          "top5_accuracy": 0.5625,
+          "itr_bits_per_minute": 61.66805442427628
+        },
+        "18": {
+          "accuracy": 0.50625,
+          "balanced_accuracy": 0.50625,
+          "top5_accuracy": 0.8875,
+          "itr_bits_per_minute": 114.15823085397003
+        },
+        "20": {
+          "accuracy": 0.1125,
+          "balanced_accuracy": 0.1125,
+          "top5_accuracy": 0.3125,
+          "itr_bits_per_minute": 8.248177465494658
+        },
+        "23": {
+          "accuracy": 0.2125,
+          "balanced_accuracy": 0.2125,
+          "top5_accuracy": 0.69375,
+          "itr_bits_per_minute": 27.562636411190766
+        },
+        "24": {
+          "accuracy": 0.175,
+          "balanced_accuracy": 0.175,
+          "top5_accuracy": 0.50625,
+          "itr_bits_per_minute": 19.49702861796337
+        },
+        "33": {
+          "accuracy": 0.14375,
+          "balanced_accuracy": 0.14375,
+          "top5_accuracy": 0.4625,
+          "itr_bits_per_minute": 13.488423487823079
+        },
+        "34": {
+          "accuracy": 0.4,
+          "balanced_accuracy": 0.4,
+          "top5_accuracy": 0.74375,
+          "itr_bits_per_minute": 78.64907794102307
+        },
+        "41": {
+          "accuracy": 0.16875,
+          "balanced_accuracy": 0.16875,
+          "top5_accuracy": 0.34375,
+          "itr_bits_per_minute": 18.240013071413646
+        },
+        "43": {
+          "accuracy": 0.1625,
+          "balanced_accuracy": 0.1625,
+          "top5_accuracy": 0.5,
+          "itr_bits_per_minute": 17.00978619394527
+        },
+        "47": {
+          "accuracy": 0.09375,
+          "balanced_accuracy": 0.09375,
+          "top5_accuracy": 0.3375,
+          "itr_bits_per_minute": 5.544523021361354
+        },
+        "63": {
+          "accuracy": 0.5875,
+          "balanced_accuracy": 0.5875,
+          "top5_accuracy": 0.84375,
+          "itr_bits_per_minute": 144.26034062101982
+        }
+      }
+    },
+    "0.6": {
+      "overall": {
+        "accuracy": 0.39285714285714285,
+        "balanced_accuracy": 0.3928571428571429,
+        "top5_accuracy": 0.696875,
+        "itr_bits_per_minute": 62.5262868016384
+      },
+      "per_subject": {
+        "4": {
+          "accuracy": 0.53125,
+          "balanced_accuracy": 0.53125,
+          "top5_accuracy": 0.7625,
+          "itr_bits_per_minute": 100.75720395825925
+        },
+        "5": {
+          "accuracy": 0.3,
+          "balanced_accuracy": 0.3,
+          "top5_accuracy": 0.675,
+          "itr_bits_per_minute": 40.41030777016891
+        },
+        "11": {
+          "accuracy": 0.14375,
+          "balanced_accuracy": 0.14375,
+          "top5_accuracy": 0.38125,
+          "itr_bits_per_minute": 11.035982853673428
+        },
+        "15": {
+          "accuracy": 0.43125,
+          "balanced_accuracy": 0.43125,
+          "top5_accuracy": 0.7375,
+          "itr_bits_per_minute": 72.52019245203768
+        },
+        "18": {
+          "accuracy": 0.75625,
+          "balanced_accuracy": 0.75625,
+          "top5_accuracy": 0.9875,
+          "itr_bits_per_minute": 176.31219944666793
+        },
+        "20": {
+          "accuracy": 0.1875,
+          "balanced_accuracy": 0.1875,
+          "top5_accuracy": 0.4875,
+          "itr_bits_per_minute": 18.072356287453104
+        },
+        "23": {
+          "accuracy": 0.475,
+          "balanced_accuracy": 0.475,
+          "top5_accuracy": 0.8875,
+          "itr_bits_per_minute": 84.48523914228393
+        },
+        "24": {
+          "accuracy": 0.31875,
+          "balanced_accuracy": 0.31875,
+          "top5_accuracy": 0.7125,
+          "itr_bits_per_minute": 44.63077567678845
+        },
+        "33": {
+          "accuracy": 0.21875,
+          "balanced_accuracy": 0.21875,
+          "top5_accuracy": 0.575,
+          "itr_bits_per_minute": 23.71795357433648
+        },
+        "34": {
+          "accuracy": 0.61875,
+          "balanced_accuracy": 0.61875,
+          "top5_accuracy": 0.94375,
+          "itr_bits_per_minute": 128.06991396430237
+        },
+        "41": {
+          "accuracy": 0.175,
+          "balanced_accuracy": 0.175,
+          "top5_accuracy": 0.5,
+          "itr_bits_per_minute": 15.95211432378821
+        },
+        "43": {
+          "accuracy": 0.30625,
+          "balanced_accuracy": 0.30625,
+          "top5_accuracy": 0.6625,
+          "itr_bits_per_minute": 41.80271496572639
+        },
+        "47": {
+          "accuracy": 0.24375,
+          "balanced_accuracy": 0.24375,
+          "top5_accuracy": 0.48125,
+          "itr_bits_per_minute": 28.561182873927827
+        },
+        "63": {
+          "accuracy": 0.79375,
+          "balanced_accuracy": 0.79375,
+          "top5_accuracy": 0.9625,
+          "itr_bits_per_minute": 190.7760299783317
+        }
+      }
+    },
+    "0.8": {
+      "overall": {
+        "accuracy": 0.5285714285714286,
+        "balanced_accuracy": 0.5285714285714285,
+        "top5_accuracy": 0.7674107142857143,
+        "itr_bits_per_minute": 84.58131606633866
+      },
+      "per_subject": {
+        "4": {
+          "accuracy": 0.625,
+          "balanced_accuracy": 0.625,
+          "top5_accuracy": 0.80625,
+          "itr_bits_per_minute": 110.09853507180249
+        },
+        "5": {
+          "accuracy": 0.5,
+          "balanced_accuracy": 0.5,
+          "top5_accuracy": 0.8,
+          "itr_bits_per_minute": 77.50278394413407
+        },
+        "11": {
+          "accuracy": 0.21875,
+          "balanced_accuracy": 0.21875,
+          "top5_accuracy": 0.4625,
+          "itr_bits_per_minute": 20.069037639823176
+        },
+        "15": {
+          "accuracy": 0.60625,
+          "balanced_accuracy": 0.60625,
+          "top5_accuracy": 0.7875,
+          "itr_bits_per_minute": 104.93649262047822
+        },
+        "18": {
+          "accuracy": 0.9125,
+          "balanced_accuracy": 0.9125,
+          "top5_accuracy": 0.9875,
+          "itr_bits_per_minute": 204.52549714650505
+        },
+        "20": {
+          "accuracy": 0.31875,
+          "balanced_accuracy": 0.31875,
+          "top5_accuracy": 0.64375,
+          "itr_bits_per_minute": 37.76450249574408
+        },
+        "23": {
+          "accuracy": 0.65,
+          "balanced_accuracy": 0.65,
+          "top5_accuracy": 0.96875,
+          "itr_bits_per_minute": 117.1370429035424
+        },
+        "24": {
+          "accuracy": 0.4625,
+          "balanced_accuracy": 0.4625,
+          "top5_accuracy": 0.83125,
+          "itr_bits_per_minute": 68.54242129002965
+        },
+        "33": {
+          "accuracy": 0.33125,
+          "balanced_accuracy": 0.33125,
+          "top5_accuracy": 0.625,
+          "itr_bits_per_minute": 40.20539833226303
+        },
+        "34": {
+          "accuracy": 0.825,
+          "balanced_accuracy": 0.825,
+          "top5_accuracy": 0.98125,
+          "itr_bits_per_minute": 172.06000945522666
+        },
+        "41": {
+          "accuracy": 0.2375,
+          "balanced_accuracy": 0.2375,
+          "top5_accuracy": 0.475,
+          "itr_bits_per_minute": 23.12080672855792
+        },
+        "43": {
+          "accuracy": 0.5,
+          "balanced_accuracy": 0.5,
+          "top5_accuracy": 0.825,
+          "itr_bits_per_minute": 77.50278394413407
+        },
+        "47": {
+          "accuracy": 0.325,
+          "balanced_accuracy": 0.325,
+          "top5_accuracy": 0.58125,
+          "itr_bits_per_minute": 38.9790219057313
+        },
+        "63": {
+          "accuracy": 0.8875,
+          "balanced_accuracy": 0.8875,
+          "top5_accuracy": 0.96875,
+          "itr_bits_per_minute": 194.76504838156902
+        }
+      }
+    },
+    "1.0": {
+      "overall": {
+        "accuracy": 0.6040178571428572,
+        "balanced_accuracy": 0.6040178571428572,
+        "top5_accuracy": 0.8169642857142857,
+        "itr_bits_per_minute": 90.41805898652592
+      },
+      "per_subject": {
+        "4": {
+          "accuracy": 0.70625,
+          "balanced_accuracy": 0.70625,
+          "top5_accuracy": 0.86875,
+          "itr_bits_per_minute": 115.8329986238099
+        },
+        "5": {
+          "accuracy": 0.6625,
+          "balanced_accuracy": 0.6625,
+          "top5_accuracy": 0.9125,
+          "itr_bits_per_minute": 104.62794337049127
+        },
+        "11": {
+          "accuracy": 0.2625,
+          "balanced_accuracy": 0.2625,
+          "top5_accuracy": 0.54375,
+          "itr_bits_per_minute": 23.73793743891497
+        },
+        "15": {
+          "accuracy": 0.65625,
+          "balanced_accuracy": 0.65625,
+          "top5_accuracy": 0.84375,
+          "itr_bits_per_minute": 103.0683603903439
+        },
+        "18": {
+          "accuracy": 0.9625,
+          "balanced_accuracy": 0.9625,
+          "top5_accuracy": 1.0,
+          "itr_bits_per_minute": 195.72062223954208
+        },
+        "20": {
+          "accuracy": 0.3625,
+          "balanced_accuracy": 0.3625,
+          "top5_accuracy": 0.6625,
+          "itr_bits_per_minute": 40.309814068635625
+        },
+        "23": {
+          "accuracy": 0.7625,
+          "balanced_accuracy": 0.7625,
+          "top5_accuracy": 0.99375,
+          "itr_bits_per_minute": 131.03147909419073
+        },
+        "24": {
+          "accuracy": 0.54375,
+          "balanced_accuracy": 0.54375,
+          "top5_accuracy": 0.875,
+          "itr_bits_per_minute": 76.63972874003413
+        },
+        "33": {
+          "accuracy": 0.39375,
+          "balanced_accuracy": 0.39375,
+          "top5_accuracy": 0.70625,
+          "itr_bits_per_minute": 46.01904141075202
+        },
+        "34": {
+          "accuracy": 0.875,
+          "balanced_accuracy": 0.875,
+          "top5_accuracy": 0.9875,
+          "itr_bits_per_minute": 164.7075349731994
+        },
+        "41": {
+          "accuracy": 0.30625,
+          "balanced_accuracy": 0.30625,
+          "top5_accuracy": 0.55625,
+          "itr_bits_per_minute": 30.655324308199354
+        },
+        "43": {
+          "accuracy": 0.6125,
+          "balanced_accuracy": 0.6125,
+          "top5_accuracy": 0.88125,
+          "itr_bits_per_minute": 92.42669959945435
+        },
+        "47": {
+          "accuracy": 0.425,
+          "balanced_accuracy": 0.425,
+          "top5_accuracy": 0.625,
+          "itr_bits_per_minute": 51.96454225673536
+        },
+        "63": {
+          "accuracy": 0.925,
+          "balanced_accuracy": 0.925,
+          "top5_accuracy": 0.98125,
+          "itr_bits_per_minute": 181.6484553738479
+        }
+      }
+    },
+    "1.2": {
+      "overall": {
+        "accuracy": 0.65625,
+        "balanced_accuracy": 0.65625,
+        "top5_accuracy": 0.8504464285714286,
+        "itr_bits_per_minute": 90.94267093265638
+      },
+      "per_subject": {
+        "4": {
+          "accuracy": 0.775,
+          "balanced_accuracy": 0.775,
+          "top5_accuracy": 0.925,
+          "itr_bits_per_minute": 118.71246235165917
+        },
+        "5": {
+          "accuracy": 0.7625,
+          "balanced_accuracy": 0.7625,
+          "top5_accuracy": 0.95625,
+          "itr_bits_per_minute": 115.61601096546241
+        },
+        "11": {
+          "accuracy": 0.34375,
+          "balanced_accuracy": 0.34375,
+          "top5_accuracy": 0.59375,
+          "itr_bits_per_minute": 32.6477935187345
+        },
+        "15": {
+          "accuracy": 0.7,
+          "balanced_accuracy": 0.7,
+          "top5_accuracy": 0.85,
+          "itr_bits_per_minute": 100.76528929404688
+        },
+        "18": {
+          "accuracy": 0.98125,
+          "balanced_accuracy": 0.98125,
+          "top5_accuracy": 1.0,
+          "itr_bits_per_minute": 179.5928246518152
+        },
+        "20": {
+          "accuracy": 0.38125,
+          "balanced_accuracy": 0.38125,
+          "top5_accuracy": 0.675,
+          "itr_bits_per_minute": 38.56466102467387
+        },
+        "23": {
+          "accuracy": 0.85,
+          "balanced_accuracy": 0.85,
+          "top5_accuracy": 0.99375,
+          "itr_bits_per_minute": 138.3274396708809
+        },
+        "24": {
+          "accuracy": 0.625,
+          "balanced_accuracy": 0.625,
+          "top5_accuracy": 0.9125,
+          "itr_bits_per_minute": 84.19299740784896
+        },
+        "33": {
+          "accuracy": 0.46875,
+          "balanced_accuracy": 0.46875,
+          "top5_accuracy": 0.7875,
+          "itr_bits_per_minute": 53.536862372559874
+        },
+        "34": {
+          "accuracy": 0.94375,
+          "balanced_accuracy": 0.94375,
+          "top5_accuracy": 1.0,
+          "itr_bits_per_minute": 166.314666326759
+        },
+        "41": {
+          "accuracy": 0.3,
+          "balanced_accuracy": 0.3,
+          "top5_accuracy": 0.6,
+          "itr_bits_per_minute": 26.147846204226944
+        },
+        "43": {
+          "accuracy": 0.6625,
+          "balanced_accuracy": 0.6625,
+          "top5_accuracy": 0.90625,
+          "itr_bits_per_minute": 92.31877356219817
+        },
+        "47": {
+          "accuracy": 0.44375,
+          "balanced_accuracy": 0.44375,
+          "top5_accuracy": 0.7125,
+          "itr_bits_per_minute": 49.09665956516952
+        },
+        "63": {
+          "accuracy": 0.95,
+          "balanced_accuracy": 0.95,
+          "top5_accuracy": 0.99375,
+          "itr_bits_per_minute": 168.39744800570446
+        }
+      }
+    },
+    "1.5": {
+      "overall": {
+        "accuracy": 0.7111607142857143,
+        "balanced_accuracy": 0.7111607142857143,
+        "top5_accuracy": 0.8794642857142857,
+        "itr_bits_per_minute": 87.8423742610187
+      },
+      "per_subject": {
+        "4": {
+          "accuracy": 0.7875,
+          "balanced_accuracy": 0.7875,
+          "top5_accuracy": 0.94375,
+          "itr_bits_per_minute": 103.57637466040961
+        },
+        "5": {
+          "accuracy": 0.8625,
+          "balanced_accuracy": 0.8625,
+          "top5_accuracy": 0.975,
+          "itr_bits_per_minute": 120.52594159320722
+        },
+        "11": {
+          "accuracy": 0.375,
+          "balanced_accuracy": 0.375,
+          "top5_accuracy": 0.63125,
+          "itr_bits_per_minute": 31.923531155204774
+        },
+        "15": {
+          "accuracy": 0.7375,
+          "balanced_accuracy": 0.7375,
+          "top5_accuracy": 0.86875,
+          "itr_bits_per_minute": 93.12043469797328
+        },
+        "18": {
+          "accuracy": 0.9875,
+          "balanced_accuracy": 0.9875,
+          "top5_accuracy": 1.0,
+          "itr_bits_per_minute": 154.76747883267336
+        },
+        "20": {
+          "accuracy": 0.475,
+          "balanced_accuracy": 0.475,
+          "top5_accuracy": 0.71875,
+          "itr_bits_per_minute": 46.46688152825617
+        },
+        "23": {
+          "accuracy": 0.93125,
+          "balanced_accuracy": 0.93125,
+          "top5_accuracy": 1.0,
+          "itr_bits_per_minute": 137.9194561774477
+        },
+        "24": {
+          "accuracy": 0.7,
+          "balanced_accuracy": 0.7,
+          "top5_accuracy": 0.95,
+          "itr_bits_per_minute": 85.65049589993984
+        },
+        "33": {
+          "accuracy": 0.54375,
+          "balanced_accuracy": 0.54375,
+          "top5_accuracy": 0.84375,
+          "itr_bits_per_minute": 57.4797965550256
+        },
+        "34": {
+          "accuracy": 0.9625,
+          "balanced_accuracy": 0.9625,
+          "top5_accuracy": 0.99375,
+          "itr_bits_per_minute": 146.79046667965656
+        },
+        "41": {
+          "accuracy": 0.35,
+          "balanced_accuracy": 0.35,
+          "top5_accuracy": 0.64375,
+          "itr_bits_per_minute": 28.570457917542296
+        },
+        "43": {
+          "accuracy": 0.775,
+          "balanced_accuracy": 0.775,
+          "top5_accuracy": 0.95625,
+          "itr_bits_per_minute": 100.9055929989103
+        },
+        "47": {
+          "accuracy": 0.49375,
+          "balanced_accuracy": 0.49375,
+          "top5_accuracy": 0.7875,
+          "itr_bits_per_minute": 49.389178052213175
+        },
+        "63": {
+          "accuracy": 0.975,
+          "balanced_accuracy": 0.975,
+          "top5_accuracy": 1.0,
+          "itr_bits_per_minute": 150.63396323757408
+        }
+      }
+    }
+  }
+}

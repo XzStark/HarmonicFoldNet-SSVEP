@@ -58,7 +58,10 @@ research contribution.
 
 ## Authorship and review
 
-The public software artifact can identify Xiangzhe Kong. If a later venue uses
+Public code and model artifacts use the project handle `XzStark`. Do not place
+the author's institutional affiliation, ORCID or correspondence email in the
+GitHub or Hugging Face release. Submission-only identity belongs in the private
+manuscript source and the journal submission system. If a later venue uses
 double-blind review, prepare the manuscript and supplemental files according to
 that venue's anonymity rules rather than assuming the public repository alone
 is anonymous.

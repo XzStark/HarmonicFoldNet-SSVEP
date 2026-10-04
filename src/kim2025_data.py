@@ -7,7 +7,7 @@ from pathlib import Path
 import mne
 import numpy as np
 import pandas as pd
-from scipy.signal import butter, sosfiltfilt
+from scipy.signal import butter, sosfilt, sosfiltfilt
 
 
 DEFAULT_CHANNELS = ("PO7", "PO3", "POz", "PO4", "PO8", "O1", "Oz", "O2")
@@ -29,6 +29,7 @@ def build_subject_shard(
     onset_delay_seconds: float = 0.0,
     window_seconds: float = 5.0,
     bandpass_hz: tuple[float, float] = (6.0, 45.0),
+    filter_mode: str = "zero_phase",
 ) -> dict:
     subject_dir = Path(subject_dir)
     output = Path(output)
@@ -36,6 +37,7 @@ def build_subject_shard(
     xs: list[np.ndarray] = []
     ys: list[int] = []
     frequencies: list[float] = []
+    phases: list[float] = []
     sessions: list[str] = []
     samples = int(round(window_seconds * target_sfreq))
     sos = butter(4, bandpass_hz, btype="bandpass", fs=target_sfreq, output="sos")
@@ -58,7 +60,12 @@ def build_subject_shard(
         if int(round(raw.info["sfreq"])) != target_sfreq:
             raw.resample(target_sfreq, npad="auto", verbose="ERROR")
         signal = raw.get_data().astype(np.float32, copy=False)
-        signal = sosfiltfilt(sos, signal, axis=-1).astype(np.float32)
+        if filter_mode == "causal":
+            signal = sosfilt(sos, signal, axis=-1).astype(np.float32)
+        elif filter_mode == "zero_phase":
+            signal = sosfiltfilt(sos, signal, axis=-1).astype(np.float32)
+        else:
+            raise ValueError(f"unsupported filter mode: {filter_mode}")
         events = pd.read_csv(events_path, sep="\t")
         for row in events.itertuples(index=False):
             label = int(row.value) - 1
@@ -71,6 +78,7 @@ def build_subject_shard(
             xs.append(_normalize(window))
             ys.append(label)
             frequencies.append(float(row.trial_type))
+            phases.append(float((label % 4) * 0.5 * np.pi))
             sessions.append(session)
 
     if not xs:
@@ -80,9 +88,11 @@ def build_subject_shard(
     np.savez_compressed(
         output, x=stacked, y=np.asarray(ys, dtype=np.int64),
         frequency_hz=np.asarray(frequencies, dtype=np.float32),
+        phase_rad=np.asarray(phases, dtype=np.float32),
         session=np.asarray(sessions), channels=np.asarray(channels),
         sample_rate=np.asarray(target_sfreq, dtype=np.int32),
         subject=np.asarray(subject_dir.name.removeprefix("sub-")),
+        filter_mode=np.asarray(filter_mode),
     )
     return {
         "subject": subject_dir.name, "trials": len(xs),
@@ -94,6 +104,7 @@ def build_subject_shard(
 def build_all(
     root: str | Path, output_dir: str | Path, *,
     metadata_root: str | Path | None = None, force: bool = False,
+    filter_mode: str = "zero_phase",
 ) -> list[dict]:
     root = Path(root)
     output_dir = Path(output_dir)
@@ -111,7 +122,9 @@ def build_all(
                     "status": "existing",
                 })
             continue
-        summary = build_subject_shard(subject_dir, shard, metadata_root=metadata_root)
+        summary = build_subject_shard(
+            subject_dir, shard, metadata_root=metadata_root, filter_mode=filter_mode,
+        )
         summary["status"] = "built"
         summaries.append(summary)
         print(json.dumps(summary, ensure_ascii=False), flush=True)
@@ -120,6 +133,7 @@ def build_all(
         "total_trials": sum(item["trials"] for item in summaries),
         "channels": list(DEFAULT_CHANNELS), "sample_rate": 250,
         "window_seconds": 5.0, "onset_delay_seconds": 0.0,
+        "filter_mode": filter_mode,
     }
     output_dir.mkdir(parents=True, exist_ok=True)
     (output_dir / "manifest.json").write_text(
@@ -134,8 +148,10 @@ if __name__ == "__main__":
     parser.add_argument("--output-dir", required=True)
     parser.add_argument("--metadata-root")
     parser.add_argument("--force", action="store_true")
+    parser.add_argument("--filter-mode", choices=("causal", "zero_phase"), default="zero_phase")
     args = parser.parse_args()
     result = build_all(
         args.root, args.output_dir, metadata_root=args.metadata_root, force=args.force,
+        filter_mode=args.filter_mode,
     )
     print(json.dumps({"subjects": len(result), "trials": sum(x["trials"] for x in result)}, indent=2))

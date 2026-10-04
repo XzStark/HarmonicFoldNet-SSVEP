@@ -1,18 +1,14 @@
 cff-version: 1.2.0
 message: "If you use this research software or its model weights, please cite this software release and the dataset paper."
-title: "FastSSVEPFusionNet"
+title: "HarmonicFoldNet"
 type: software
-version: 0.1.0
-date-released: 2026-09-29
-repository-code: "https://github.com/XzStark/FastSSVEPFusionNet"
-repository-artifact: "https://huggingface.co/KSTARKX/FastSSVEPFusionNet"
+version: 0.2.0
 authors:
-  - family-names: "Kong"
-    given-names: "Xiangzhe"
+  - family-names: "XzStark"
 abstract: >-
-  A compact research implementation for subject-disjoint 40-class SSVEP
-  decoding with candidate-frequency evidence, time/frequency feature fusion,
-  late attention, and train-to-deploy structural reparameterization.
+  A compact research implementation for cross-subject SSVEP decoding with
+  candidate-aligned spectral evidence, foldable local temporal mixing,
+  reduced-token harmonic attention, and optional low-parameter adaptation.
 keywords:
   - EEG
   - SSVEP
@@ -20,3 +16,5 @@ keywords:
   - cross-subject decoding
   - structural reparameterization
 license: PolyForm-Noncommercial-1.0.0
+repository-code: "https://github.com/XzStark/FastSSVEPFusionNet"
+url: "https://huggingface.co/KSTARKX/FastSSVEPFusionNet"
