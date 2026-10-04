@@ -5,11 +5,8 @@ from pathlib import Path
 
 import numpy as np
 
-from scripts.build_submission_evidence import (
-    DEFAULT_CONFIG,
-    _bootstrap_difference_ci,
-    run,
-)
+from scripts.build_submission_evidence import _bootstrap_difference_ci
+from scripts.rebuild_submission_from_bundle import DEFAULT_ARCHIVE, rebuild
 
 
 def test_paired_bootstrap_interval_is_deterministic() -> None:
@@ -21,10 +18,10 @@ def test_paired_bootstrap_interval_is_deterministic() -> None:
     assert np.allclose(first, (0.1, 0.1))
 
 
-def test_submission_evidence_rebuilds_from_preserved_runs(tmp_path: Path) -> None:
+def test_submission_evidence_rebuilds_from_public_bundle(tmp_path: Path) -> None:
     output = tmp_path / "source_data"
     report = tmp_path / "report.md"
-    bundle = run(DEFAULT_CONFIG, output, report, update_figure_data=False)
+    bundle = rebuild(DEFAULT_ARCHIVE, output, report)
 
     assert bundle["main"]["audit"]["validation"] == "passed"
     assert bundle["ablations"]["audit"]["validation"] == "passed"

@@ -5,12 +5,16 @@ and the one deployment checkpoint referenced by
 `paper/SUBMISSION_EVIDENCE_CONFIG.json`. Paths inside the archive are relative
 to the repository root.
 
-To rebuild the participant-level tables from a clean source checkout:
+To verify the archive hashes and rebuild the participant-level tables from a
+clean source checkout without extracting files into the working tree:
 
-1. extract the archive at the repository root, preserving paths;
-2. install the locked environment in `paper/environment-lock.txt`;
-3. run `python -m scripts.build_submission_evidence`;
-4. run `python -m scripts.build_supplement` and the manuscript audits.
+1. install the locked environment in `paper/environment-lock.txt`;
+2. run `python -m scripts.rebuild_submission_from_bundle`;
+3. run `python -m scripts.build_supplement` and the manuscript audits.
+
+The rebuild command validates every archived input against the manifest,
+extracts it into a temporary directory, rebuilds the evidence tables, and
+removes the temporary inputs when it exits.
 
 This bundle supports exact evidence-table reconstruction from preserved run
 outputs. It is not raw-EEG redistribution and does not retrain every model.

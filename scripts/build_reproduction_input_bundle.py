@@ -43,6 +43,19 @@ def main() -> None:
             if path.is_file():
                 paths.add(path)
 
+    # MTSNet participant records are discovered by the evidence builder from
+    # each registered comparison file's directory rather than listed as a
+    # separate config pattern. Include those derived inputs explicitly so a
+    # clean public checkout can rebuild the comparison instead of relying on a
+    # private local runs directory.
+    for relative in config.get("mtsnet", {}).get("comparison_files", []):
+        comparison = ROOT / relative
+        pattern = comparison.parent / "seed-*" / "fold-*" / "result.json"
+        for match in glob.glob(str(pattern)):
+            path = Path(match)
+            if path.is_file():
+                paths.add(path)
+
     # The statistical evidence builder does not recompute folding equivalence,
     # so its precomputed audit remains a separate released source-data file.
     relative_paths = sorted(path.relative_to(ROOT) for path in paths)

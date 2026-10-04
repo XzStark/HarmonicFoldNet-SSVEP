@@ -93,7 +93,7 @@ The manuscript matrix uses seeds 20260929, 20260930, and 20260931 over all five
 folds. The evidence configuration records every preserved input artifact:
 
 ```powershell
-.\.venv\Scripts\python.exe -m scripts.build_submission_evidence
+.\.venv\Scripts\python.exe -m scripts.rebuild_submission_from_bundle
 .\.venv\Scripts\python.exe -m scripts.build_supplement
 .\.venv\Scripts\python.exe -m scripts.audit_manuscript
 .\.venv\Scripts\python.exe -m pytest -q
