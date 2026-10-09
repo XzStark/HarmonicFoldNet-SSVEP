@@ -1,0 +1,264 @@
+{
+  "status": "complete",
+  "protocol": "EXTERNAL_BASELINE_EXTENSION_PROTOCOL_v1",
+  "analysis_status": "post_result_supplementary",
+  "independent_unit": "participant",
+  "seed_aggregation": "mean within participant before paired inference",
+  "primary_metric": "accuracy",
+  "multiple_testing": "Holm correction across 1 dataset(s) by three windows",
+  "mtsnet_upstream_commit": "890b0a4f93c3affd50741a1f1d036fb74a30a062",
+  "comparisons": [
+    {
+      "dataset": "dong2023",
+      "window_seconds": 0.4,
+      "participants": 59,
+      "harmonicfoldnet_seeds": [
+        20260929,
+        20260930,
+        20260931
+      ],
+      "mtsnet_seeds": [
+        3407,
+        12917,
+        62003
+      ],
+      "metrics": {
+        "accuracy": {
+          "harmonicfoldnet": {
+            "participants": 59,
+            "mean": 0.15985169491525425,
+            "standard_deviation": 0.0943418661454484,
+            "median": 0.13958333333333336,
+            "q1": 0.08333333333333333,
+            "q3": 0.21145833333333333,
+            "bootstrap_mean_ci95_low": 0.1365104166666667,
+            "bootstrap_mean_ci95_high": 0.18418079096045198
+          },
+          "mtsnet": {
+            "participants": 59,
+            "mean": 0.17330508474576273,
+            "standard_deviation": 0.1165405430848503,
+            "median": 0.15,
+            "q1": 0.07916666666666666,
+            "q3": 0.234375,
+            "bootstrap_mean_ci95_low": 0.1450203036723164,
+            "bootstrap_mean_ci95_high": 0.2036370056497175
+          },
+          "harmonicfoldnet_minus_mtsnet": {
+            "participants": 59,
+            "mean_difference": -0.01345338983050847,
+            "median_difference": -0.008333333333333338,
+            "bootstrap_mean_difference_ci95_low": -0.024999999999999988,
+            "bootstrap_mean_difference_ci95_high": -0.0024011299435028203,
+            "p_value": 0.049693536138628217,
+            "rank_biserial": -0.2937853107344633,
+            "holm_adjusted_p_value": 0.11503927300482128
+          },
+          "harmonicfoldnet_seed_sd_mean": 0.01763860063535664,
+          "mtsnet_seed_sd_mean": 0.012420648376659193
+        },
+        "balanced_accuracy": {
+          "harmonicfoldnet": {
+            "participants": 59,
+            "mean": 0.15985169491525425,
+            "standard_deviation": 0.0943418661454484,
+            "median": 0.13958333333333336,
+            "q1": 0.08333333333333333,
+            "q3": 0.21145833333333333,
+            "bootstrap_mean_ci95_low": 0.1366172316384181,
+            "bootstrap_mean_ci95_high": 0.18411016949152545
+          },
+          "mtsnet": {
+            "participants": 59,
+            "mean": 0.17330508474576273,
+            "standard_deviation": 0.1165405430848503,
+            "median": 0.15,
+            "q1": 0.07916666666666666,
+            "q3": 0.234375,
+            "bootstrap_mean_ci95_low": 0.1448446327683616,
+            "bootstrap_mean_ci95_high": 0.20374293785310732
+          },
+          "harmonicfoldnet_minus_mtsnet": {
+            "participants": 59,
+            "mean_difference": -0.01345338983050847,
+            "median_difference": -0.008333333333333338,
+            "bootstrap_mean_difference_ci95_low": -0.025141242937853102,
+            "bootstrap_mean_difference_ci95_high": -0.002365819209039549,
+            "p_value": 0.049693536138628217,
+            "rank_biserial": -0.2937853107344633
+          },
+          "harmonicfoldnet_seed_sd_mean": 0.01763860063535664,
+          "mtsnet_seed_sd_mean": 0.012420648376659193
+        }
+      }
+    },
+    {
+      "dataset": "dong2023",
+      "window_seconds": 0.8,
+      "participants": 59,
+      "harmonicfoldnet_seeds": [
+        20260929,
+        20260930,
+        20260931
+      ],
+      "mtsnet_seeds": [
+        3407,
+        12917,
+        62003
+      ],
+      "metrics": {
+        "accuracy": {
+          "harmonicfoldnet": {
+            "participants": 59,
+            "mean": 0.32983757062146896,
+            "standard_deviation": 0.19550345193455249,
+            "median": 0.33125,
+            "q1": 0.16666666666666666,
+            "q3": 0.46875,
+            "bootstrap_mean_ci95_low": 0.2805773305084746,
+            "bootstrap_mean_ci95_high": 0.3797669491525424
+          },
+          "mtsnet": {
+            "participants": 59,
+            "mean": 0.3230932203389831,
+            "standard_deviation": 0.20344674567289403,
+            "median": 0.3125,
+            "q1": 0.15520833333333334,
+            "q3": 0.4510416666666667,
+            "bootstrap_mean_ci95_low": 0.272704802259887,
+            "bootstrap_mean_ci95_high": 0.3746822033898305
+          },
+          "harmonicfoldnet_minus_mtsnet": {
+            "participants": 59,
+            "mean_difference": 0.006744350282485877,
+            "median_difference": 0.01041666666666663,
+            "bootstrap_mean_difference_ci95_low": -0.007874293785310734,
+            "bootstrap_mean_difference_ci95_high": 0.0221045197740113,
+            "p_value": 0.4859110773010852,
+            "rank_biserial": 0.10520163646990065,
+            "holm_adjusted_p_value": 0.4859110773010852
+          },
+          "harmonicfoldnet_seed_sd_mean": 0.01941496357304585,
+          "mtsnet_seed_sd_mean": 0.019722173366953248
+        },
+        "balanced_accuracy": {
+          "harmonicfoldnet": {
+            "participants": 59,
+            "mean": 0.32983757062146896,
+            "standard_deviation": 0.19550345193455249,
+            "median": 0.33125,
+            "q1": 0.16666666666666666,
+            "q3": 0.46875,
+            "bootstrap_mean_ci95_low": 0.2810707980225989,
+            "bootstrap_mean_ci95_high": 0.37927259887005654
+          },
+          "mtsnet": {
+            "participants": 59,
+            "mean": 0.3230932203389831,
+            "standard_deviation": 0.20344674567289403,
+            "median": 0.3125,
+            "q1": 0.15520833333333334,
+            "q3": 0.4510416666666667,
+            "bootstrap_mean_ci95_low": 0.27224487994350277,
+            "bootstrap_mean_ci95_high": 0.3754608050847457
+          },
+          "harmonicfoldnet_minus_mtsnet": {
+            "participants": 59,
+            "mean_difference": 0.006744350282485877,
+            "median_difference": 0.01041666666666663,
+            "bootstrap_mean_difference_ci95_low": -0.007733933615819214,
+            "bootstrap_mean_difference_ci95_high": 0.021752295197740107,
+            "p_value": 0.4859110773010852,
+            "rank_biserial": 0.10520163646990065
+          },
+          "harmonicfoldnet_seed_sd_mean": 0.01941496357304585,
+          "mtsnet_seed_sd_mean": 0.019722173366953248
+        }
+      }
+    },
+    {
+      "dataset": "dong2023",
+      "window_seconds": 1.2,
+      "participants": 59,
+      "harmonicfoldnet_seeds": [
+        20260929,
+        20260930,
+        20260931
+      ],
+      "mtsnet_seeds": [
+        3407,
+        12917,
+        62003
+      ],
+      "metrics": {
+        "accuracy": {
+          "harmonicfoldnet": {
+            "participants": 59,
+            "mean": 0.4361935028248587,
+            "standard_deviation": 0.24148480148618331,
+            "median": 0.4770833333333333,
+            "q1": 0.2572916666666667,
+            "q3": 0.63125,
+            "bootstrap_mean_ci95_low": 0.3750353107344632,
+            "bootstrap_mean_ci95_high": 0.4972810734463277
+          },
+          "mtsnet": {
+            "participants": 59,
+            "mean": 0.4173728813559322,
+            "standard_deviation": 0.24531701397532377,
+            "median": 0.41875,
+            "q1": 0.21770833333333334,
+            "q3": 0.6062500000000001,
+            "bootstrap_mean_ci95_low": 0.35579007768361576,
+            "bootstrap_mean_ci95_high": 0.47916666666666663
+          },
+          "harmonicfoldnet_minus_mtsnet": {
+            "participants": 59,
+            "mean_difference": 0.01882062146892656,
+            "median_difference": 0.010416666666666685,
+            "bootstrap_mean_difference_ci95_low": 0.004096045197740132,
+            "bootstrap_mean_difference_ci95_high": 0.034180790960451984,
+            "p_value": 0.03834642433494043,
+            "rank_biserial": 0.31268264172998245,
+            "holm_adjusted_p_value": 0.11503927300482128
+          },
+          "harmonicfoldnet_seed_sd_mean": 0.019345579280180554,
+          "mtsnet_seed_sd_mean": 0.01754302590927112
+        },
+        "balanced_accuracy": {
+          "harmonicfoldnet": {
+            "participants": 59,
+            "mean": 0.4361935028248587,
+            "standard_deviation": 0.24148480148618331,
+            "median": 0.4770833333333333,
+            "q1": 0.2572916666666667,
+            "q3": 0.63125,
+            "bootstrap_mean_ci95_low": 0.37581038135593225,
+            "bootstrap_mean_ci95_high": 0.49632768361581925
+          },
+          "mtsnet": {
+            "participants": 59,
+            "mean": 0.4173728813559322,
+            "standard_deviation": 0.24531701397532377,
+            "median": 0.41875,
+            "q1": 0.21770833333333334,
+            "q3": 0.6062500000000001,
+            "bootstrap_mean_ci95_low": 0.35441207627118637,
+            "bootstrap_mean_ci95_high": 0.47902630649717515
+          },
+          "harmonicfoldnet_minus_mtsnet": {
+            "participants": 59,
+            "mean_difference": 0.01882062146892656,
+            "median_difference": 0.010416666666666685,
+            "bootstrap_mean_difference_ci95_low": 0.0039194915254237425,
+            "bootstrap_mean_difference_ci95_high": 0.03407485875706215,
+            "p_value": 0.03834642433494043,
+            "rank_biserial": 0.31268264172998245
+          },
+          "harmonicfoldnet_seed_sd_mean": 0.019345579280180554,
+          "mtsnet_seed_sd_mean": 0.01754302590927112
+        }
+      }
+    }
+  ]
+}

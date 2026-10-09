@@ -147,7 +147,11 @@ def run(args: argparse.Namespace) -> dict[str, object]:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", default="configs/paper_multidataset.yaml")
-    parser.add_argument("--dataset", required=True, choices=("kim2025", "benchmark", "beta", "wearable"))
+    parser.add_argument(
+        "--dataset",
+        required=True,
+        choices=("kim2025", "benchmark", "beta", "wearable", "dong2023"),
+    )
     parser.add_argument("--methods", nargs="*", choices=("harmonic", "cca", "fbcca"))
     parser.add_argument(
         "--all-subjects", action="store_true",

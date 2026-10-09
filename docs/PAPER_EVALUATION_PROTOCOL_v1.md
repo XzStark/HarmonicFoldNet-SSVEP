@@ -75,9 +75,10 @@ datasets acquired with different equipment and experimental conditions:
 | Kim2025 beta-range | 40 | architecture development and beta-band stress test |
 | Tsinghua Benchmark | 35 | established 40-target laboratory benchmark |
 | BETA | 70 | 40-target data collected in a less controlled environment |
+| Dong2023 | 59 | independently reserved external-dataset validation after architecture and analysis freeze |
 | Wearable SSVEP, wet and dry | 102 | mixed-condition wearable-electrode test |
 
-The four datasets contain 247 independent participants in total. Wet and dry
+The five datasets contain 306 independent participants in total. Wet and dry
 recordings from the same Wearable participant are paired conditions, not two
 participants. Dataset-specific class sets, frequency ranges, latency offsets
 and trial durations are preserved and disclosed. They are never silently

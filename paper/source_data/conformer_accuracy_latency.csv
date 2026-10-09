@@ -1,0 +1,67 @@
+﻿dataset,window_seconds,model,accuracy_pct,balanced_accuracy_pct,training_params,params,active_forward_params,macs,flops_conv_matmul,cpu_median_ms,cpu_p95_ms,completed_jobs,required_jobs,accuracy_status,resource_status,weight_status
+benchmark,0.4,SSVEPformer,31.02777777777777,31.02777777777777,1247240,1247240,1247240,6400128,12800256,0.84755,1.239785,15,15,complete_accuracy,measured,architecture_only_unsaved_reference_weights
+benchmark,0.4,DG-Conformer,31.56349206349207,31.563492063492067,110388,110388,69364,15555200,31110400,1.5288499999999998,1.8557599999999999,15,15,complete_accuracy,measured,validation_selected_checkpoint
+benchmark,0.4,EEG Conformer,3.686507936507937,3.686507936507937,155680,155680,153960,1717552,3435104,1.1971,1.726265,15,15,complete_accuracy,measured,validation_selected_checkpoint
+benchmark,0.4,MTSNet,36.7936507936508,36.7936507936508,8718800,8718800,8716160,128959360,257918720,5.1198999999999995,6.051739999999998,15,15,complete_accuracy,measured,architecture_only_unsaved_reference_weights
+benchmark,0.4,HarmonicFoldNet,29.384920634920636,29.384920634920636,435139,435043,435043,20561168,41122336,2.74125,3.2657299999999996,15,15,complete_accuracy,measured,archived_same_architecture_protocol_checkpoint_not_original_accuracy_weights
+benchmark,0.4,FB-SSVEPformer,,,,,,,,,,0,15,incomplete_accuracy_not_for_claims,not_measured,
+benchmark,0.6,SSVEPformer,46.095238095238095,46.09523809523808,1247240,1247240,1247240,6400128,12800256,0.84845,1.227905,15,15,complete_accuracy,measured,architecture_only_unsaved_reference_weights
+benchmark,0.6,DG-Conformer,44.69047619047619,44.69047619047618,118388,118388,77364,24292800,48585600,2.0213,2.3937299999999997,15,15,complete_accuracy,measured,validation_selected_checkpoint
+benchmark,0.6,EEG Conformer,9.726190476190478,9.726190476190478,186400,186400,184680,3146112,6292224,1.3667,1.9560899999999997,15,15,complete_accuracy,measured,validation_selected_checkpoint
+benchmark,0.6,MTSNet,,,,,,,,,,0,15,incomplete_accuracy_not_for_claims,not_measured,
+benchmark,0.6,HarmonicFoldNet,48.773809523809526,48.773809523809526,435139,435043,435043,21107568,42215136,2.7509,3.21534,15,15,complete_accuracy,measured,archived_same_architecture_protocol_checkpoint_not_original_accuracy_weights
+benchmark,0.6,FB-SSVEPformer,,,,,,,,,,0,15,incomplete_accuracy_not_for_claims,not_measured,
+benchmark,0.8,SSVEPformer,62.626984126984134,62.626984126984134,1247240,1247240,1247240,6400128,12800256,0.8438,1.2024099999999998,15,15,complete_accuracy,measured,architecture_only_unsaved_reference_weights
+benchmark,0.8,DG-Conformer,58.7936507936508,58.7936507936508,126388,126388,85364,33670400,67340800,2.5582,2.934415,15,15,complete_accuracy,measured,validation_selected_checkpoint
+benchmark,0.8,EEG Conformer,16.29761904761905,16.29761904761905,217120,217120,215400,4583072,9166144,1.4896500000000001,2.005335,15,15,complete_accuracy,measured,validation_selected_checkpoint
+benchmark,0.8,MTSNet,66.01984126984128,66.01984126984128,10484200,10484200,10481160,156440960,312881920,6.23765,7.053954999999999,15,15,complete_accuracy,measured,architecture_only_unsaved_reference_weights
+benchmark,0.8,HarmonicFoldNet,66.73412698412699,66.73412698412699,435139,435043,435043,21653968,43307936,2.7996499999999997,3.2630099999999995,15,15,complete_accuracy,measured,archived_same_architecture_protocol_checkpoint_not_original_accuracy_weights
+benchmark,0.8,FB-SSVEPformer,,,,,,,,,,0,15,incomplete_accuracy_not_for_claims,not_measured,
+benchmark,1.0,SSVEPformer,71.1984126984127,71.1984126984127,1247240,1247240,1247240,6400128,12800256,0.8437,1.2280449999999998,15,15,complete_accuracy,measured,architecture_only_unsaved_reference_weights
+benchmark,1.0,DG-Conformer,67.34126984126983,67.34126984126983,134388,134388,93364,43688000,87376000,3.1375,3.668405,15,15,complete_accuracy,measured,validation_selected_checkpoint
+benchmark,1.0,EEG Conformer,22.611111111111107,22.611111111111107,258080,258080,256360,6165792,12331584,1.61605,2.3698099999999998,15,15,complete_accuracy,measured,validation_selected_checkpoint
+benchmark,1.0,MTSNet,,,,,,,,,,0,15,incomplete_accuracy_not_for_claims,not_measured,
+benchmark,1.0,HarmonicFoldNet,75.60317460317461,75.60317460317462,435139,435043,435043,22200368,44400736,2.8188000000000004,3.922955,15,15,complete_accuracy,measured,archived_same_architecture_protocol_checkpoint_not_original_accuracy_weights
+benchmark,1.0,FB-SSVEPformer,,,,,,,,,,0,15,incomplete_accuracy_not_for_claims,not_measured,
+benchmark,1.2,SSVEPformer,73.88492063492063,73.88492063492063,1247240,1247240,1247240,6400128,12800256,0.8501,1.215025,15,15,complete_accuracy,measured,architecture_only_unsaved_reference_weights
+benchmark,1.2,DG-Conformer,70.32142857142857,70.32142857142857,142388,142388,101364,54345600,108691200,3.85365,4.983829999999999,15,15,complete_accuracy,measured,validation_selected_checkpoint
+benchmark,1.2,EEG Conformer,24.88095238095238,24.88095238095238,288800,288800,287080,7622912,15245824,1.7266499999999998,2.271105,15,15,complete_accuracy,measured,validation_selected_checkpoint
+benchmark,1.2,MTSNet,77.54761904761904,77.54761904761904,12569600,12569600,12566160,189042560,378085120,7.4679,8.3674,15,15,complete_accuracy,measured,architecture_only_unsaved_reference_weights
+benchmark,1.2,HarmonicFoldNet,78.3015873015873,78.3015873015873,435139,435043,435043,22746768,45493536,2.823,3.3815099999999987,15,15,complete_accuracy,measured,archived_same_architecture_protocol_checkpoint_not_original_accuracy_weights
+benchmark,1.2,FB-SSVEPformer,,,,,,,,,,0,15,incomplete_accuracy_not_for_claims,not_measured,
+beta,0.4,SSVEPformer,30.261904761904763,30.261904761904763,1247240,1247240,1247240,6400128,12800256,0.8432999999999999,1.2059799999999998,15,15,complete_accuracy,measured,architecture_only_unsaved_reference_weights
+beta,0.4,DG-Conformer,29.38095238095239,29.38095238095239,110388,110388,69364,15555200,31110400,1.5266,1.9562199999999998,15,15,complete_accuracy,measured,validation_selected_checkpoint
+beta,0.4,EEG Conformer,3.270833333333335,3.270833333333335,155680,155680,153960,1717552,3435104,1.1961,1.732155,15,15,complete_accuracy,measured,validation_selected_checkpoint
+beta,0.4,MTSNet,35.898809523809526,35.898809523809526,8718800,8718800,8716160,128959360,257918720,5.1311,5.999964999999999,15,15,complete_accuracy,measured,architecture_only_unsaved_reference_weights
+beta,0.4,HarmonicFoldNet,27.36607142857143,27.36607142857143,435139,435043,435043,20561168,41122336,2.7443,3.29921,15,15,complete_accuracy,measured,archived_same_architecture_protocol_checkpoint_not_original_accuracy_weights
+beta,0.4,FB-SSVEPformer,34.05654761904763,34.05654761904763,3741724,3741724,3741724,19200504,38401008,2.64235,3.3072399999999997,15,15,complete_accuracy,measured,architecture_only_unsaved_reference_weights
+beta,0.6,SSVEPformer,43.45535714285714,43.45535714285714,1247240,1247240,1247240,6400128,12800256,0.8451,1.2032399999999999,15,15,complete_accuracy,measured,architecture_only_unsaved_reference_weights
+beta,0.6,DG-Conformer,39.19047619047619,39.19047619047619,118388,118388,77364,24292800,48585600,2.0234,2.37425,15,15,complete_accuracy,measured,validation_selected_checkpoint
+beta,0.6,EEG Conformer,9.250000000000002,9.250000000000002,186400,186400,184680,3146112,6292224,1.3781500000000002,2.0061599999999995,15,15,complete_accuracy,measured,validation_selected_checkpoint
+beta,0.6,MTSNet,,,,,,,,,,0,15,incomplete_accuracy_not_for_claims,not_measured,
+beta,0.6,HarmonicFoldNet,43.473214285714285,43.473214285714285,435139,435043,435043,21107568,42215136,2.76195,3.4858949999999997,15,15,complete_accuracy,measured,archived_same_architecture_protocol_checkpoint_not_original_accuracy_weights
+beta,0.6,FB-SSVEPformer,48.57142857142857,48.57142857142857,3741724,3741724,3741724,19200504,38401008,2.6336000000000004,3.3746899999999975,15,15,complete_accuracy,measured,architecture_only_unsaved_reference_weights
+beta,0.8,SSVEPformer,52.78571428571429,52.78571428571429,1247240,1247240,1247240,6400128,12800256,0.8461,1.1863249999999999,15,15,complete_accuracy,measured,architecture_only_unsaved_reference_weights
+beta,0.8,DG-Conformer,47.13392857142857,47.13392857142857,126388,126388,85364,33670400,67340800,2.5362999999999998,2.935935,15,15,complete_accuracy,measured,validation_selected_checkpoint
+beta,0.8,EEG Conformer,12.44047619047619,12.44047619047619,217120,217120,215400,4583072,9166144,1.4732500000000002,2.0093249999999996,15,15,complete_accuracy,measured,validation_selected_checkpoint
+beta,0.8,MTSNet,56.625,56.625,10484200,10484200,10481160,156440960,312881920,6.243,7.048929999999998,15,15,complete_accuracy,measured,architecture_only_unsaved_reference_weights
+beta,0.8,HarmonicFoldNet,55.601190476190474,55.601190476190474,435139,435043,435043,21653968,43307936,2.7958,3.5531899999999976,15,15,complete_accuracy,measured,archived_same_architecture_protocol_checkpoint_not_original_accuracy_weights
+beta,0.8,FB-SSVEPformer,57.88988095238097,57.88988095238097,3741724,3741724,3741724,19200504,38401008,2.6742999999999997,3.3080099999999995,15,15,complete_accuracy,measured,architecture_only_unsaved_reference_weights
+beta,1.0,SSVEPformer,58.52380952380953,58.52380952380953,1247240,1247240,1247240,6400128,12800256,0.8427,1.1959749999999993,15,15,complete_accuracy,measured,architecture_only_unsaved_reference_weights
+beta,1.0,DG-Conformer,52.33333333333333,52.33333333333333,134388,134388,93364,43688000,87376000,3.13625,3.53371,15,15,complete_accuracy,measured,validation_selected_checkpoint
+beta,1.0,EEG Conformer,15.586309523809524,15.586309523809524,258080,258080,256360,6165792,12331584,1.62,2.1963399999999997,15,15,complete_accuracy,measured,validation_selected_checkpoint
+beta,1.0,MTSNet,,,,,,,,,,0,15,incomplete_accuracy_not_for_claims,not_measured,
+beta,1.0,HarmonicFoldNet,63.559523809523796,63.559523809523796,435139,435043,435043,22200368,44400736,2.8045999999999998,3.299635,15,15,complete_accuracy,measured,archived_same_architecture_protocol_checkpoint_not_original_accuracy_weights
+beta,1.0,FB-SSVEPformer,63.77976190476192,63.77976190476192,3741724,3741724,3741724,19200504,38401008,2.64425,3.2213349999999994,15,15,complete_accuracy,measured,architecture_only_unsaved_reference_weights
+beta,1.2,SSVEPformer,61.952380952380956,61.952380952380956,1247240,1247240,1247240,6400128,12800256,0.85115,1.21404,15,15,complete_accuracy,measured,architecture_only_unsaved_reference_weights
+beta,1.2,DG-Conformer,56.53273809523809,56.53273809523809,142388,142388,101364,54345600,108691200,3.79795,4.265119999999999,15,15,complete_accuracy,measured,validation_selected_checkpoint
+beta,1.2,EEG Conformer,24.767857142857142,24.767857142857142,288800,288800,287080,7622912,15245824,1.7335,2.3081599999999995,15,15,complete_accuracy,measured,validation_selected_checkpoint
+beta,1.2,MTSNet,68.58333333333331,68.58333333333331,12569600,12569600,12566160,189042560,378085120,7.54585,8.2592,15,15,complete_accuracy,measured,architecture_only_unsaved_reference_weights
+beta,1.2,HarmonicFoldNet,68.70238095238096,68.70238095238096,435139,435043,435043,22746768,45493536,2.8462,3.8407899999999997,15,15,complete_accuracy,measured,archived_same_architecture_protocol_checkpoint_not_original_accuracy_weights
+beta,1.2,FB-SSVEPformer,67.30059523809526,67.30059523809526,3741724,3741724,3741724,19200504,38401008,2.68105,3.381844999999999,15,15,complete_accuracy,measured,architecture_only_unsaved_reference_weights
+beta,1.5,SSVEPformer,65.09226190476191,65.09226190476191,1247240,1247240,1247240,6400128,12800256,0.84385,1.201655,15,15,complete_accuracy,measured,architecture_only_unsaved_reference_weights
+beta,1.5,DG-Conformer,60.574404761904745,60.574404761904745,154388,154388,113364,71532000,143064000,5.1813,6.069709999999998,15,15,complete_accuracy,measured,validation_selected_checkpoint
+beta,1.5,EEG Conformer,36.30357142857143,36.30357142857143,340000,340000,338280,9897312,19794624,1.9168,2.470625,15,15,complete_accuracy,measured,validation_selected_checkpoint
+beta,1.5,MTSNet,,,,,,,,,,0,15,incomplete_accuracy_not_for_claims,not_measured,
+beta,1.5,HarmonicFoldNet,73.11904761904763,73.11904761904763,435139,435043,435043,23566368,47132736,2.8599,3.3509100000000003,15,15,complete_accuracy,measured,archived_same_architecture_protocol_checkpoint_not_original_accuracy_weights
+beta,1.5,FB-SSVEPformer,70.77678571428571,70.77678571428571,3741724,3741724,3741724,19200504,38401008,2.64675,3.2579649999999996,15,15,complete_accuracy,measured,architecture_only_unsaved_reference_weights

@@ -12,7 +12,8 @@ from .model import AttentionBlock, RepTokenMixer1d
 FUSION_MODES = ("full", "no_evidence", "no_attention", "no_local")
 HARMONIC_FOLD_MODES = (
     "full", "no_attention", "no_cross_attention", "no_candidate_attention",
-    "no_local", "no_harmonic_bias",
+    "no_local", "no_harmonic_bias", "no_temporal_candidate",
+    "no_spectral_candidate",
 )
 TEMPORAL_FUSION_ARCHITECTURE_REVISION = "temporal_fusion_v1_3"
 SPECTRAL_FUSION_ARCHITECTURE_REVISION = "spectral_fusion_v3_0"
@@ -585,6 +586,7 @@ class HarmonicFoldNet(nn.Module):
         neighborhood_bins: int = 2,
         spectral_resolution_hz: float = 0.25,
         spectral_band_hz: tuple[float, float] = (6.0, 45.0),
+        spectral_token_stride: int = 2,
         harmonic_bias_width_hz: float = 0.5,
         align_spectral_grid_to_classes: bool = False,
         duration_conditioning: bool = False,
@@ -639,6 +641,9 @@ class HarmonicFoldNet(nn.Module):
         self.spectral_resolution_hz = float(spectral_resolution_hz)
         self.harmonic_bias_width_hz = float(harmonic_bias_width_hz)
         self.sample_rate = float(sample_rate)
+        self.spectral_token_stride = int(spectral_token_stride)
+        if self.spectral_token_stride <= 0:
+            raise ValueError("spectral_token_stride must be positive")
         self.duration_conditioning_enabled = bool(duration_conditioning)
         self.candidate_local_mixing_enabled = bool(candidate_local_mixing)
         self.candidate_local_mixing_placement = candidate_local_mixing_placement
@@ -712,7 +717,9 @@ class HarmonicFoldNet(nn.Module):
                 )
                 for _ in range(local_depths[0])
             )
-        self.downsample = DepthwiseDownsample1d(width, dim, stride=2)
+        self.downsample = DepthwiseDownsample1d(
+            width, dim, stride=self.spectral_token_stride,
+        )
         if local_domain in {"spectral", "dual"}:
             self.local_stage2.extend(
                 RepEEGBlock(dim, kernel_size=5, dropout=dropout, gate_logit_init=0.0)
@@ -787,10 +794,12 @@ class HarmonicFoldNet(nn.Module):
         else:
             self.decision_reliability_gate = None
         spectral_bins = self.spectrum.end - self.spectrum.start
-        reduced_bins = (spectral_bins + 1) // 2
+        reduced_bins = (
+            spectral_bins + self.spectral_token_stride - 1
+        ) // self.spectral_token_stride
         token_hz = float(spectral_band_hz[0]) + torch.arange(
             reduced_bins, dtype=torch.float32,
-        ) * (2.0 * self.spectral_resolution_hz)
+        ) * (self.spectral_token_stride * self.spectral_resolution_hz)
         normalized_hz = token_hz / (0.5 * float(sample_rate))
         position_features = torch.stack(
             (
@@ -955,6 +964,10 @@ class HarmonicFoldNet(nn.Module):
         )
         temporal = self.temporal_candidate_features(local_x)
         frequency = self.spectral_candidate_features(spectrum, output_dtype=x.dtype)
+        if mode == "no_temporal_candidate":
+            temporal = torch.zeros_like(temporal)
+        elif mode == "no_spectral_candidate":
+            frequency = torch.zeros_like(frequency)
         candidates = self.candidate_fusion(torch.cat((temporal, frequency), dim=-1))
         if self.duration_projection is not None:
             candidates = candidates + self._duration_conditioning(

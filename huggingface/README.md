@@ -25,10 +25,10 @@ device and does not decode unrestricted thoughts or imagined language.
 This snapshot contains exactly 15 BETA source-decoder checkpoints: three seeds
 by five participant-disjoint folds. It does not contain Benchmark, component-
 ablation, Wearable, comparator, or participant-adapter checkpoints. The broader
-paper evaluates four public datasets, but that paper-level scope must not be
+paper evaluates five public datasets, but that paper-level scope must not be
 mistaken for the weight scope of this model repository.
 
-- Four public datasets; 247 unique participants in total
+- Five public datasets; 306 unique participants in total
 - Participant-disjoint five-fold evaluation
 - Three training seeds for final neural comparisons
 - Registered windows from 0.4 s to 1.2/1.5 s for headline comparisons
@@ -41,6 +41,13 @@ strong-reference comparisons, and selection-history qualifications are in the
 paper source-data package; isolated headline numbers should not be treated as a
 universal ranking.
 
+The fifth dataset, Dong2023, was reserved until the architecture and six-window
+analysis plan were frozen. Relative to SSVEPformer, HarmonicFoldNet was lower by
+1.95 points at 0.4 s, showed no detected difference at 0.6 or 0.8 s, and was
+higher by 5.29--11.84 points at 1.0--1.5 s after Holm correction. These are
+external-dataset results from models refitted inside each outer fold, not zero-shot
+weight transfer and not results produced by the 15 BETA checkpoints hosted here.
+
 ## Deployment graph
 
 - Training graph: 435,139 parameters
@@ -48,6 +55,10 @@ universal ranking.
 - Expanded equivalence audit: 20 checkpoints, five windows, 49,000 held-out paired
   predictions, zero label disagreements
 - Maximum absolute logit error after folding: 1.55e-5
+- Stride-2 token reduction: 79 rather than 157 spectral tokens, with differences
+  from stride 1 within 0.20 points at 0.4, 0.8, and 1.2 s
+- Repeated folding speedups were backend and window dependent; prediction
+  equivalence is the unconditional result
 
 Laptop timings are implementation-specific and exclude EEG acquisition time. The
 1.2 s folded graph measured about 3.04 ms median on one CPU thread in the reported
@@ -88,7 +99,7 @@ from an untrusted transport.
 
 ## Data
 
-Raw EEG is not included. Obtain Benchmark, BETA, Wearable SSVEP, and Kim2025 from
+Raw EEG is not included. Obtain Benchmark, BETA, Dong2023, Wearable SSVEP, and Kim2025 from
 their original records for paper-level reproduction. The released checkpoints
 were trained on BETA. Dataset licenses remain independent of this model license;
 see `LICENSE_PROVENANCE_MATRIX.md`.
@@ -110,5 +121,6 @@ research software rather than an OSI-approved open-source release.
 
 ## Citation
 
-Use the repository `CITATION.cff` until the arXiv identifier is available. Do not
-invent a venue, DOI, or peer-review status.
+Use the source repository `CITATION.cff` for the software release. The versioned
+preprint family is archived under Zenodo concept DOI `10.5281/zenodo.23170146`.
+Do not invent a venue or peer-review status.

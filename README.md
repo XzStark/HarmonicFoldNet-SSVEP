@@ -12,11 +12,13 @@ package, a medical device, or evidence of unrestricted thought decoding.
 
 ## Evidence at a glance
 
-The paper evaluates four public datasets containing 247 unique participants. All
+The paper evaluates five public datasets containing 306 unique participants. All
 neural headline results use participant-disjoint outer folds and three training
 seeds. Benchmark and BETA are explicitly reported as selection-aware because later
-candidate screening consulted them; the Wearable dry/wet analysis was frozen after
-model retention.
+candidate screening consulted them. Dong2023 was reserved until the architecture,
+preprocessing, endpoints, and multiplicity plan were frozen, and supplies an
+independent external-dataset validation. The Wearable dry/wet analysis was frozen
+after model retention.
 
 At 1.2 s, HarmonicFoldNet reached 78.30% balanced accuracy on Benchmark and 68.70%
 on BETA. It was not the best method at 0.4 s. On BETA it crossed the ordinary
@@ -24,11 +26,26 @@ spectral Transformer after 0.6 s and was 1.40 percentage points above the
 filter-bank Transformer at 1.2 s. Against the MTSNet protocol reconstruction, the
 1.2 s differences were not significant on either Benchmark or BETA.
 
+On Dong2023, HarmonicFoldNet was 1.95 percentage points below SSVEPformer at
+0.4 s, showed no detected difference at 0.6 or 0.8 s, and was 5.29--11.84 points
+higher at 1.0--1.5 s after Holm correction. Its differences from MTSNet at 0.4,
+0.8, and 1.2 s were -1.35, +0.67, and +1.88 points; none was significant after
+Holm correction. Each neural model was fitted inside each Dong2023 outer fold, so
+this is external-dataset validation rather than zero-shot weight transfer.
+
 The folded deployment graph has 435,043 executable parameters. On the measured
 laptop it required about 3.04 ms median batch-one CPU time at 1.2 s with one thread.
 An expanded audit over 20 checkpoints, five windows, and 49,000 held-out prediction
 pairs produced zero label disagreements between training and folded graphs; maximum
 absolute logit error was 1.55e-5.
+
+Post-freeze mechanism checks compare spectral-token strides 1, 2, and 4; isolate
+the temporal and spectral candidate-evidence paths; and repeat train-to-deploy
+timing in five fresh processes per backend-window pair. Stride 2 halves the token
+count relative to no reduction while staying within 0.20 points at 0.4, 0.8, and
+1.2 s. The temporal candidate path contributes across all tested windows, whereas
+an independent spectral-path contribution is detected only at 1.5 s. Folding is
+prediction-equivalent, but repeatable speedups are backend and window dependent.
 
 These are offline research measurements, not target-device or online BCI latency.
 
@@ -38,7 +55,6 @@ These are offline research measurements, not target-device or online BCI latency
 - `src/paper_train.py`: grouped participant training and evaluation entry point
 - `src/paper_baselines.py` and `src/calibrated_baselines.py`: analytic and calibrated controls
 - `configs/paper_multidataset.yaml`: frozen dataset and model contract
-- `paper/MANUSCRIPT_DRAFT_v1.md`: manuscript source
 - `paper/SUPPLEMENTARY_INFORMATION.md`: supplementary methods and tables
 - `paper/source_data/`: participant-level derived results and provenance
 - `paper/figures/`: publication figures and figure-source tables
@@ -71,7 +87,9 @@ convert it to the registered shard format:
 ```
 
 Use `benchmark` or `wearable` in place of `beta` for the other datasets. Kim2025
-preparation is documented by `python -m src.kim2025_data --help`.
+preparation is documented by `python -m src.kim2025_data --help`. Dong2023
+provenance, split hashes, and derived comparison records are included in the paper
+source-data manifest; raw EEG is obtained from the original Zenodo record.
 
 ## Reproduce one outer fold
 
@@ -128,5 +146,6 @@ performance for a future peri-auricular or glasses-mounted montage.
 
 ## Citation
 
-Use `CITATION.cff` for the software release. Replace the software citation with the
-arXiv or journal citation after the preprint identifier is available.
+Use `CITATION.cff` for the software release. The versioned preprint family is
+archived under Zenodo concept DOI `10.5281/zenodo.23170146`; cite the journal
+article instead if and when it is published.

@@ -1,0 +1,3730 @@
+{
+  "status": "complete",
+  "protocol_version": 4,
+  "dataset": "dong2023",
+  "subjects": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27",
+    "28",
+    "29",
+    "30",
+    "31",
+    "32",
+    "33",
+    "34",
+    "35",
+    "36",
+    "37",
+    "38",
+    "39",
+    "40",
+    "41",
+    "42",
+    "43",
+    "44",
+    "45",
+    "46",
+    "47",
+    "48",
+    "49",
+    "50",
+    "51",
+    "52",
+    "53",
+    "54",
+    "55",
+    "56",
+    "57",
+    "58",
+    "59"
+  ],
+  "channels": [
+    "PO7",
+    "PO3",
+    "POz",
+    "PO4",
+    "PO8",
+    "O1",
+    "Oz",
+    "O2"
+  ],
+  "methods": {
+    "cca": {
+      "0.4": {
+        "overall": {
+          "accuracy": 0.06419491525423729,
+          "balanced_accuracy": 0.06419491525423729,
+          "itr_bits_per_minute": 2.129665356726266
+        },
+        "per_subject": {
+          "1": {
+            "accuracy": 0.1,
+            "balanced_accuracy": 0.1,
+            "itr_bits_per_minute": 6.40470028813714
+          },
+          "2": {
+            "accuracy": 0.04375,
+            "balanced_accuracy": 0.04375,
+            "itr_bits_per_minute": 0.568868708522885
+          },
+          "3": {
+            "accuracy": 0.03125,
+            "balanced_accuracy": 0.03125,
+            "itr_bits_per_minute": 0.0714914034563326
+          },
+          "4": {
+            "accuracy": 0.08125,
+            "balanced_accuracy": 0.08125,
+            "itr_bits_per_minute": 3.959760355845532
+          },
+          "5": {
+            "accuracy": 0.025,
+            "balanced_accuracy": 0.025,
+            "itr_bits_per_minute": 0.0
+          },
+          "6": {
+            "accuracy": 0.05,
+            "balanced_accuracy": 0.05,
+            "itr_bits_per_minute": 0.9599353234847285
+          },
+          "7": {
+            "accuracy": 0.11875,
+            "balanced_accuracy": 0.11875,
+            "itr_bits_per_minute": 9.227354410033803
+          },
+          "8": {
+            "accuracy": 0.1,
+            "balanced_accuracy": 0.1,
+            "itr_bits_per_minute": 6.40470028813714
+          },
+          "9": {
+            "accuracy": 0.06875,
+            "balanced_accuracy": 0.06875,
+            "itr_bits_per_minute": 2.577052809748833
+          },
+          "10": {
+            "accuracy": 0.04375,
+            "balanced_accuracy": 0.04375,
+            "itr_bits_per_minute": 0.568868708522885
+          },
+          "11": {
+            "accuracy": 0.03125,
+            "balanced_accuracy": 0.03125,
+            "itr_bits_per_minute": 0.0714914034563326
+          },
+          "12": {
+            "accuracy": 0.09375,
+            "balanced_accuracy": 0.09375,
+            "itr_bits_per_minute": 5.544523021361354
+          },
+          "13": {
+            "accuracy": 0.04375,
+            "balanced_accuracy": 0.04375,
+            "itr_bits_per_minute": 0.568868708522885
+          },
+          "14": {
+            "accuracy": 0.0125,
+            "balanced_accuracy": 0.0125,
+            "itr_bits_per_minute": 0.0
+          },
+          "15": {
+            "accuracy": 0.16875,
+            "balanced_accuracy": 0.16875,
+            "itr_bits_per_minute": 18.240013071413646
+          },
+          "16": {
+            "accuracy": 0.05,
+            "balanced_accuracy": 0.05,
+            "itr_bits_per_minute": 0.9599353234847285
+          },
+          "17": {
+            "accuracy": 0.05,
+            "balanced_accuracy": 0.05,
+            "itr_bits_per_minute": 0.9599353234847285
+          },
+          "18": {
+            "accuracy": 0.05625,
+            "balanced_accuracy": 0.05625,
+            "itr_bits_per_minute": 1.4302940011951055
+          },
+          "19": {
+            "accuracy": 0.05,
+            "balanced_accuracy": 0.05,
+            "itr_bits_per_minute": 0.9599353234847285
+          },
+          "20": {
+            "accuracy": 0.01875,
+            "balanced_accuracy": 0.01875,
+            "itr_bits_per_minute": 0.0
+          },
+          "21": {
+            "accuracy": 0.0625,
+            "balanced_accuracy": 0.0625,
+            "itr_bits_per_minute": 1.9715632057993795
+          },
+          "22": {
+            "accuracy": 0.04375,
+            "balanced_accuracy": 0.04375,
+            "itr_bits_per_minute": 0.568868708522885
+          },
+          "23": {
+            "accuracy": 0.06875,
+            "balanced_accuracy": 0.06875,
+            "itr_bits_per_minute": 2.577052809748833
+          },
+          "24": {
+            "accuracy": 0.08125,
+            "balanced_accuracy": 0.08125,
+            "itr_bits_per_minute": 3.959760355845532
+          },
+          "25": {
+            "accuracy": 0.0625,
+            "balanced_accuracy": 0.0625,
+            "itr_bits_per_minute": 1.9715632057993795
+          },
+          "26": {
+            "accuracy": 0.0375,
+            "balanced_accuracy": 0.0375,
+            "itr_bits_per_minute": 0.26790023606479235
+          },
+          "27": {
+            "accuracy": 0.125,
+            "balanced_accuracy": 0.125,
+            "itr_bits_per_minute": 10.242447345553293
+          },
+          "28": {
+            "accuracy": 0.06875,
+            "balanced_accuracy": 0.06875,
+            "itr_bits_per_minute": 2.577052809748833
+          },
+          "29": {
+            "accuracy": 0.0625,
+            "balanced_accuracy": 0.0625,
+            "itr_bits_per_minute": 1.9715632057993795
+          },
+          "30": {
+            "accuracy": 0.01875,
+            "balanced_accuracy": 0.01875,
+            "itr_bits_per_minute": 0.0
+          },
+          "31": {
+            "accuracy": 0.03125,
+            "balanced_accuracy": 0.03125,
+            "itr_bits_per_minute": 0.0714914034563326
+          },
+          "32": {
+            "accuracy": 0.05625,
+            "balanced_accuracy": 0.05625,
+            "itr_bits_per_minute": 1.4302940011951055
+          },
+          "33": {
+            "accuracy": 0.0875,
+            "balanced_accuracy": 0.0875,
+            "itr_bits_per_minute": 4.728596063083638
+          },
+          "34": {
+            "accuracy": 0.06875,
+            "balanced_accuracy": 0.06875,
+            "itr_bits_per_minute": 2.577052809748833
+          },
+          "35": {
+            "accuracy": 0.26875,
+            "balanced_accuracy": 0.26875,
+            "itr_bits_per_minute": 41.154165431902356
+          },
+          "36": {
+            "accuracy": 0.03125,
+            "balanced_accuracy": 0.03125,
+            "itr_bits_per_minute": 0.0714914034563326
+          },
+          "37": {
+            "accuracy": 0.025,
+            "balanced_accuracy": 0.025,
+            "itr_bits_per_minute": 0.0
+          },
+          "38": {
+            "accuracy": 0.1625,
+            "balanced_accuracy": 0.1625,
+            "itr_bits_per_minute": 17.00978619394527
+          },
+          "39": {
+            "accuracy": 0.0625,
+            "balanced_accuracy": 0.0625,
+            "itr_bits_per_minute": 1.9715632057993795
+          },
+          "40": {
+            "accuracy": 0.025,
+            "balanced_accuracy": 0.025,
+            "itr_bits_per_minute": 0.0
+          },
+          "41": {
+            "accuracy": 0.0875,
+            "balanced_accuracy": 0.0875,
+            "itr_bits_per_minute": 4.728596063083638
+          },
+          "42": {
+            "accuracy": 0.04375,
+            "balanced_accuracy": 0.04375,
+            "itr_bits_per_minute": 0.568868708522885
+          },
+          "43": {
+            "accuracy": 0.025,
+            "balanced_accuracy": 0.025,
+            "itr_bits_per_minute": 0.0
+          },
+          "44": {
+            "accuracy": 0.03125,
+            "balanced_accuracy": 0.03125,
+            "itr_bits_per_minute": 0.0714914034563326
+          },
+          "45": {
+            "accuracy": 0.05,
+            "balanced_accuracy": 0.05,
+            "itr_bits_per_minute": 0.9599353234847285
+          },
+          "46": {
+            "accuracy": 0.05625,
+            "balanced_accuracy": 0.05625,
+            "itr_bits_per_minute": 1.4302940011951055
+          },
+          "47": {
+            "accuracy": 0.04375,
+            "balanced_accuracy": 0.04375,
+            "itr_bits_per_minute": 0.568868708522885
+          },
+          "48": {
+            "accuracy": 0.04375,
+            "balanced_accuracy": 0.04375,
+            "itr_bits_per_minute": 0.568868708522885
+          },
+          "49": {
+            "accuracy": 0.06875,
+            "balanced_accuracy": 0.06875,
+            "itr_bits_per_minute": 2.577052809748833
+          },
+          "50": {
+            "accuracy": 0.075,
+            "balanced_accuracy": 0.075,
+            "itr_bits_per_minute": 3.2412998875523513
+          },
+          "51": {
+            "accuracy": 0.09375,
+            "balanced_accuracy": 0.09375,
+            "itr_bits_per_minute": 5.544523021361354
+          },
+          "52": {
+            "accuracy": 0.0625,
+            "balanced_accuracy": 0.0625,
+            "itr_bits_per_minute": 1.9715632057993795
+          },
+          "53": {
+            "accuracy": 0.0375,
+            "balanced_accuracy": 0.0375,
+            "itr_bits_per_minute": 0.26790023606479235
+          },
+          "54": {
+            "accuracy": 0.05,
+            "balanced_accuracy": 0.05,
+            "itr_bits_per_minute": 0.9599353234847285
+          },
+          "55": {
+            "accuracy": 0.05625,
+            "balanced_accuracy": 0.05625,
+            "itr_bits_per_minute": 1.4302940011951055
+          },
+          "56": {
+            "accuracy": 0.075,
+            "balanced_accuracy": 0.075,
+            "itr_bits_per_minute": 3.2412998875523513
+          },
+          "57": {
+            "accuracy": 0.0875,
+            "balanced_accuracy": 0.0875,
+            "itr_bits_per_minute": 4.728596063083638
+          },
+          "58": {
+            "accuracy": 0.0625,
+            "balanced_accuracy": 0.0625,
+            "itr_bits_per_minute": 1.9715632057993795
+          },
+          "59": {
+            "accuracy": 0.05,
+            "balanced_accuracy": 0.05,
+            "itr_bits_per_minute": 0.9599353234847285
+          }
+        }
+      },
+      "0.6": {
+        "overall": {
+          "accuracy": 0.11408898305084746,
+          "balanced_accuracy": 0.11408898305084744,
+          "itr_bits_per_minute": 6.9493285523047525
+        },
+        "per_subject": {
+          "1": {
+            "accuracy": 0.125,
+            "balanced_accuracy": 0.125,
+            "itr_bits_per_minute": 8.38018419181633
+          },
+          "2": {
+            "accuracy": 0.0875,
+            "balanced_accuracy": 0.0875,
+            "itr_bits_per_minute": 3.868851324341158
+          },
+          "3": {
+            "accuracy": 0.0625,
+            "balanced_accuracy": 0.0625,
+            "itr_bits_per_minute": 1.6130971683813105
+          },
+          "4": {
+            "accuracy": 0.08125,
+            "balanced_accuracy": 0.08125,
+            "itr_bits_per_minute": 3.2398039275099806
+          },
+          "5": {
+            "accuracy": 0.0375,
+            "balanced_accuracy": 0.0375,
+            "itr_bits_per_minute": 0.21919110223483007
+          },
+          "6": {
+            "accuracy": 0.09375,
+            "balanced_accuracy": 0.09375,
+            "itr_bits_per_minute": 4.536427926568381
+          },
+          "7": {
+            "accuracy": 0.19375,
+            "balanced_accuracy": 0.19375,
+            "itr_bits_per_minute": 19.16301659262369
+          },
+          "8": {
+            "accuracy": 0.2,
+            "balanced_accuracy": 0.2,
+            "itr_bits_per_minute": 20.27335772237459
+          },
+          "9": {
+            "accuracy": 0.21875,
+            "balanced_accuracy": 0.21875,
+            "itr_bits_per_minute": 23.71795357433648
+          },
+          "10": {
+            "accuracy": 0.0375,
+            "balanced_accuracy": 0.0375,
+            "itr_bits_per_minute": 0.21919110223483007
+          },
+          "11": {
+            "accuracy": 0.0625,
+            "balanced_accuracy": 0.0625,
+            "itr_bits_per_minute": 1.6130971683813105
+          },
+          "12": {
+            "accuracy": 0.18125,
+            "balanced_accuracy": 0.18125,
+            "itr_bits_per_minute": 17.001876609937884
+          },
+          "13": {
+            "accuracy": 0.0375,
+            "balanced_accuracy": 0.0375,
+            "itr_bits_per_minute": 0.21919110223483007
+          },
+          "14": {
+            "accuracy": 0.01875,
+            "balanced_accuracy": 0.01875,
+            "itr_bits_per_minute": 0.0
+          },
+          "15": {
+            "accuracy": 0.2625,
+            "balanced_accuracy": 0.2625,
+            "itr_bits_per_minute": 32.3699146894295
+          },
+          "16": {
+            "accuracy": 0.125,
+            "balanced_accuracy": 0.125,
+            "itr_bits_per_minute": 8.38018419181633
+          },
+          "17": {
+            "accuracy": 0.06875,
+            "balanced_accuracy": 0.06875,
+            "itr_bits_per_minute": 2.108497753430863
+          },
+          "18": {
+            "accuracy": 0.09375,
+            "balanced_accuracy": 0.09375,
+            "itr_bits_per_minute": 4.536427926568381
+          },
+          "19": {
+            "accuracy": 0.1,
+            "balanced_accuracy": 0.1,
+            "itr_bits_per_minute": 5.24020932665766
+          },
+          "20": {
+            "accuracy": 0.075,
+            "balanced_accuracy": 0.075,
+            "itr_bits_per_minute": 2.6519726352701056
+          },
+          "21": {
+            "accuracy": 0.0625,
+            "balanced_accuracy": 0.0625,
+            "itr_bits_per_minute": 1.6130971683813105
+          },
+          "22": {
+            "accuracy": 0.05,
+            "balanced_accuracy": 0.05,
+            "itr_bits_per_minute": 0.7854016283056869
+          },
+          "23": {
+            "accuracy": 0.14375,
+            "balanced_accuracy": 0.14375,
+            "itr_bits_per_minute": 11.035982853673428
+          },
+          "24": {
+            "accuracy": 0.10625,
+            "balanced_accuracy": 0.10625,
+            "itr_bits_per_minute": 5.978165510203645
+          },
+          "25": {
+            "accuracy": 0.075,
+            "balanced_accuracy": 0.075,
+            "itr_bits_per_minute": 2.6519726352701056
+          },
+          "26": {
+            "accuracy": 0.09375,
+            "balanced_accuracy": 0.09375,
+            "itr_bits_per_minute": 4.536427926568381
+          },
+          "27": {
+            "accuracy": 0.26875,
+            "balanced_accuracy": 0.26875,
+            "itr_bits_per_minute": 33.6715898988292
+          },
+          "28": {
+            "accuracy": 0.15,
+            "balanced_accuracy": 0.15,
+            "itr_bits_per_minute": 11.9725038620755
+          },
+          "29": {
+            "accuracy": 0.13125,
+            "balanced_accuracy": 0.13125,
+            "itr_bits_per_minute": 9.238829510819002
+          },
+          "30": {
+            "accuracy": 0.0125,
+            "balanced_accuracy": 0.0125,
+            "itr_bits_per_minute": 0.0
+          },
+          "31": {
+            "accuracy": 0.05,
+            "balanced_accuracy": 0.05,
+            "itr_bits_per_minute": 0.7854016283056869
+          },
+          "32": {
+            "accuracy": 0.125,
+            "balanced_accuracy": 0.125,
+            "itr_bits_per_minute": 8.38018419181633
+          },
+          "33": {
+            "accuracy": 0.09375,
+            "balanced_accuracy": 0.09375,
+            "itr_bits_per_minute": 4.536427926568381
+          },
+          "34": {
+            "accuracy": 0.05625,
+            "balanced_accuracy": 0.05625,
+            "itr_bits_per_minute": 1.170240546432359
+          },
+          "35": {
+            "accuracy": 0.4875,
+            "balanced_accuracy": 0.4875,
+            "itr_bits_per_minute": 88.0151098306479
+          },
+          "36": {
+            "accuracy": 0.08125,
+            "balanced_accuracy": 0.08125,
+            "itr_bits_per_minute": 3.2398039275099806
+          },
+          "37": {
+            "accuracy": 0.025,
+            "balanced_accuracy": 0.025,
+            "itr_bits_per_minute": 0.0
+          },
+          "38": {
+            "accuracy": 0.45625,
+            "balanced_accuracy": 0.45625,
+            "itr_bits_per_minute": 79.28293769184037
+          },
+          "39": {
+            "accuracy": 0.175,
+            "balanced_accuracy": 0.175,
+            "itr_bits_per_minute": 15.95211432378821
+          },
+          "40": {
+            "accuracy": 0.0375,
+            "balanced_accuracy": 0.0375,
+            "itr_bits_per_minute": 0.21919110223483007
+          },
+          "41": {
+            "accuracy": 0.21875,
+            "balanced_accuracy": 0.21875,
+            "itr_bits_per_minute": 23.71795357433648
+          },
+          "42": {
+            "accuracy": 0.025,
+            "balanced_accuracy": 0.025,
+            "itr_bits_per_minute": 0.0
+          },
+          "43": {
+            "accuracy": 0.05,
+            "balanced_accuracy": 0.05,
+            "itr_bits_per_minute": 0.7854016283056869
+          },
+          "44": {
+            "accuracy": 0.05,
+            "balanced_accuracy": 0.05,
+            "itr_bits_per_minute": 0.7854016283056869
+          },
+          "45": {
+            "accuracy": 0.16875,
+            "balanced_accuracy": 0.16875,
+            "itr_bits_per_minute": 14.923647058429344
+          },
+          "46": {
+            "accuracy": 0.14375,
+            "balanced_accuracy": 0.14375,
+            "itr_bits_per_minute": 11.035982853673428
+          },
+          "47": {
+            "accuracy": 0.025,
+            "balanced_accuracy": 0.025,
+            "itr_bits_per_minute": 0.0
+          },
+          "48": {
+            "accuracy": 0.09375,
+            "balanced_accuracy": 0.09375,
+            "itr_bits_per_minute": 4.536427926568381
+          },
+          "49": {
+            "accuracy": 0.125,
+            "balanced_accuracy": 0.125,
+            "itr_bits_per_minute": 8.38018419181633
+          },
+          "50": {
+            "accuracy": 0.19375,
+            "balanced_accuracy": 0.19375,
+            "itr_bits_per_minute": 19.16301659262369
+          },
+          "51": {
+            "accuracy": 0.175,
+            "balanced_accuracy": 0.175,
+            "itr_bits_per_minute": 15.95211432378821
+          },
+          "52": {
+            "accuracy": 0.0625,
+            "balanced_accuracy": 0.0625,
+            "itr_bits_per_minute": 1.6130971683813105
+          },
+          "53": {
+            "accuracy": 0.03125,
+            "balanced_accuracy": 0.03125,
+            "itr_bits_per_minute": 0.05849296646427213
+          },
+          "54": {
+            "accuracy": 0.10625,
+            "balanced_accuracy": 0.10625,
+            "itr_bits_per_minute": 5.978165510203645
+          },
+          "55": {
+            "accuracy": 0.05625,
+            "balanced_accuracy": 0.05625,
+            "itr_bits_per_minute": 1.170240546432359
+          },
+          "56": {
+            "accuracy": 0.1375,
+            "balanced_accuracy": 0.1375,
+            "itr_bits_per_minute": 10.124442423551468
+          },
+          "57": {
+            "accuracy": 0.14375,
+            "balanced_accuracy": 0.14375,
+            "itr_bits_per_minute": 11.035982853673428
+          },
+          "58": {
+            "accuracy": 0.0375,
+            "balanced_accuracy": 0.0375,
+            "itr_bits_per_minute": 0.21919110223483007
+          },
+          "59": {
+            "accuracy": 0.04375,
+            "balanced_accuracy": 0.04375,
+            "itr_bits_per_minute": 0.4654380342459967
+          }
+        }
+      },
+      "0.8": {
+        "overall": {
+          "accuracy": 0.18283898305084745,
+          "balanced_accuracy": 0.18283898305084745,
+          "itr_bits_per_minute": 14.614845717115292
+        },
+        "per_subject": {
+          "1": {
+            "accuracy": 0.24375,
+            "balanced_accuracy": 0.24375,
+            "itr_bits_per_minute": 24.167154739477393
+          },
+          "2": {
+            "accuracy": 0.15,
+            "balanced_accuracy": 0.15,
+            "itr_bits_per_minute": 10.130580190986963
+          },
+          "3": {
+            "accuracy": 0.10625,
+            "balanced_accuracy": 0.10625,
+            "itr_bits_per_minute": 5.058447739403085
+          },
+          "4": {
+            "accuracy": 0.10625,
+            "balanced_accuracy": 0.10625,
+            "itr_bits_per_minute": 5.058447739403085
+          },
+          "5": {
+            "accuracy": 0.16875,
+            "balanced_accuracy": 0.16875,
+            "itr_bits_per_minute": 12.627701357132523
+          },
+          "6": {
+            "accuracy": 0.1875,
+            "balanced_accuracy": 0.1875,
+            "itr_bits_per_minute": 15.29199378169109
+          },
+          "7": {
+            "accuracy": 0.35625,
+            "balanced_accuracy": 0.35625,
+            "itr_bits_per_minute": 45.227266316668356
+          },
+          "8": {
+            "accuracy": 0.31875,
+            "balanced_accuracy": 0.31875,
+            "itr_bits_per_minute": 37.76450249574408
+          },
+          "9": {
+            "accuracy": 0.40625,
+            "balanced_accuracy": 0.40625,
+            "itr_bits_per_minute": 55.81066726337769
+          },
+          "10": {
+            "accuracy": 0.075,
+            "balanced_accuracy": 0.075,
+            "itr_bits_per_minute": 2.2439768452285507
+          },
+          "11": {
+            "accuracy": 0.11875,
+            "balanced_accuracy": 0.11875,
+            "itr_bits_per_minute": 6.388168437715708
+          },
+          "12": {
+            "accuracy": 0.24375,
+            "balanced_accuracy": 0.24375,
+            "itr_bits_per_minute": 24.167154739477393
+          },
+          "13": {
+            "accuracy": 0.04375,
+            "balanced_accuracy": 0.04375,
+            "itr_bits_per_minute": 0.3938321828235357
+          },
+          "14": {
+            "accuracy": 0.0375,
+            "balanced_accuracy": 0.0375,
+            "itr_bits_per_minute": 0.18546939419870237
+          },
+          "15": {
+            "accuracy": 0.33125,
+            "balanced_accuracy": 0.33125,
+            "itr_bits_per_minute": 40.20539833226303
+          },
+          "16": {
+            "accuracy": 0.18125,
+            "balanced_accuracy": 0.18125,
+            "itr_bits_per_minute": 14.386203285332057
+          },
+          "17": {
+            "accuracy": 0.1,
+            "balanced_accuracy": 0.1,
+            "itr_bits_per_minute": 4.434023276402636
+          },
+          "18": {
+            "accuracy": 0.10625,
+            "balanced_accuracy": 0.10625,
+            "itr_bits_per_minute": 5.058447739403085
+          },
+          "19": {
+            "accuracy": 0.13125,
+            "balanced_accuracy": 0.13125,
+            "itr_bits_per_minute": 7.817471124539155
+          },
+          "20": {
+            "accuracy": 0.1125,
+            "balanced_accuracy": 0.1125,
+            "itr_bits_per_minute": 5.710276706880918
+          },
+          "21": {
+            "accuracy": 0.19375,
+            "balanced_accuracy": 0.19375,
+            "itr_bits_per_minute": 16.214860193758508
+          },
+          "22": {
+            "accuracy": 0.1375,
+            "balanced_accuracy": 0.1375,
+            "itr_bits_per_minute": 8.566835896851243
+          },
+          "23": {
+            "accuracy": 0.1875,
+            "balanced_accuracy": 0.1875,
+            "itr_bits_per_minute": 15.29199378169109
+          },
+          "24": {
+            "accuracy": 0.125,
+            "balanced_accuracy": 0.125,
+            "itr_bits_per_minute": 7.0909250853830486
+          },
+          "25": {
+            "accuracy": 0.1375,
+            "balanced_accuracy": 0.1375,
+            "itr_bits_per_minute": 8.566835896851243
+          },
+          "26": {
+            "accuracy": 0.09375,
+            "balanced_accuracy": 0.09375,
+            "itr_bits_per_minute": 3.838515937865553
+          },
+          "27": {
+            "accuracy": 0.49375,
+            "balanced_accuracy": 0.49375,
+            "itr_bits_per_minute": 75.98335084955873
+          },
+          "28": {
+            "accuracy": 0.25625,
+            "balanced_accuracy": 0.25625,
+            "itr_bits_per_minute": 26.30194672453247
+          },
+          "29": {
+            "accuracy": 0.225,
+            "balanced_accuracy": 0.225,
+            "itr_bits_per_minute": 21.071471365666422
+          },
+          "30": {
+            "accuracy": 0.01875,
+            "balanced_accuracy": 0.01875,
+            "itr_bits_per_minute": 0.0
+          },
+          "31": {
+            "accuracy": 0.10625,
+            "balanced_accuracy": 0.10625,
+            "itr_bits_per_minute": 5.058447739403085
+          },
+          "32": {
+            "accuracy": 0.23125,
+            "balanced_accuracy": 0.23125,
+            "itr_bits_per_minute": 22.088822816809966
+          },
+          "33": {
+            "accuracy": 0.15625,
+            "balanced_accuracy": 0.15625,
+            "itr_bits_per_minute": 10.943426192257755
+          },
+          "34": {
+            "accuracy": 0.10625,
+            "balanced_accuracy": 0.10625,
+            "itr_bits_per_minute": 5.058447739403085
+          },
+          "35": {
+            "accuracy": 0.61875,
+            "balanced_accuracy": 0.61875,
+            "itr_bits_per_minute": 108.36685027748663
+          },
+          "36": {
+            "accuracy": 0.0625,
+            "balanced_accuracy": 0.0625,
+            "itr_bits_per_minute": 1.3649283732457242
+          },
+          "37": {
+            "accuracy": 0.05,
+            "balanced_accuracy": 0.05,
+            "itr_bits_per_minute": 0.6645706085663505
+          },
+          "38": {
+            "accuracy": 0.6125,
+            "balanced_accuracy": 0.6125,
+            "itr_bits_per_minute": 106.64619184552424
+          },
+          "39": {
+            "accuracy": 0.28125,
+            "balanced_accuracy": 0.28125,
+            "itr_bits_per_minute": 30.7336990454654
+          },
+          "40": {
+            "accuracy": 0.14375,
+            "balanced_accuracy": 0.14375,
+            "itr_bits_per_minute": 9.33813933772367
+          },
+          "41": {
+            "accuracy": 0.38125,
+            "balanced_accuracy": 0.38125,
+            "itr_bits_per_minute": 50.430710570727356
+          },
+          "42": {
+            "accuracy": 0.05,
+            "balanced_accuracy": 0.05,
+            "itr_bits_per_minute": 0.6645706085663505
+          },
+          "43": {
+            "accuracy": 0.05625,
+            "balanced_accuracy": 0.05625,
+            "itr_bits_per_minute": 0.9902035392889192
+          },
+          "44": {
+            "accuracy": 0.1,
+            "balanced_accuracy": 0.1,
+            "itr_bits_per_minute": 4.434023276402636
+          },
+          "45": {
+            "accuracy": 0.25,
+            "balanced_accuracy": 0.25,
+            "itr_bits_per_minute": 25.227614136071203
+          },
+          "46": {
+            "accuracy": 0.13125,
+            "balanced_accuracy": 0.13125,
+            "itr_bits_per_minute": 7.817471124539155
+          },
+          "47": {
+            "accuracy": 0.1125,
+            "balanced_accuracy": 0.1125,
+            "itr_bits_per_minute": 5.710276706880918
+          },
+          "48": {
+            "accuracy": 0.1125,
+            "balanced_accuracy": 0.1125,
+            "itr_bits_per_minute": 5.710276706880918
+          },
+          "49": {
+            "accuracy": 0.2375,
+            "balanced_accuracy": 0.2375,
+            "itr_bits_per_minute": 23.12080672855792
+          },
+          "50": {
+            "accuracy": 0.25625,
+            "balanced_accuracy": 0.25625,
+            "itr_bits_per_minute": 26.30194672453247
+          },
+          "51": {
+            "accuracy": 0.3,
+            "balanced_accuracy": 0.3,
+            "itr_bits_per_minute": 34.19333734398908
+          },
+          "52": {
+            "accuracy": 0.1,
+            "balanced_accuracy": 0.1,
+            "itr_bits_per_minute": 4.434023276402636
+          },
+          "53": {
+            "accuracy": 0.0125,
+            "balanced_accuracy": 0.0125,
+            "itr_bits_per_minute": 0.0
+          },
+          "54": {
+            "accuracy": 0.14375,
+            "balanced_accuracy": 0.14375,
+            "itr_bits_per_minute": 9.33813933772367
+          },
+          "55": {
+            "accuracy": 0.0875,
+            "balanced_accuracy": 0.0875,
+            "itr_bits_per_minute": 3.2736434282886724
+          },
+          "56": {
+            "accuracy": 0.2875,
+            "balanced_accuracy": 0.2875,
+            "itr_bits_per_minute": 31.874266916280803
+          },
+          "57": {
+            "accuracy": 0.21875,
+            "balanced_accuracy": 0.21875,
+            "itr_bits_per_minute": 20.069037639823176
+          },
+          "58": {
+            "accuracy": 0.125,
+            "balanced_accuracy": 0.125,
+            "itr_bits_per_minute": 7.0909250853830486
+          },
+          "59": {
+            "accuracy": 0.0625,
+            "balanced_accuracy": 0.0625,
+            "itr_bits_per_minute": 1.3649283732457242
+          }
+        }
+      },
+      "1.0": {
+        "overall": {
+          "accuracy": 0.25084745762711863,
+          "balanced_accuracy": 0.25084745762711863,
+          "itr_bits_per_minute": 21.98948132227102
+        },
+        "per_subject": {
+          "1": {
+            "accuracy": 0.36875,
+            "balanced_accuracy": 0.36875,
+            "itr_bits_per_minute": 41.43241889129822
+          },
+          "2": {
+            "accuracy": 0.24375,
+            "balanced_accuracy": 0.24375,
+            "itr_bits_per_minute": 20.944867440880408
+          },
+          "3": {
+            "accuracy": 0.1375,
+            "balanced_accuracy": 0.1375,
+            "itr_bits_per_minute": 7.4245911106044105
+          },
+          "4": {
+            "accuracy": 0.14375,
+            "balanced_accuracy": 0.14375,
+            "itr_bits_per_minute": 8.093054092693848
+          },
+          "5": {
+            "accuracy": 0.20625,
+            "balanced_accuracy": 0.20625,
+            "itr_bits_per_minute": 15.695469840847132
+          },
+          "6": {
+            "accuracy": 0.25625,
+            "balanced_accuracy": 0.25625,
+            "itr_bits_per_minute": 22.79502049459481
+          },
+          "7": {
+            "accuracy": 0.4625,
+            "balanced_accuracy": 0.4625,
+            "itr_bits_per_minute": 59.403431784692366
+          },
+          "8": {
+            "accuracy": 0.375,
+            "balanced_accuracy": 0.375,
+            "itr_bits_per_minute": 42.5647082069397
+          },
+          "9": {
+            "accuracy": 0.6125,
+            "balanced_accuracy": 0.6125,
+            "itr_bits_per_minute": 92.42669959945435
+          },
+          "10": {
+            "accuracy": 0.09375,
+            "balanced_accuracy": 0.09375,
+            "itr_bits_per_minute": 3.3267138128168128
+          },
+          "11": {
+            "accuracy": 0.125,
+            "balanced_accuracy": 0.125,
+            "itr_bits_per_minute": 6.145468407331975
+          },
+          "12": {
+            "accuracy": 0.40625,
+            "balanced_accuracy": 0.40625,
+            "itr_bits_per_minute": 48.369244961594
+          },
+          "13": {
+            "accuracy": 0.05625,
+            "balanced_accuracy": 0.05625,
+            "itr_bits_per_minute": 0.8581764007170634
+          },
+          "14": {
+            "accuracy": 0.03125,
+            "balanced_accuracy": 0.03125,
+            "itr_bits_per_minute": 0.042894842073799566
+          },
+          "15": {
+            "accuracy": 0.49375,
+            "balanced_accuracy": 0.49375,
+            "itr_bits_per_minute": 65.8522374029509
+          },
+          "16": {
+            "accuracy": 0.29375,
+            "balanced_accuracy": 0.29375,
+            "itr_bits_per_minute": 28.623862012582787
+          },
+          "17": {
+            "accuracy": 0.1,
+            "balanced_accuracy": 0.1,
+            "itr_bits_per_minute": 3.842820172882284
+          },
+          "18": {
+            "accuracy": 0.14375,
+            "balanced_accuracy": 0.14375,
+            "itr_bits_per_minute": 8.093054092693848
+          },
+          "19": {
+            "accuracy": 0.2,
+            "balanced_accuracy": 0.2,
+            "itr_bits_per_minute": 14.867128996408034
+          },
+          "20": {
+            "accuracy": 0.11875,
+            "balanced_accuracy": 0.11875,
+            "itr_bits_per_minute": 5.536412646020281
+          },
+          "21": {
+            "accuracy": 0.2125,
+            "balanced_accuracy": 0.2125,
+            "itr_bits_per_minute": 16.53758184671446
+          },
+          "22": {
+            "accuracy": 0.2625,
+            "balanced_accuracy": 0.2625,
+            "itr_bits_per_minute": 23.73793743891497
+          },
+          "23": {
+            "accuracy": 0.35,
+            "balanced_accuracy": 0.35,
+            "itr_bits_per_minute": 38.093943890056394
+          },
+          "24": {
+            "accuracy": 0.15625,
+            "balanced_accuracy": 0.15625,
+            "itr_bits_per_minute": 9.484302699956721
+          },
+          "25": {
+            "accuracy": 0.15625,
+            "balanced_accuracy": 0.15625,
+            "itr_bits_per_minute": 9.484302699956721
+          },
+          "26": {
+            "accuracy": 0.0875,
+            "balanced_accuracy": 0.0875,
+            "itr_bits_per_minute": 2.837157637850183
+          },
+          "27": {
+            "accuracy": 0.65,
+            "balanced_accuracy": 0.65,
+            "itr_bits_per_minute": 101.51877051640342
+          },
+          "28": {
+            "accuracy": 0.34375,
+            "balanced_accuracy": 0.34375,
+            "itr_bits_per_minute": 37.00083265456577
+          },
+          "29": {
+            "accuracy": 0.29375,
+            "balanced_accuracy": 0.29375,
+            "itr_bits_per_minute": 28.623862012582787
+          },
+          "30": {
+            "accuracy": 0.03125,
+            "balanced_accuracy": 0.03125,
+            "itr_bits_per_minute": 0.042894842073799566
+          },
+          "31": {
+            "accuracy": 0.13125,
+            "balanced_accuracy": 0.13125,
+            "itr_bits_per_minute": 6.775141641267268
+          },
+          "32": {
+            "accuracy": 0.275,
+            "balanced_accuracy": 0.275,
+            "itr_bits_per_minute": 25.658532316704665
+          },
+          "33": {
+            "accuracy": 0.26875,
+            "balanced_accuracy": 0.26875,
+            "itr_bits_per_minute": 24.692499259141414
+          },
+          "34": {
+            "accuracy": 0.2125,
+            "balanced_accuracy": 0.2125,
+            "itr_bits_per_minute": 16.53758184671446
+          },
+          "35": {
+            "accuracy": 0.7375,
+            "balanced_accuracy": 0.7375,
+            "itr_bits_per_minute": 124.16057959729771
+          },
+          "36": {
+            "accuracy": 0.10625,
+            "balanced_accuracy": 0.10625,
+            "itr_bits_per_minute": 4.383988040816007
+          },
+          "37": {
+            "accuracy": 0.025,
+            "balanced_accuracy": 0.025,
+            "itr_bits_per_minute": 0.0
+          },
+          "38": {
+            "accuracy": 0.79375,
+            "balanced_accuracy": 0.79375,
+            "itr_bits_per_minute": 139.90242198410994
+          },
+          "39": {
+            "accuracy": 0.4375,
+            "balanced_accuracy": 0.4375,
+            "itr_bits_per_minute": 54.407597539554025
+          },
+          "40": {
+            "accuracy": 0.175,
+            "balanced_accuracy": 0.175,
+            "itr_bits_per_minute": 11.698217170778022
+          },
+          "41": {
+            "accuracy": 0.4875,
+            "balanced_accuracy": 0.4875,
+            "itr_bits_per_minute": 64.54441387580847
+          },
+          "42": {
+            "accuracy": 0.0625,
+            "balanced_accuracy": 0.0625,
+            "itr_bits_per_minute": 1.1829379234796278
+          },
+          "43": {
+            "accuracy": 0.1,
+            "balanced_accuracy": 0.1,
+            "itr_bits_per_minute": 3.842820172882284
+          },
+          "44": {
+            "accuracy": 0.13125,
+            "balanced_accuracy": 0.13125,
+            "itr_bits_per_minute": 6.775141641267268
+          },
+          "45": {
+            "accuracy": 0.33125,
+            "balanced_accuracy": 0.33125,
+            "itr_bits_per_minute": 34.84467855462796
+          },
+          "46": {
+            "accuracy": 0.18125,
+            "balanced_accuracy": 0.18125,
+            "itr_bits_per_minute": 12.468042847287784
+          },
+          "47": {
+            "accuracy": 0.11875,
+            "balanced_accuracy": 0.11875,
+            "itr_bits_per_minute": 5.536412646020281
+          },
+          "48": {
+            "accuracy": 0.15625,
+            "balanced_accuracy": 0.15625,
+            "itr_bits_per_minute": 9.484302699956721
+          },
+          "49": {
+            "accuracy": 0.3,
+            "balanced_accuracy": 0.3,
+            "itr_bits_per_minute": 29.63422569812387
+          },
+          "50": {
+            "accuracy": 0.4125,
+            "balanced_accuracy": 0.4125,
+            "itr_bits_per_minute": 49.55838884057611
+          },
+          "51": {
+            "accuracy": 0.45625,
+            "balanced_accuracy": 0.45625,
+            "itr_bits_per_minute": 58.14082097401627
+          },
+          "52": {
+            "accuracy": 0.11875,
+            "balanced_accuracy": 0.11875,
+            "itr_bits_per_minute": 5.536412646020281
+          },
+          "53": {
+            "accuracy": 0.04375,
+            "balanced_accuracy": 0.04375,
+            "itr_bits_per_minute": 0.341321225113731
+          },
+          "54": {
+            "accuracy": 0.225,
+            "balanced_accuracy": 0.225,
+            "itr_bits_per_minute": 18.261941850244234
+          },
+          "55": {
+            "accuracy": 0.15,
+            "balanced_accuracy": 0.15,
+            "itr_bits_per_minute": 8.779836165522035
+          },
+          "56": {
+            "accuracy": 0.375,
+            "balanced_accuracy": 0.375,
+            "itr_bits_per_minute": 42.5647082069397
+          },
+          "57": {
+            "accuracy": 0.35,
+            "balanced_accuracy": 0.35,
+            "itr_bits_per_minute": 38.093943890056394
+          },
+          "58": {
+            "accuracy": 0.18125,
+            "balanced_accuracy": 0.18125,
+            "itr_bits_per_minute": 12.468042847287784
+          },
+          "59": {
+            "accuracy": 0.04375,
+            "balanced_accuracy": 0.04375,
+            "itr_bits_per_minute": 0.341321225113731
+          }
+        }
+      },
+      "1.2": {
+        "overall": {
+          "accuracy": 0.3188559322033898,
+          "balanced_accuracy": 0.3188559322033898,
+          "itr_bits_per_minute": 28.89440268784423
+        },
+        "per_subject": {
+          "1": {
+            "accuracy": 0.5,
+            "balanced_accuracy": 0.5,
+            "itr_bits_per_minute": 59.26683478080841
+          },
+          "2": {
+            "accuracy": 0.31875,
+            "balanced_accuracy": 0.31875,
+            "itr_bits_per_minute": 28.87873720262783
+          },
+          "3": {
+            "accuracy": 0.225,
+            "balanced_accuracy": 0.225,
+            "itr_bits_per_minute": 16.113478103156677
+          },
+          "4": {
+            "accuracy": 0.19375,
+            "balanced_accuracy": 0.19375,
+            "itr_bits_per_minute": 12.399598971697683
+          },
+          "5": {
+            "accuracy": 0.31875,
+            "balanced_accuracy": 0.31875,
+            "itr_bits_per_minute": 28.87873720262783
+          },
+          "6": {
+            "accuracy": 0.3,
+            "balanced_accuracy": 0.3,
+            "itr_bits_per_minute": 26.147846204226944
+          },
+          "7": {
+            "accuracy": 0.58125,
+            "balanced_accuracy": 0.58125,
+            "itr_bits_per_minute": 75.09877864631189
+          },
+          "8": {
+            "accuracy": 0.5,
+            "balanced_accuracy": 0.5,
+            "itr_bits_per_minute": 59.26683478080841
+          },
+          "9": {
+            "accuracy": 0.775,
+            "balanced_accuracy": 0.775,
+            "itr_bits_per_minute": 118.71246235165917
+          },
+          "10": {
+            "accuracy": 0.15,
+            "balanced_accuracy": 0.15,
+            "itr_bits_per_minute": 7.746914263695913
+          },
+          "11": {
+            "accuracy": 0.18125,
+            "balanced_accuracy": 0.18125,
+            "itr_bits_per_minute": 11.001214277018633
+          },
+          "12": {
+            "accuracy": 0.4875,
+            "balanced_accuracy": 0.4875,
+            "itr_bits_per_minute": 56.950953419831
+          },
+          "13": {
+            "accuracy": 0.05,
+            "balanced_accuracy": 0.05,
+            "itr_bits_per_minute": 0.5082010536095621
+          },
+          "14": {
+            "accuracy": 0.05,
+            "balanced_accuracy": 0.05,
+            "itr_bits_per_minute": 0.5082010536095621
+          },
+          "15": {
+            "accuracy": 0.5875,
+            "balanced_accuracy": 0.5875,
+            "itr_bits_per_minute": 76.37312150524579
+          },
+          "16": {
+            "accuracy": 0.4375,
+            "balanced_accuracy": 0.4375,
+            "itr_bits_per_minute": 48.0067037113712
+          },
+          "17": {
+            "accuracy": 0.10625,
+            "balanced_accuracy": 0.10625,
+            "itr_bits_per_minute": 3.868224741896477
+          },
+          "18": {
+            "accuracy": 0.225,
+            "balanced_accuracy": 0.225,
+            "itr_bits_per_minute": 16.113478103156677
+          },
+          "19": {
+            "accuracy": 0.26875,
+            "balanced_accuracy": 0.26875,
+            "itr_bits_per_minute": 21.78749934630125
+          },
+          "20": {
+            "accuracy": 0.20625,
+            "balanced_accuracy": 0.20625,
+            "itr_bits_per_minute": 13.848943977218058
+          },
+          "21": {
+            "accuracy": 0.3,
+            "balanced_accuracy": 0.3,
+            "itr_bits_per_minute": 26.147846204226944
+          },
+          "22": {
+            "accuracy": 0.3875,
+            "balanced_accuracy": 0.3875,
+            "itr_bits_per_minute": 39.580658496788885
+          },
+          "23": {
+            "accuracy": 0.40625,
+            "balanced_accuracy": 0.40625,
+            "itr_bits_per_minute": 42.67874555434764
+          },
+          "24": {
+            "accuracy": 0.15625,
+            "balanced_accuracy": 0.15625,
+            "itr_bits_per_minute": 8.368502382314755
+          },
+          "25": {
+            "accuracy": 0.23125,
+            "balanced_accuracy": 0.23125,
+            "itr_bits_per_minute": 16.891452742266445
+          },
+          "26": {
+            "accuracy": 0.1,
+            "balanced_accuracy": 0.1,
+            "itr_bits_per_minute": 3.390723681954957
+          },
+          "27": {
+            "accuracy": 0.6875,
+            "balanced_accuracy": 0.6875,
+            "itr_bits_per_minute": 97.91300008088304
+          },
+          "28": {
+            "accuracy": 0.43125,
+            "balanced_accuracy": 0.43125,
+            "itr_bits_per_minute": 46.92483041014203
+          },
+          "29": {
+            "accuracy": 0.3375,
+            "balanced_accuracy": 0.3375,
+            "itr_bits_per_minute": 31.692101051719455
+          },
+          "30": {
+            "accuracy": 0.0375,
+            "balanced_accuracy": 0.0375,
+            "itr_bits_per_minute": 0.14182953674018417
+          },
+          "31": {
+            "accuracy": 0.1875,
+            "balanced_accuracy": 0.1875,
+            "itr_bits_per_minute": 11.693877597763775
+          },
+          "32": {
+            "accuracy": 0.425,
+            "balanced_accuracy": 0.425,
+            "itr_bits_per_minute": 45.851066697119435
+          },
+          "33": {
+            "accuracy": 0.275,
+            "balanced_accuracy": 0.275,
+            "itr_bits_per_minute": 22.63988145591588
+          },
+          "34": {
+            "accuracy": 0.26875,
+            "balanced_accuracy": 0.26875,
+            "itr_bits_per_minute": 21.78749934630125
+          },
+          "35": {
+            "accuracy": 0.81875,
+            "balanced_accuracy": 0.81875,
+            "itr_bits_per_minute": 129.9227642014192
+          },
+          "36": {
+            "accuracy": 0.11875,
+            "balanced_accuracy": 0.11875,
+            "itr_bits_per_minute": 4.8850699817826015
+          },
+          "37": {
+            "accuracy": 0.0375,
+            "balanced_accuracy": 0.0375,
+            "itr_bits_per_minute": 0.14182953674018417
+          },
+          "38": {
+            "accuracy": 0.85625,
+            "balanced_accuracy": 0.85625,
+            "itr_bits_per_minute": 140.05325058553055
+          },
+          "39": {
+            "accuracy": 0.56875,
+            "balanced_accuracy": 0.56875,
+            "itr_bits_per_minute": 72.57457647226765
+          },
+          "40": {
+            "accuracy": 0.2375,
+            "balanced_accuracy": 0.2375,
+            "itr_bits_per_minute": 17.680616910073706
+          },
+          "41": {
+            "accuracy": 0.6375,
+            "balanced_accuracy": 0.6375,
+            "itr_bits_per_minute": 86.86697512598852
+          },
+          "42": {
+            "accuracy": 0.05,
+            "balanced_accuracy": 0.05,
+            "itr_bits_per_minute": 0.5082010536095621
+          },
+          "43": {
+            "accuracy": 0.1375,
+            "balanced_accuracy": 0.1375,
+            "itr_bits_per_minute": 6.55110980347448
+          },
+          "44": {
+            "accuracy": 0.15,
+            "balanced_accuracy": 0.15,
+            "itr_bits_per_minute": 7.746914263695913
+          },
+          "45": {
+            "accuracy": 0.4,
+            "balanced_accuracy": 0.4,
+            "itr_bits_per_minute": 41.63774714524751
+          },
+          "46": {
+            "accuracy": 0.325,
+            "balanced_accuracy": 0.325,
+            "itr_bits_per_minute": 29.807487339676882
+          },
+          "47": {
+            "accuracy": 0.1625,
+            "balanced_accuracy": 0.1625,
+            "itr_bits_per_minute": 9.00518092620632
+          },
+          "48": {
+            "accuracy": 0.2,
+            "balanced_accuracy": 0.2,
+            "itr_bits_per_minute": 13.118054996830619
+          },
+          "49": {
+            "accuracy": 0.45625,
+            "balanced_accuracy": 0.45625,
+            "itr_bits_per_minute": 51.30072438883789
+          },
+          "50": {
+            "accuracy": 0.525,
+            "balanced_accuracy": 0.525,
+            "itr_bits_per_minute": 63.99409983123474
+          },
+          "51": {
+            "accuracy": 0.55625,
+            "balanced_accuracy": 0.55625,
+            "itr_bits_per_minute": 70.08281543418137
+          },
+          "52": {
+            "accuracy": 0.1125,
+            "balanced_accuracy": 0.1125,
+            "itr_bits_per_minute": 4.36668218761482
+          },
+          "53": {
+            "accuracy": 0.03125,
+            "balanced_accuracy": 0.03125,
+            "itr_bits_per_minute": 0.03784839006511727
+          },
+          "54": {
+            "accuracy": 0.24375,
+            "balanced_accuracy": 0.24375,
+            "itr_bits_per_minute": 18.480765389012124
+          },
+          "55": {
+            "accuracy": 0.2125,
+            "balanced_accuracy": 0.2125,
+            "itr_bits_per_minute": 14.591983982395112
+          },
+          "56": {
+            "accuracy": 0.45,
+            "balanced_accuracy": 0.45,
+            "itr_bits_per_minute": 50.194673665599424
+          },
+          "57": {
+            "accuracy": 0.475,
+            "balanced_accuracy": 0.475,
+            "itr_bits_per_minute": 54.66691944500726
+          },
+          "58": {
+            "accuracy": 0.25625,
+            "balanced_accuracy": 0.25625,
+            "itr_bits_per_minute": 20.113253377583657
+          },
+          "59": {
+            "accuracy": 0.1,
+            "balanced_accuracy": 0.1,
+            "itr_bits_per_minute": 3.390723681954957
+          }
+        }
+      },
+      "1.5": {
+        "overall": {
+          "accuracy": 0.4059322033898305,
+          "balanced_accuracy": 0.40593220338983044,
+          "itr_bits_per_minute": 36.231771988466164
+        },
+        "per_subject": {
+          "1": {
+            "accuracy": 0.6625,
+            "balanced_accuracy": 0.6625,
+            "itr_bits_per_minute": 78.47095752786845
+          },
+          "2": {
+            "accuracy": 0.45,
+            "balanced_accuracy": 0.45,
+            "itr_bits_per_minute": 42.66547261575951
+          },
+          "3": {
+            "accuracy": 0.28125,
+            "balanced_accuracy": 0.28125,
+            "itr_bits_per_minute": 19.97690437955251
+          },
+          "4": {
+            "accuracy": 0.2375,
+            "balanced_accuracy": 0.2375,
+            "itr_bits_per_minute": 15.028524373562648
+          },
+          "5": {
+            "accuracy": 0.40625,
+            "balanced_accuracy": 0.40625,
+            "itr_bits_per_minute": 36.2769337211955
+          },
+          "6": {
+            "accuracy": 0.3875,
+            "balanced_accuracy": 0.3875,
+            "itr_bits_per_minute": 33.64355972227055
+          },
+          "7": {
+            "accuracy": 0.775,
+            "balanced_accuracy": 0.775,
+            "itr_bits_per_minute": 100.9055929989103
+          },
+          "8": {
+            "accuracy": 0.58125,
+            "balanced_accuracy": 0.58125,
+            "itr_bits_per_minute": 63.833961849365096
+          },
+          "9": {
+            "accuracy": 0.85625,
+            "balanced_accuracy": 0.85625,
+            "itr_bits_per_minute": 119.04526299770096
+          },
+          "10": {
+            "accuracy": 0.2125,
+            "balanced_accuracy": 0.2125,
+            "itr_bits_per_minute": 12.403186385035845
+          },
+          "11": {
+            "accuracy": 0.225,
+            "balanced_accuracy": 0.225,
+            "itr_bits_per_minute": 13.696456387683176
+          },
+          "12": {
+            "accuracy": 0.5625,
+            "balanced_accuracy": 0.5625,
+            "itr_bits_per_minute": 60.625956475398944
+          },
+          "13": {
+            "accuracy": 0.14375,
+            "balanced_accuracy": 0.14375,
+            "itr_bits_per_minute": 6.069790569520386
+          },
+          "14": {
+            "accuracy": 0.075,
+            "balanced_accuracy": 0.075,
+            "itr_bits_per_minute": 1.458584949398558
+          },
+          "15": {
+            "accuracy": 0.7875,
+            "balanced_accuracy": 0.7875,
+            "itr_bits_per_minute": 103.57637466040961
+          },
+          "16": {
+            "accuracy": 0.6,
+            "balanced_accuracy": 0.6,
+            "itr_bits_per_minute": 67.10449838663385
+          },
+          "17": {
+            "accuracy": 0.14375,
+            "balanced_accuracy": 0.14375,
+            "itr_bits_per_minute": 6.069790569520386
+          },
+          "18": {
+            "accuracy": 0.29375,
+            "balanced_accuracy": 0.29375,
+            "itr_bits_per_minute": 21.46789650943709
+          },
+          "19": {
+            "accuracy": 0.39375,
+            "balanced_accuracy": 0.39375,
+            "itr_bits_per_minute": 34.514281058064014
+          },
+          "20": {
+            "accuracy": 0.21875,
+            "balanced_accuracy": 0.21875,
+            "itr_bits_per_minute": 13.044874465885066
+          },
+          "21": {
+            "accuracy": 0.35625,
+            "balanced_accuracy": 0.35625,
+            "itr_bits_per_minute": 29.39772310583443
+          },
+          "22": {
+            "accuracy": 0.5875,
+            "balanced_accuracy": 0.5875,
+            "itr_bits_per_minute": 64.91715327945892
+          },
+          "23": {
+            "accuracy": 0.5875,
+            "balanced_accuracy": 0.5875,
+            "itr_bits_per_minute": 64.91715327945892
+          },
+          "24": {
+            "accuracy": 0.25,
+            "balanced_accuracy": 0.25,
+            "itr_bits_per_minute": 16.397949188446283
+          },
+          "25": {
+            "accuracy": 0.31875,
+            "balanced_accuracy": 0.31875,
+            "itr_bits_per_minute": 24.546926622233652
+          },
+          "26": {
+            "accuracy": 0.18125,
+            "balanced_accuracy": 0.18125,
+            "itr_bits_per_minute": 9.351032135465838
+          },
+          "27": {
+            "accuracy": 0.775,
+            "balanced_accuracy": 0.775,
+            "itr_bits_per_minute": 100.9055929989103
+          },
+          "28": {
+            "accuracy": 0.55625,
+            "balanced_accuracy": 0.55625,
+            "itr_bits_per_minute": 59.57039311905416
+          },
+          "29": {
+            "accuracy": 0.43125,
+            "balanced_accuracy": 0.43125,
+            "itr_bits_per_minute": 39.88610584862072
+          },
+          "30": {
+            "accuracy": 0.04375,
+            "balanced_accuracy": 0.04375,
+            "itr_bits_per_minute": 0.25599091883529823
+          },
+          "31": {
+            "accuracy": 0.3,
+            "balanced_accuracy": 0.3,
+            "itr_bits_per_minute": 22.225669273592903
+          },
+          "32": {
+            "accuracy": 0.575,
+            "balanced_accuracy": 0.575,
+            "itr_bits_per_minute": 62.757716677431624
+          },
+          "33": {
+            "accuracy": 0.4375,
+            "balanced_accuracy": 0.4375,
+            "itr_bits_per_minute": 40.80569815466552
+          },
+          "34": {
+            "accuracy": 0.3125,
+            "balanced_accuracy": 0.3125,
+            "itr_bits_per_minute": 23.765275106550288
+          },
+          "35": {
+            "accuracy": 0.85625,
+            "balanced_accuracy": 0.85625,
+            "itr_bits_per_minute": 119.04526299770096
+          },
+          "36": {
+            "accuracy": 0.175,
+            "balanced_accuracy": 0.175,
+            "itr_bits_per_minute": 8.773662878083517
+          },
+          "37": {
+            "accuracy": 0.05,
+            "balanced_accuracy": 0.05,
+            "itr_bits_per_minute": 0.43197089556812784
+          },
+          "38": {
+            "accuracy": 0.95,
+            "balanced_accuracy": 0.95,
+            "itr_bits_per_minute": 143.1378308048488
+          },
+          "39": {
+            "accuracy": 0.78125,
+            "balanced_accuracy": 0.78125,
+            "itr_bits_per_minute": 102.23603690918553
+          },
+          "40": {
+            "accuracy": 0.31875,
+            "balanced_accuracy": 0.31875,
+            "itr_bits_per_minute": 24.546926622233652
+          },
+          "41": {
+            "accuracy": 0.7625,
+            "balanced_accuracy": 0.7625,
+            "itr_bits_per_minute": 98.27360932064305
+          },
+          "42": {
+            "accuracy": 0.1125,
+            "balanced_accuracy": 0.1125,
+            "itr_bits_per_minute": 3.7116798594725964
+          },
+          "43": {
+            "accuracy": 0.15625,
+            "balanced_accuracy": 0.15625,
+            "itr_bits_per_minute": 7.113227024967541
+          },
+          "44": {
+            "accuracy": 0.23125,
+            "balanced_accuracy": 0.23125,
+            "itr_bits_per_minute": 14.357734830926479
+          },
+          "45": {
+            "accuracy": 0.53125,
+            "balanced_accuracy": 0.53125,
+            "itr_bits_per_minute": 55.4164621770426
+          },
+          "46": {
+            "accuracy": 0.38125,
+            "balanced_accuracy": 0.38125,
+            "itr_bits_per_minute": 32.779961870972784
+          },
+          "47": {
+            "accuracy": 0.13125,
+            "balanced_accuracy": 0.13125,
+            "itr_bits_per_minute": 5.081356230950451
+          },
+          "48": {
+            "accuracy": 0.175,
+            "balanced_accuracy": 0.175,
+            "itr_bits_per_minute": 8.773662878083517
+          },
+          "49": {
+            "accuracy": 0.525,
+            "balanced_accuracy": 0.525,
+            "itr_bits_per_minute": 54.39498485654953
+          },
+          "50": {
+            "accuracy": 0.68125,
+            "balanced_accuracy": 0.68125,
+            "itr_bits_per_minute": 82.02567575236063
+          },
+          "51": {
+            "accuracy": 0.7375,
+            "balanced_accuracy": 0.7375,
+            "itr_bits_per_minute": 93.12043469797328
+          },
+          "52": {
+            "accuracy": 0.13125,
+            "balanced_accuracy": 0.13125,
+            "itr_bits_per_minute": 5.081356230950451
+          },
+          "53": {
+            "accuracy": 0.01875,
+            "balanced_accuracy": 0.01875,
+            "itr_bits_per_minute": 0.0
+          },
+          "54": {
+            "accuracy": 0.30625,
+            "balanced_accuracy": 0.30625,
+            "itr_bits_per_minute": 22.991493231149516
+          },
+          "55": {
+            "accuracy": 0.24375,
+            "balanced_accuracy": 0.24375,
+            "itr_bits_per_minute": 15.708650580660306
+          },
+          "56": {
+            "accuracy": 0.575,
+            "balanced_accuracy": 0.575,
+            "itr_bits_per_minute": 62.757716677431624
+          },
+          "57": {
+            "accuracy": 0.6,
+            "balanced_accuracy": 0.6,
+            "itr_bits_per_minute": 67.10449838663385
+          },
+          "58": {
+            "accuracy": 0.3875,
+            "balanced_accuracy": 0.3875,
+            "itr_bits_per_minute": 33.64355972227055
+          },
+          "59": {
+            "accuracy": 0.125,
+            "balanced_accuracy": 0.125,
+            "itr_bits_per_minute": 4.609101305498982
+          }
+        }
+      }
+    },
+    "fbcca": {
+      "0.4": {
+        "overall": {
+          "accuracy": 0.049364406779661016,
+          "balanced_accuracy": 0.049364406779661016,
+          "itr_bits_per_minute": 0.916385178423873
+        },
+        "per_subject": {
+          "1": {
+            "accuracy": 0.0375,
+            "balanced_accuracy": 0.0375,
+            "itr_bits_per_minute": 0.26790023606479235
+          },
+          "2": {
+            "accuracy": 0.01875,
+            "balanced_accuracy": 0.01875,
+            "itr_bits_per_minute": 0.0
+          },
+          "3": {
+            "accuracy": 0.05625,
+            "balanced_accuracy": 0.05625,
+            "itr_bits_per_minute": 1.4302940011951055
+          },
+          "4": {
+            "accuracy": 0.03125,
+            "balanced_accuracy": 0.03125,
+            "itr_bits_per_minute": 0.0714914034563326
+          },
+          "5": {
+            "accuracy": 0.01875,
+            "balanced_accuracy": 0.01875,
+            "itr_bits_per_minute": 0.0
+          },
+          "6": {
+            "accuracy": 0.06875,
+            "balanced_accuracy": 0.06875,
+            "itr_bits_per_minute": 2.577052809748833
+          },
+          "7": {
+            "accuracy": 0.05625,
+            "balanced_accuracy": 0.05625,
+            "itr_bits_per_minute": 1.4302940011951055
+          },
+          "8": {
+            "accuracy": 0.0875,
+            "balanced_accuracy": 0.0875,
+            "itr_bits_per_minute": 4.728596063083638
+          },
+          "9": {
+            "accuracy": 0.0375,
+            "balanced_accuracy": 0.0375,
+            "itr_bits_per_minute": 0.26790023606479235
+          },
+          "10": {
+            "accuracy": 0.06875,
+            "balanced_accuracy": 0.06875,
+            "itr_bits_per_minute": 2.577052809748833
+          },
+          "11": {
+            "accuracy": 0.04375,
+            "balanced_accuracy": 0.04375,
+            "itr_bits_per_minute": 0.568868708522885
+          },
+          "12": {
+            "accuracy": 0.06875,
+            "balanced_accuracy": 0.06875,
+            "itr_bits_per_minute": 2.577052809748833
+          },
+          "13": {
+            "accuracy": 0.03125,
+            "balanced_accuracy": 0.03125,
+            "itr_bits_per_minute": 0.0714914034563326
+          },
+          "14": {
+            "accuracy": 0.03125,
+            "balanced_accuracy": 0.03125,
+            "itr_bits_per_minute": 0.0714914034563326
+          },
+          "15": {
+            "accuracy": 0.09375,
+            "balanced_accuracy": 0.09375,
+            "itr_bits_per_minute": 5.544523021361354
+          },
+          "16": {
+            "accuracy": 0.0625,
+            "balanced_accuracy": 0.0625,
+            "itr_bits_per_minute": 1.9715632057993795
+          },
+          "17": {
+            "accuracy": 0.025,
+            "balanced_accuracy": 0.025,
+            "itr_bits_per_minute": 0.0
+          },
+          "18": {
+            "accuracy": 0.0625,
+            "balanced_accuracy": 0.0625,
+            "itr_bits_per_minute": 1.9715632057993795
+          },
+          "19": {
+            "accuracy": 0.0375,
+            "balanced_accuracy": 0.0375,
+            "itr_bits_per_minute": 0.26790023606479235
+          },
+          "20": {
+            "accuracy": 0.0375,
+            "balanced_accuracy": 0.0375,
+            "itr_bits_per_minute": 0.26790023606479235
+          },
+          "21": {
+            "accuracy": 0.04375,
+            "balanced_accuracy": 0.04375,
+            "itr_bits_per_minute": 0.568868708522885
+          },
+          "22": {
+            "accuracy": 0.05625,
+            "balanced_accuracy": 0.05625,
+            "itr_bits_per_minute": 1.4302940011951055
+          },
+          "23": {
+            "accuracy": 0.05625,
+            "balanced_accuracy": 0.05625,
+            "itr_bits_per_minute": 1.4302940011951055
+          },
+          "24": {
+            "accuracy": 0.05,
+            "balanced_accuracy": 0.05,
+            "itr_bits_per_minute": 0.9599353234847285
+          },
+          "25": {
+            "accuracy": 0.05625,
+            "balanced_accuracy": 0.05625,
+            "itr_bits_per_minute": 1.4302940011951055
+          },
+          "26": {
+            "accuracy": 0.05,
+            "balanced_accuracy": 0.05,
+            "itr_bits_per_minute": 0.9599353234847285
+          },
+          "27": {
+            "accuracy": 0.13125,
+            "balanced_accuracy": 0.13125,
+            "itr_bits_per_minute": 11.291902735445447
+          },
+          "28": {
+            "accuracy": 0.04375,
+            "balanced_accuracy": 0.04375,
+            "itr_bits_per_minute": 0.568868708522885
+          },
+          "29": {
+            "accuracy": 0.06875,
+            "balanced_accuracy": 0.06875,
+            "itr_bits_per_minute": 2.577052809748833
+          },
+          "30": {
+            "accuracy": 0.025,
+            "balanced_accuracy": 0.025,
+            "itr_bits_per_minute": 0.0
+          },
+          "31": {
+            "accuracy": 0.025,
+            "balanced_accuracy": 0.025,
+            "itr_bits_per_minute": 0.0
+          },
+          "32": {
+            "accuracy": 0.05625,
+            "balanced_accuracy": 0.05625,
+            "itr_bits_per_minute": 1.4302940011951055
+          },
+          "33": {
+            "accuracy": 0.01875,
+            "balanced_accuracy": 0.01875,
+            "itr_bits_per_minute": 0.0
+          },
+          "34": {
+            "accuracy": 0.04375,
+            "balanced_accuracy": 0.04375,
+            "itr_bits_per_minute": 0.568868708522885
+          },
+          "35": {
+            "accuracy": 0.20625,
+            "balanced_accuracy": 0.20625,
+            "itr_bits_per_minute": 26.159116401411886
+          },
+          "36": {
+            "accuracy": 0.03125,
+            "balanced_accuracy": 0.03125,
+            "itr_bits_per_minute": 0.0714914034563326
+          },
+          "37": {
+            "accuracy": 0.025,
+            "balanced_accuracy": 0.025,
+            "itr_bits_per_minute": 0.0
+          },
+          "38": {
+            "accuracy": 0.1125,
+            "balanced_accuracy": 0.1125,
+            "itr_bits_per_minute": 8.248177465494658
+          },
+          "39": {
+            "accuracy": 0.0375,
+            "balanced_accuracy": 0.0375,
+            "itr_bits_per_minute": 0.26790023606479235
+          },
+          "40": {
+            "accuracy": 0.03125,
+            "balanced_accuracy": 0.03125,
+            "itr_bits_per_minute": 0.0714914034563326
+          },
+          "41": {
+            "accuracy": 0.04375,
+            "balanced_accuracy": 0.04375,
+            "itr_bits_per_minute": 0.568868708522885
+          },
+          "42": {
+            "accuracy": 0.03125,
+            "balanced_accuracy": 0.03125,
+            "itr_bits_per_minute": 0.0714914034563326
+          },
+          "43": {
+            "accuracy": 0.01875,
+            "balanced_accuracy": 0.01875,
+            "itr_bits_per_minute": 0.0
+          },
+          "44": {
+            "accuracy": 0.0125,
+            "balanced_accuracy": 0.0125,
+            "itr_bits_per_minute": 0.0
+          },
+          "45": {
+            "accuracy": 0.0625,
+            "balanced_accuracy": 0.0625,
+            "itr_bits_per_minute": 1.9715632057993795
+          },
+          "46": {
+            "accuracy": 0.04375,
+            "balanced_accuracy": 0.04375,
+            "itr_bits_per_minute": 0.568868708522885
+          },
+          "47": {
+            "accuracy": 0.0375,
+            "balanced_accuracy": 0.0375,
+            "itr_bits_per_minute": 0.26790023606479235
+          },
+          "48": {
+            "accuracy": 0.06875,
+            "balanced_accuracy": 0.06875,
+            "itr_bits_per_minute": 2.577052809748833
+          },
+          "49": {
+            "accuracy": 0.01875,
+            "balanced_accuracy": 0.01875,
+            "itr_bits_per_minute": 0.0
+          },
+          "50": {
+            "accuracy": 0.05,
+            "balanced_accuracy": 0.05,
+            "itr_bits_per_minute": 0.9599353234847285
+          },
+          "51": {
+            "accuracy": 0.05,
+            "balanced_accuracy": 0.05,
+            "itr_bits_per_minute": 0.9599353234847285
+          },
+          "52": {
+            "accuracy": 0.04375,
+            "balanced_accuracy": 0.04375,
+            "itr_bits_per_minute": 0.568868708522885
+          },
+          "53": {
+            "accuracy": 0.03125,
+            "balanced_accuracy": 0.03125,
+            "itr_bits_per_minute": 0.0714914034563326
+          },
+          "54": {
+            "accuracy": 0.075,
+            "balanced_accuracy": 0.075,
+            "itr_bits_per_minute": 3.2412998875523513
+          },
+          "55": {
+            "accuracy": 0.04375,
+            "balanced_accuracy": 0.04375,
+            "itr_bits_per_minute": 0.568868708522885
+          },
+          "56": {
+            "accuracy": 0.05,
+            "balanced_accuracy": 0.05,
+            "itr_bits_per_minute": 0.9599353234847285
+          },
+          "57": {
+            "accuracy": 0.05,
+            "balanced_accuracy": 0.05,
+            "itr_bits_per_minute": 0.9599353234847285
+          },
+          "58": {
+            "accuracy": 0.025,
+            "balanced_accuracy": 0.025,
+            "itr_bits_per_minute": 0.0
+          },
+          "59": {
+            "accuracy": 0.0125,
+            "balanced_accuracy": 0.0125,
+            "itr_bits_per_minute": 0.0
+          }
+        }
+      },
+      "0.6": {
+        "overall": {
+          "accuracy": 0.09110169491525423,
+          "balanced_accuracy": 0.09110169491525424,
+          "itr_bits_per_minute": 4.249008898571253
+        },
+        "per_subject": {
+          "1": {
+            "accuracy": 0.11875,
+            "balanced_accuracy": 0.11875,
+            "itr_bits_per_minute": 7.549653608209474
+          },
+          "2": {
+            "accuracy": 0.05625,
+            "balanced_accuracy": 0.05625,
+            "itr_bits_per_minute": 1.170240546432359
+          },
+          "3": {
+            "accuracy": 0.04375,
+            "balanced_accuracy": 0.04375,
+            "itr_bits_per_minute": 0.4654380342459967
+          },
+          "4": {
+            "accuracy": 0.075,
+            "balanced_accuracy": 0.075,
+            "itr_bits_per_minute": 2.6519726352701056
+          },
+          "5": {
+            "accuracy": 0.025,
+            "balanced_accuracy": 0.025,
+            "itr_bits_per_minute": 0.0
+          },
+          "6": {
+            "accuracy": 0.1,
+            "balanced_accuracy": 0.1,
+            "itr_bits_per_minute": 5.24020932665766
+          },
+          "7": {
+            "accuracy": 0.125,
+            "balanced_accuracy": 0.125,
+            "itr_bits_per_minute": 8.38018419181633
+          },
+          "8": {
+            "accuracy": 0.29375,
+            "balanced_accuracy": 0.29375,
+            "itr_bits_per_minute": 39.03253910806743
+          },
+          "9": {
+            "accuracy": 0.16875,
+            "balanced_accuracy": 0.16875,
+            "itr_bits_per_minute": 14.923647058429344
+          },
+          "10": {
+            "accuracy": 0.025,
+            "balanced_accuracy": 0.025,
+            "itr_bits_per_minute": 0.0
+          },
+          "11": {
+            "accuracy": 0.05625,
+            "balanced_accuracy": 0.05625,
+            "itr_bits_per_minute": 1.170240546432359
+          },
+          "12": {
+            "accuracy": 0.1,
+            "balanced_accuracy": 0.1,
+            "itr_bits_per_minute": 5.24020932665766
+          },
+          "13": {
+            "accuracy": 0.0125,
+            "balanced_accuracy": 0.0125,
+            "itr_bits_per_minute": 0.0
+          },
+          "14": {
+            "accuracy": 0.04375,
+            "balanced_accuracy": 0.04375,
+            "itr_bits_per_minute": 0.4654380342459967
+          },
+          "15": {
+            "accuracy": 0.20625,
+            "balanced_accuracy": 0.20625,
+            "itr_bits_per_minute": 21.402913419336997
+          },
+          "16": {
+            "accuracy": 0.08125,
+            "balanced_accuracy": 0.08125,
+            "itr_bits_per_minute": 3.2398039275099806
+          },
+          "17": {
+            "accuracy": 0.03125,
+            "balanced_accuracy": 0.03125,
+            "itr_bits_per_minute": 0.05849296646427213
+          },
+          "18": {
+            "accuracy": 0.08125,
+            "balanced_accuracy": 0.08125,
+            "itr_bits_per_minute": 3.2398039275099806
+          },
+          "19": {
+            "accuracy": 0.03125,
+            "balanced_accuracy": 0.03125,
+            "itr_bits_per_minute": 0.05849296646427213
+          },
+          "20": {
+            "accuracy": 0.075,
+            "balanced_accuracy": 0.075,
+            "itr_bits_per_minute": 2.6519726352701056
+          },
+          "21": {
+            "accuracy": 0.15625,
+            "balanced_accuracy": 0.15625,
+            "itr_bits_per_minute": 12.933140045395529
+          },
+          "22": {
+            "accuracy": 0.11875,
+            "balanced_accuracy": 0.11875,
+            "itr_bits_per_minute": 7.549653608209474
+          },
+          "23": {
+            "accuracy": 0.15625,
+            "balanced_accuracy": 0.15625,
+            "itr_bits_per_minute": 12.933140045395529
+          },
+          "24": {
+            "accuracy": 0.05,
+            "balanced_accuracy": 0.05,
+            "itr_bits_per_minute": 0.7854016283056869
+          },
+          "25": {
+            "accuracy": 0.04375,
+            "balanced_accuracy": 0.04375,
+            "itr_bits_per_minute": 0.4654380342459967
+          },
+          "26": {
+            "accuracy": 0.0625,
+            "balanced_accuracy": 0.0625,
+            "itr_bits_per_minute": 1.6130971683813105
+          },
+          "27": {
+            "accuracy": 0.18125,
+            "balanced_accuracy": 0.18125,
+            "itr_bits_per_minute": 17.001876609937884
+          },
+          "28": {
+            "accuracy": 0.1875,
+            "balanced_accuracy": 0.1875,
+            "itr_bits_per_minute": 18.072356287453104
+          },
+          "29": {
+            "accuracy": 0.05625,
+            "balanced_accuracy": 0.05625,
+            "itr_bits_per_minute": 1.170240546432359
+          },
+          "30": {
+            "accuracy": 0.03125,
+            "balanced_accuracy": 0.03125,
+            "itr_bits_per_minute": 0.05849296646427213
+          },
+          "31": {
+            "accuracy": 0.03125,
+            "balanced_accuracy": 0.03125,
+            "itr_bits_per_minute": 0.05849296646427213
+          },
+          "32": {
+            "accuracy": 0.10625,
+            "balanced_accuracy": 0.10625,
+            "itr_bits_per_minute": 5.978165510203645
+          },
+          "33": {
+            "accuracy": 0.09375,
+            "balanced_accuracy": 0.09375,
+            "itr_bits_per_minute": 4.536427926568381
+          },
+          "34": {
+            "accuracy": 0.05625,
+            "balanced_accuracy": 0.05625,
+            "itr_bits_per_minute": 1.170240546432359
+          },
+          "35": {
+            "accuracy": 0.375,
+            "balanced_accuracy": 0.375,
+            "itr_bits_per_minute": 58.04278391855413
+          },
+          "36": {
+            "accuracy": 0.05625,
+            "balanced_accuracy": 0.05625,
+            "itr_bits_per_minute": 1.170240546432359
+          },
+          "37": {
+            "accuracy": 0.025,
+            "balanced_accuracy": 0.025,
+            "itr_bits_per_minute": 0.0
+          },
+          "38": {
+            "accuracy": 0.33125,
+            "balanced_accuracy": 0.33125,
+            "itr_bits_per_minute": 47.515470756310854
+          },
+          "39": {
+            "accuracy": 0.1125,
+            "balanced_accuracy": 0.1125,
+            "itr_bits_per_minute": 6.74850883540472
+          },
+          "40": {
+            "accuracy": 0.05625,
+            "balanced_accuracy": 0.05625,
+            "itr_bits_per_minute": 1.170240546432359
+          },
+          "41": {
+            "accuracy": 0.1125,
+            "balanced_accuracy": 0.1125,
+            "itr_bits_per_minute": 6.74850883540472
+          },
+          "42": {
+            "accuracy": 0.0375,
+            "balanced_accuracy": 0.0375,
+            "itr_bits_per_minute": 0.21919110223483007
+          },
+          "43": {
+            "accuracy": 0.03125,
+            "balanced_accuracy": 0.03125,
+            "itr_bits_per_minute": 0.05849296646427213
+          },
+          "44": {
+            "accuracy": 0.0375,
+            "balanced_accuracy": 0.0375,
+            "itr_bits_per_minute": 0.21919110223483007
+          },
+          "45": {
+            "accuracy": 0.075,
+            "balanced_accuracy": 0.075,
+            "itr_bits_per_minute": 2.6519726352701056
+          },
+          "46": {
+            "accuracy": 0.08125,
+            "balanced_accuracy": 0.08125,
+            "itr_bits_per_minute": 3.2398039275099806
+          },
+          "47": {
+            "accuracy": 0.05,
+            "balanced_accuracy": 0.05,
+            "itr_bits_per_minute": 0.7854016283056869
+          },
+          "48": {
+            "accuracy": 0.08125,
+            "balanced_accuracy": 0.08125,
+            "itr_bits_per_minute": 3.2398039275099806
+          },
+          "49": {
+            "accuracy": 0.05625,
+            "balanced_accuracy": 0.05625,
+            "itr_bits_per_minute": 1.170240546432359
+          },
+          "50": {
+            "accuracy": 0.10625,
+            "balanced_accuracy": 0.10625,
+            "itr_bits_per_minute": 5.978165510203645
+          },
+          "51": {
+            "accuracy": 0.1125,
+            "balanced_accuracy": 0.1125,
+            "itr_bits_per_minute": 6.74850883540472
+          },
+          "52": {
+            "accuracy": 0.0625,
+            "balanced_accuracy": 0.0625,
+            "itr_bits_per_minute": 1.6130971683813105
+          },
+          "53": {
+            "accuracy": 0.03125,
+            "balanced_accuracy": 0.03125,
+            "itr_bits_per_minute": 0.05849296646427213
+          },
+          "54": {
+            "accuracy": 0.13125,
+            "balanced_accuracy": 0.13125,
+            "itr_bits_per_minute": 9.238829510819002
+          },
+          "55": {
+            "accuracy": 0.04375,
+            "balanced_accuracy": 0.04375,
+            "itr_bits_per_minute": 0.4654380342459967
+          },
+          "56": {
+            "accuracy": 0.0625,
+            "balanced_accuracy": 0.0625,
+            "itr_bits_per_minute": 1.6130971683813105
+          },
+          "57": {
+            "accuracy": 0.125,
+            "balanced_accuracy": 0.125,
+            "itr_bits_per_minute": 8.38018419181633
+          },
+          "58": {
+            "accuracy": 0.0375,
+            "balanced_accuracy": 0.0375,
+            "itr_bits_per_minute": 0.21919110223483007
+          },
+          "59": {
+            "accuracy": 0.0625,
+            "balanced_accuracy": 0.0625,
+            "itr_bits_per_minute": 1.6130971683813105
+          }
+        }
+      },
+      "0.8": {
+        "overall": {
+          "accuracy": 0.1541313559322034,
+          "balanced_accuracy": 0.15413135593220337,
+          "itr_bits_per_minute": 10.665641882689632
+        },
+        "per_subject": {
+          "1": {
+            "accuracy": 0.15,
+            "balanced_accuracy": 0.15,
+            "itr_bits_per_minute": 10.130580190986963
+          },
+          "2": {
+            "accuracy": 0.0875,
+            "balanced_accuracy": 0.0875,
+            "itr_bits_per_minute": 3.2736434282886724
+          },
+          "3": {
+            "accuracy": 0.09375,
+            "balanced_accuracy": 0.09375,
+            "itr_bits_per_minute": 3.838515937865553
+          },
+          "4": {
+            "accuracy": 0.10625,
+            "balanced_accuracy": 0.10625,
+            "itr_bits_per_minute": 5.058447739403085
+          },
+          "5": {
+            "accuracy": 0.1125,
+            "balanced_accuracy": 0.1125,
+            "itr_bits_per_minute": 5.710276706880918
+          },
+          "6": {
+            "accuracy": 0.16875,
+            "balanced_accuracy": 0.16875,
+            "itr_bits_per_minute": 12.627701357132523
+          },
+          "7": {
+            "accuracy": 0.25,
+            "balanced_accuracy": 0.25,
+            "itr_bits_per_minute": 25.227614136071203
+          },
+          "8": {
+            "accuracy": 0.41875,
+            "balanced_accuracy": 0.41875,
+            "itr_bits_per_minute": 58.565578511402485
+          },
+          "9": {
+            "accuracy": 0.30625,
+            "balanced_accuracy": 0.30625,
+            "itr_bits_per_minute": 35.37152804792233
+          },
+          "10": {
+            "accuracy": 0.05,
+            "balanced_accuracy": 0.05,
+            "itr_bits_per_minute": 0.6645706085663505
+          },
+          "11": {
+            "accuracy": 0.075,
+            "balanced_accuracy": 0.075,
+            "itr_bits_per_minute": 2.2439768452285507
+          },
+          "12": {
+            "accuracy": 0.24375,
+            "balanced_accuracy": 0.24375,
+            "itr_bits_per_minute": 24.167154739477393
+          },
+          "13": {
+            "accuracy": 0.04375,
+            "balanced_accuracy": 0.04375,
+            "itr_bits_per_minute": 0.3938321828235357
+          },
+          "14": {
+            "accuracy": 0.04375,
+            "balanced_accuracy": 0.04375,
+            "itr_bits_per_minute": 0.3938321828235357
+          },
+          "15": {
+            "accuracy": 0.2875,
+            "balanced_accuracy": 0.2875,
+            "itr_bits_per_minute": 31.874266916280803
+          },
+          "16": {
+            "accuracy": 0.15625,
+            "balanced_accuracy": 0.15625,
+            "itr_bits_per_minute": 10.943426192257755
+          },
+          "17": {
+            "accuracy": 0.06875,
+            "balanced_accuracy": 0.06875,
+            "itr_bits_per_minute": 1.7841134836722687
+          },
+          "18": {
+            "accuracy": 0.1375,
+            "balanced_accuracy": 0.1375,
+            "itr_bits_per_minute": 8.566835896851243
+          },
+          "19": {
+            "accuracy": 0.10625,
+            "balanced_accuracy": 0.10625,
+            "itr_bits_per_minute": 5.058447739403085
+          },
+          "20": {
+            "accuracy": 0.1125,
+            "balanced_accuracy": 0.1125,
+            "itr_bits_per_minute": 5.710276706880918
+          },
+          "21": {
+            "accuracy": 0.25625,
+            "balanced_accuracy": 0.25625,
+            "itr_bits_per_minute": 26.30194672453247
+          },
+          "22": {
+            "accuracy": 0.1875,
+            "balanced_accuracy": 0.1875,
+            "itr_bits_per_minute": 15.29199378169109
+          },
+          "23": {
+            "accuracy": 0.16875,
+            "balanced_accuracy": 0.16875,
+            "itr_bits_per_minute": 12.627701357132523
+          },
+          "24": {
+            "accuracy": 0.09375,
+            "balanced_accuracy": 0.09375,
+            "itr_bits_per_minute": 3.838515937865553
+          },
+          "25": {
+            "accuracy": 0.1125,
+            "balanced_accuracy": 0.1125,
+            "itr_bits_per_minute": 5.710276706880918
+          },
+          "26": {
+            "accuracy": 0.0625,
+            "balanced_accuracy": 0.0625,
+            "itr_bits_per_minute": 1.3649283732457242
+          },
+          "27": {
+            "accuracy": 0.31875,
+            "balanced_accuracy": 0.31875,
+            "itr_bits_per_minute": 37.76450249574408
+          },
+          "28": {
+            "accuracy": 0.3,
+            "balanced_accuracy": 0.3,
+            "itr_bits_per_minute": 34.19333734398908
+          },
+          "29": {
+            "accuracy": 0.1125,
+            "balanced_accuracy": 0.1125,
+            "itr_bits_per_minute": 5.710276706880918
+          },
+          "30": {
+            "accuracy": 0.0375,
+            "balanced_accuracy": 0.0375,
+            "itr_bits_per_minute": 0.18546939419870237
+          },
+          "31": {
+            "accuracy": 0.075,
+            "balanced_accuracy": 0.075,
+            "itr_bits_per_minute": 2.2439768452285507
+          },
+          "32": {
+            "accuracy": 0.18125,
+            "balanced_accuracy": 0.18125,
+            "itr_bits_per_minute": 14.386203285332057
+          },
+          "33": {
+            "accuracy": 0.10625,
+            "balanced_accuracy": 0.10625,
+            "itr_bits_per_minute": 5.058447739403085
+          },
+          "34": {
+            "accuracy": 0.10625,
+            "balanced_accuracy": 0.10625,
+            "itr_bits_per_minute": 5.058447739403085
+          },
+          "35": {
+            "accuracy": 0.53125,
+            "balanced_accuracy": 0.53125,
+            "itr_bits_per_minute": 85.2560956569886
+          },
+          "36": {
+            "accuracy": 0.0625,
+            "balanced_accuracy": 0.0625,
+            "itr_bits_per_minute": 1.3649283732457242
+          },
+          "37": {
+            "accuracy": 0.03125,
+            "balanced_accuracy": 0.03125,
+            "itr_bits_per_minute": 0.04949404854669181
+          },
+          "38": {
+            "accuracy": 0.4625,
+            "balanced_accuracy": 0.4625,
+            "itr_bits_per_minute": 68.54242129002965
+          },
+          "39": {
+            "accuracy": 0.16875,
+            "balanced_accuracy": 0.16875,
+            "itr_bits_per_minute": 12.627701357132523
+          },
+          "40": {
+            "accuracy": 0.10625,
+            "balanced_accuracy": 0.10625,
+            "itr_bits_per_minute": 5.058447739403085
+          },
+          "41": {
+            "accuracy": 0.3375,
+            "balanced_accuracy": 0.3375,
+            "itr_bits_per_minute": 41.44351675994082
+          },
+          "42": {
+            "accuracy": 0.05,
+            "balanced_accuracy": 0.05,
+            "itr_bits_per_minute": 0.6645706085663505
+          },
+          "43": {
+            "accuracy": 0.11875,
+            "balanced_accuracy": 0.11875,
+            "itr_bits_per_minute": 6.388168437715708
+          },
+          "44": {
+            "accuracy": 0.0375,
+            "balanced_accuracy": 0.0375,
+            "itr_bits_per_minute": 0.18546939419870237
+          },
+          "45": {
+            "accuracy": 0.1375,
+            "balanced_accuracy": 0.1375,
+            "itr_bits_per_minute": 8.566835896851243
+          },
+          "46": {
+            "accuracy": 0.19375,
+            "balanced_accuracy": 0.19375,
+            "itr_bits_per_minute": 16.214860193758508
+          },
+          "47": {
+            "accuracy": 0.06875,
+            "balanced_accuracy": 0.06875,
+            "itr_bits_per_minute": 1.7841134836722687
+          },
+          "48": {
+            "accuracy": 0.11875,
+            "balanced_accuracy": 0.11875,
+            "itr_bits_per_minute": 6.388168437715708
+          },
+          "49": {
+            "accuracy": 0.11875,
+            "balanced_accuracy": 0.11875,
+            "itr_bits_per_minute": 6.388168437715708
+          },
+          "50": {
+            "accuracy": 0.16875,
+            "balanced_accuracy": 0.16875,
+            "itr_bits_per_minute": 12.627701357132523
+          },
+          "51": {
+            "accuracy": 0.3,
+            "balanced_accuracy": 0.3,
+            "itr_bits_per_minute": 34.19333734398908
+          },
+          "52": {
+            "accuracy": 0.0625,
+            "balanced_accuracy": 0.0625,
+            "itr_bits_per_minute": 1.3649283732457242
+          },
+          "53": {
+            "accuracy": 0.04375,
+            "balanced_accuracy": 0.04375,
+            "itr_bits_per_minute": 0.3938321828235357
+          },
+          "54": {
+            "accuracy": 0.2,
+            "balanced_accuracy": 0.2,
+            "itr_bits_per_minute": 17.15437961124004
+          },
+          "55": {
+            "accuracy": 0.075,
+            "balanced_accuracy": 0.075,
+            "itr_bits_per_minute": 2.2439768452285507
+          },
+          "56": {
+            "accuracy": 0.1375,
+            "balanced_accuracy": 0.1375,
+            "itr_bits_per_minute": 8.566835896851243
+          },
+          "57": {
+            "accuracy": 0.2625,
+            "balanced_accuracy": 0.2625,
+            "itr_bits_per_minute": 27.389927814132655
+          },
+          "58": {
+            "accuracy": 0.075,
+            "balanced_accuracy": 0.075,
+            "itr_bits_per_minute": 2.2439768452285507
+          },
+          "59": {
+            "accuracy": 0.0875,
+            "balanced_accuracy": 0.0875,
+            "itr_bits_per_minute": 3.2736434282886724
+          }
+        }
+      },
+      "1.0": {
+        "overall": {
+          "accuracy": 0.2208686440677966,
+          "balanced_accuracy": 0.22086864406779663,
+          "itr_bits_per_minute": 17.686201792544445
+        },
+        "per_subject": {
+          "1": {
+            "accuracy": 0.2875,
+            "balanced_accuracy": 0.2875,
+            "itr_bits_per_minute": 27.624364660776696
+          },
+          "2": {
+            "accuracy": 0.1125,
+            "balanced_accuracy": 0.1125,
+            "itr_bits_per_minute": 4.948906479296795
+          },
+          "3": {
+            "accuracy": 0.14375,
+            "balanced_accuracy": 0.14375,
+            "itr_bits_per_minute": 8.093054092693848
+          },
+          "4": {
+            "accuracy": 0.14375,
+            "balanced_accuracy": 0.14375,
+            "itr_bits_per_minute": 8.093054092693848
+          },
+          "5": {
+            "accuracy": 0.1375,
+            "balanced_accuracy": 0.1375,
+            "itr_bits_per_minute": 7.4245911106044105
+          },
+          "6": {
+            "accuracy": 0.24375,
+            "balanced_accuracy": 0.24375,
+            "itr_bits_per_minute": 20.944867440880408
+          },
+          "7": {
+            "accuracy": 0.2875,
+            "balanced_accuracy": 0.2875,
+            "itr_bits_per_minute": 27.624364660776696
+          },
+          "8": {
+            "accuracy": 0.6125,
+            "balanced_accuracy": 0.6125,
+            "itr_bits_per_minute": 92.42669959945435
+          },
+          "9": {
+            "accuracy": 0.4625,
+            "balanced_accuracy": 0.4625,
+            "itr_bits_per_minute": 59.403431784692366
+          },
+          "10": {
+            "accuracy": 0.0875,
+            "balanced_accuracy": 0.0875,
+            "itr_bits_per_minute": 2.837157637850183
+          },
+          "11": {
+            "accuracy": 0.1375,
+            "balanced_accuracy": 0.1375,
+            "itr_bits_per_minute": 7.4245911106044105
+          },
+          "12": {
+            "accuracy": 0.3375,
+            "balanced_accuracy": 0.3375,
+            "itr_bits_per_minute": 35.917714525282044
+          },
+          "13": {
+            "accuracy": 0.09375,
+            "balanced_accuracy": 0.09375,
+            "itr_bits_per_minute": 3.3267138128168128
+          },
+          "14": {
+            "accuracy": 0.04375,
+            "balanced_accuracy": 0.04375,
+            "itr_bits_per_minute": 0.341321225113731
+          },
+          "15": {
+            "accuracy": 0.375,
+            "balanced_accuracy": 0.375,
+            "itr_bits_per_minute": 42.5647082069397
+          },
+          "16": {
+            "accuracy": 0.2625,
+            "balanced_accuracy": 0.2625,
+            "itr_bits_per_minute": 23.73793743891497
+          },
+          "17": {
+            "accuracy": 0.075,
+            "balanced_accuracy": 0.075,
+            "itr_bits_per_minute": 1.9447799325314108
+          },
+          "18": {
+            "accuracy": 0.1375,
+            "balanced_accuracy": 0.1375,
+            "itr_bits_per_minute": 7.4245911106044105
+          },
+          "19": {
+            "accuracy": 0.15,
+            "balanced_accuracy": 0.15,
+            "itr_bits_per_minute": 8.779836165522035
+          },
+          "20": {
+            "accuracy": 0.14375,
+            "balanced_accuracy": 0.14375,
+            "itr_bits_per_minute": 8.093054092693848
+          },
+          "21": {
+            "accuracy": 0.30625,
+            "balanced_accuracy": 0.30625,
+            "itr_bits_per_minute": 30.655324308199354
+          },
+          "22": {
+            "accuracy": 0.25625,
+            "balanced_accuracy": 0.25625,
+            "itr_bits_per_minute": 22.79502049459481
+          },
+          "23": {
+            "accuracy": 0.16875,
+            "balanced_accuracy": 0.16875,
+            "itr_bits_per_minute": 10.944007842848187
+          },
+          "24": {
+            "accuracy": 0.15,
+            "balanced_accuracy": 0.15,
+            "itr_bits_per_minute": 8.779836165522035
+          },
+          "25": {
+            "accuracy": 0.15625,
+            "balanced_accuracy": 0.15625,
+            "itr_bits_per_minute": 9.484302699956721
+          },
+          "26": {
+            "accuracy": 0.0625,
+            "balanced_accuracy": 0.0625,
+            "itr_bits_per_minute": 1.1829379234796278
+          },
+          "27": {
+            "accuracy": 0.51875,
+            "balanced_accuracy": 0.51875,
+            "itr_bits_per_minute": 71.17371639572728
+          },
+          "28": {
+            "accuracy": 0.45,
+            "balanced_accuracy": 0.45,
+            "itr_bits_per_minute": 56.88729682101268
+          },
+          "29": {
+            "accuracy": 0.225,
+            "balanced_accuracy": 0.225,
+            "itr_bits_per_minute": 18.261941850244234
+          },
+          "30": {
+            "accuracy": 0.025,
+            "balanced_accuracy": 0.025,
+            "itr_bits_per_minute": 0.0
+          },
+          "31": {
+            "accuracy": 0.05625,
+            "balanced_accuracy": 0.05625,
+            "itr_bits_per_minute": 0.8581764007170634
+          },
+          "32": {
+            "accuracy": 0.30625,
+            "balanced_accuracy": 0.30625,
+            "itr_bits_per_minute": 30.655324308199354
+          },
+          "33": {
+            "accuracy": 0.225,
+            "balanced_accuracy": 0.225,
+            "itr_bits_per_minute": 18.261941850244234
+          },
+          "34": {
+            "accuracy": 0.13125,
+            "balanced_accuracy": 0.13125,
+            "itr_bits_per_minute": 6.775141641267268
+          },
+          "35": {
+            "accuracy": 0.725,
+            "balanced_accuracy": 0.725,
+            "itr_bits_per_minute": 120.79577225622513
+          },
+          "36": {
+            "accuracy": 0.06875,
+            "balanced_accuracy": 0.06875,
+            "itr_bits_per_minute": 1.5462316858492997
+          },
+          "37": {
+            "accuracy": 0.0375,
+            "balanced_accuracy": 0.0375,
+            "itr_bits_per_minute": 0.1607401416388754
+          },
+          "38": {
+            "accuracy": 0.65625,
+            "balanced_accuracy": 0.65625,
+            "itr_bits_per_minute": 103.0683603903439
+          },
+          "39": {
+            "accuracy": 0.28125,
+            "balanced_accuracy": 0.28125,
+            "itr_bits_per_minute": 26.635872506070015
+          },
+          "40": {
+            "accuracy": 0.1875,
+            "balanced_accuracy": 0.1875,
+            "itr_bits_per_minute": 13.253061277465612
+          },
+          "41": {
+            "accuracy": 0.51875,
+            "balanced_accuracy": 0.51875,
+            "itr_bits_per_minute": 71.17371639572728
+          },
+          "42": {
+            "accuracy": 0.0625,
+            "balanced_accuracy": 0.0625,
+            "itr_bits_per_minute": 1.1829379234796278
+          },
+          "43": {
+            "accuracy": 0.14375,
+            "balanced_accuracy": 0.14375,
+            "itr_bits_per_minute": 8.093054092693848
+          },
+          "44": {
+            "accuracy": 0.075,
+            "balanced_accuracy": 0.075,
+            "itr_bits_per_minute": 1.9447799325314108
+          },
+          "45": {
+            "accuracy": 0.21875,
+            "balanced_accuracy": 0.21875,
+            "itr_bits_per_minute": 17.39316595451342
+          },
+          "46": {
+            "accuracy": 0.29375,
+            "balanced_accuracy": 0.29375,
+            "itr_bits_per_minute": 28.623862012582787
+          },
+          "47": {
+            "accuracy": 0.10625,
+            "balanced_accuracy": 0.10625,
+            "itr_bits_per_minute": 4.383988040816007
+          },
+          "48": {
+            "accuracy": 0.175,
+            "balanced_accuracy": 0.175,
+            "itr_bits_per_minute": 11.698217170778022
+          },
+          "49": {
+            "accuracy": 0.19375,
+            "balanced_accuracy": 0.19375,
+            "itr_bits_per_minute": 14.052878834590707
+          },
+          "50": {
+            "accuracy": 0.2875,
+            "balanced_accuracy": 0.2875,
+            "itr_bits_per_minute": 27.624364660776696
+          },
+          "51": {
+            "accuracy": 0.3375,
+            "balanced_accuracy": 0.3375,
+            "itr_bits_per_minute": 35.917714525282044
+          },
+          "52": {
+            "accuracy": 0.08125,
+            "balanced_accuracy": 0.08125,
+            "itr_bits_per_minute": 2.375856213507319
+          },
+          "53": {
+            "accuracy": 0.04375,
+            "balanced_accuracy": 0.04375,
+            "itr_bits_per_minute": 0.341321225113731
+          },
+          "54": {
+            "accuracy": 0.2875,
+            "balanced_accuracy": 0.2875,
+            "itr_bits_per_minute": 27.624364660776696
+          },
+          "55": {
+            "accuracy": 0.1375,
+            "balanced_accuracy": 0.1375,
+            "itr_bits_per_minute": 7.4245911106044105
+          },
+          "56": {
+            "accuracy": 0.25625,
+            "balanced_accuracy": 0.25625,
+            "itr_bits_per_minute": 22.79502049459481
+          },
+          "57": {
+            "accuracy": 0.325,
+            "balanced_accuracy": 0.325,
+            "itr_bits_per_minute": 33.78181898496713
+          },
+          "58": {
+            "accuracy": 0.08125,
+            "balanced_accuracy": 0.08125,
+            "itr_bits_per_minute": 2.375856213507319
+          },
+          "59": {
+            "accuracy": 0.1375,
+            "balanced_accuracy": 0.1375,
+            "itr_bits_per_minute": 7.4245911106044105
+          }
+        }
+      },
+      "1.2": {
+        "overall": {
+          "accuracy": 0.29735169491525426,
+          "balanced_accuracy": 0.29735169491525426,
+          "itr_bits_per_minute": 25.768930060618267
+        },
+        "per_subject": {
+          "1": {
+            "accuracy": 0.3875,
+            "balanced_accuracy": 0.3875,
+            "itr_bits_per_minute": 39.580658496788885
+          },
+          "2": {
+            "accuracy": 0.2,
+            "balanced_accuracy": 0.2,
+            "itr_bits_per_minute": 13.118054996830619
+          },
+          "3": {
+            "accuracy": 0.225,
+            "balanced_accuracy": 0.225,
+            "itr_bits_per_minute": 16.113478103156677
+          },
+          "4": {
+            "accuracy": 0.2,
+            "balanced_accuracy": 0.2,
+            "itr_bits_per_minute": 13.118054996830619
+          },
+          "5": {
+            "accuracy": 0.2375,
+            "balanced_accuracy": 0.2375,
+            "itr_bits_per_minute": 17.680616910073706
+          },
+          "6": {
+            "accuracy": 0.35625,
+            "balanced_accuracy": 0.35625,
+            "itr_bits_per_minute": 34.585556595099334
+          },
+          "7": {
+            "accuracy": 0.43125,
+            "balanced_accuracy": 0.43125,
+            "itr_bits_per_minute": 46.92483041014203
+          },
+          "8": {
+            "accuracy": 0.75,
+            "balanced_accuracy": 0.75,
+            "itr_bits_per_minute": 112.56350878985887
+          },
+          "9": {
+            "accuracy": 0.59375,
+            "balanced_accuracy": 0.59375,
+            "itr_bits_per_minute": 77.65567200270077
+          },
+          "10": {
+            "accuracy": 0.11875,
+            "balanced_accuracy": 0.11875,
+            "itr_bits_per_minute": 4.8850699817826015
+          },
+          "11": {
+            "accuracy": 0.1875,
+            "balanced_accuracy": 0.1875,
+            "itr_bits_per_minute": 11.693877597763775
+          },
+          "12": {
+            "accuracy": 0.46875,
+            "balanced_accuracy": 0.46875,
+            "itr_bits_per_minute": 53.536862372559874
+          },
+          "13": {
+            "accuracy": 0.1125,
+            "balanced_accuracy": 0.1125,
+            "itr_bits_per_minute": 4.36668218761482
+          },
+          "14": {
+            "accuracy": 0.0625,
+            "balanced_accuracy": 0.0625,
+            "itr_bits_per_minute": 1.0437687560114364
+          },
+          "15": {
+            "accuracy": 0.49375,
+            "balanced_accuracy": 0.49375,
+            "itr_bits_per_minute": 58.10491535554491
+          },
+          "16": {
+            "accuracy": 0.45625,
+            "balanced_accuracy": 0.45625,
+            "itr_bits_per_minute": 51.30072438883789
+          },
+          "17": {
+            "accuracy": 0.11875,
+            "balanced_accuracy": 0.11875,
+            "itr_bits_per_minute": 4.8850699817826015
+          },
+          "18": {
+            "accuracy": 0.14375,
+            "balanced_accuracy": 0.14375,
+            "itr_bits_per_minute": 7.14093008178869
+          },
+          "19": {
+            "accuracy": 0.20625,
+            "balanced_accuracy": 0.20625,
+            "itr_bits_per_minute": 13.848943977218058
+          },
+          "20": {
+            "accuracy": 0.2375,
+            "balanced_accuracy": 0.2375,
+            "itr_bits_per_minute": 17.680616910073706
+          },
+          "21": {
+            "accuracy": 0.35,
+            "balanced_accuracy": 0.35,
+            "itr_bits_per_minute": 33.612303432402705
+          },
+          "22": {
+            "accuracy": 0.4,
+            "balanced_accuracy": 0.4,
+            "itr_bits_per_minute": 41.63774714524751
+          },
+          "23": {
+            "accuracy": 0.2875,
+            "balanced_accuracy": 0.2875,
+            "itr_bits_per_minute": 24.374439406567674
+          },
+          "24": {
+            "accuracy": 0.1625,
+            "balanced_accuracy": 0.1625,
+            "itr_bits_per_minute": 9.00518092620632
+          },
+          "25": {
+            "accuracy": 0.20625,
+            "balanced_accuracy": 0.20625,
+            "itr_bits_per_minute": 13.848943977218058
+          },
+          "26": {
+            "accuracy": 0.0875,
+            "balanced_accuracy": 0.0875,
+            "itr_bits_per_minute": 2.503374386338397
+          },
+          "27": {
+            "accuracy": 0.625,
+            "balanced_accuracy": 0.625,
+            "itr_bits_per_minute": 84.19299740784896
+          },
+          "28": {
+            "accuracy": 0.625,
+            "balanced_accuracy": 0.625,
+            "itr_bits_per_minute": 84.19299740784896
+          },
+          "29": {
+            "accuracy": 0.2375,
+            "balanced_accuracy": 0.2375,
+            "itr_bits_per_minute": 17.680616910073706
+          },
+          "30": {
+            "accuracy": 0.04375,
+            "balanced_accuracy": 0.04375,
+            "itr_bits_per_minute": 0.30116578686505674
+          },
+          "31": {
+            "accuracy": 0.125,
+            "balanced_accuracy": 0.125,
+            "itr_bits_per_minute": 5.422472124116449
+          },
+          "32": {
+            "accuracy": 0.41875,
+            "balanced_accuracy": 0.41875,
+            "itr_bits_per_minute": 44.78544239107249
+          },
+          "33": {
+            "accuracy": 0.225,
+            "balanced_accuracy": 0.225,
+            "itr_bits_per_minute": 16.113478103156677
+          },
+          "34": {
+            "accuracy": 0.1875,
+            "balanced_accuracy": 0.1875,
+            "itr_bits_per_minute": 11.693877597763775
+          },
+          "35": {
+            "accuracy": 0.79375,
+            "balanced_accuracy": 0.79375,
+            "itr_bits_per_minute": 123.44331351539113
+          },
+          "36": {
+            "accuracy": 0.08125,
+            "balanced_accuracy": 0.08125,
+            "itr_bits_per_minute": 2.096343717800576
+          },
+          "37": {
+            "accuracy": 0.05,
+            "balanced_accuracy": 0.05,
+            "itr_bits_per_minute": 0.5082010536095621
+          },
+          "38": {
+            "accuracy": 0.79375,
+            "balanced_accuracy": 0.79375,
+            "itr_bits_per_minute": 123.44331351539113
+          },
+          "39": {
+            "accuracy": 0.35625,
+            "balanced_accuracy": 0.35625,
+            "itr_bits_per_minute": 34.585556595099334
+          },
+          "40": {
+            "accuracy": 0.225,
+            "balanced_accuracy": 0.225,
+            "itr_bits_per_minute": 16.113478103156677
+          },
+          "41": {
+            "accuracy": 0.64375,
+            "balanced_accuracy": 0.64375,
+            "itr_bits_per_minute": 88.21684381590744
+          },
+          "42": {
+            "accuracy": 0.05625,
+            "balanced_accuracy": 0.05625,
+            "itr_bits_per_minute": 0.7572144712209383
+          },
+          "43": {
+            "accuracy": 0.1625,
+            "balanced_accuracy": 0.1625,
+            "itr_bits_per_minute": 9.00518092620632
+          },
+          "44": {
+            "accuracy": 0.11875,
+            "balanced_accuracy": 0.11875,
+            "itr_bits_per_minute": 4.8850699817826015
+          },
+          "45": {
+            "accuracy": 0.34375,
+            "balanced_accuracy": 0.34375,
+            "itr_bits_per_minute": 32.6477935187345
+          },
+          "46": {
+            "accuracy": 0.35625,
+            "balanced_accuracy": 0.35625,
+            "itr_bits_per_minute": 34.585556595099334
+          },
+          "47": {
+            "accuracy": 0.13125,
+            "balanced_accuracy": 0.13125,
+            "itr_bits_per_minute": 5.978066154059355
+          },
+          "48": {
+            "accuracy": 0.3,
+            "balanced_accuracy": 0.3,
+            "itr_bits_per_minute": 26.147846204226944
+          },
+          "49": {
+            "accuracy": 0.3125,
+            "balanced_accuracy": 0.3125,
+            "itr_bits_per_minute": 27.95914718417681
+          },
+          "50": {
+            "accuracy": 0.40625,
+            "balanced_accuracy": 0.40625,
+            "itr_bits_per_minute": 42.67874555434764
+          },
+          "51": {
+            "accuracy": 0.55625,
+            "balanced_accuracy": 0.55625,
+            "itr_bits_per_minute": 70.08281543418137
+          },
+          "52": {
+            "accuracy": 0.05625,
+            "balanced_accuracy": 0.05625,
+            "itr_bits_per_minute": 0.7572144712209383
+          },
+          "53": {
+            "accuracy": 0.0375,
+            "balanced_accuracy": 0.0375,
+            "itr_bits_per_minute": 0.14182953674018417
+          },
+          "54": {
+            "accuracy": 0.35,
+            "balanced_accuracy": 0.35,
+            "itr_bits_per_minute": 33.612303432402705
+          },
+          "55": {
+            "accuracy": 0.21875,
+            "balanced_accuracy": 0.21875,
+            "itr_bits_per_minute": 15.346911136335372
+          },
+          "56": {
+            "accuracy": 0.35,
+            "balanced_accuracy": 0.35,
+            "itr_bits_per_minute": 33.612303432402705
+          },
+          "57": {
+            "accuracy": 0.54375,
+            "balanced_accuracy": 0.54375,
+            "itr_bits_per_minute": 67.623290064736
+          },
+          "58": {
+            "accuracy": 0.13125,
+            "balanced_accuracy": 0.13125,
+            "itr_bits_per_minute": 5.978066154059355
+          },
+          "59": {
+            "accuracy": 0.2,
+            "balanced_accuracy": 0.2,
+            "itr_bits_per_minute": 13.118054996830619
+          }
+        }
+      },
+      "1.5": {
+        "overall": {
+          "accuracy": 0.40052966101694915,
+          "balanced_accuracy": 0.40052966101694915,
+          "itr_bits_per_minute": 35.46679955610659
+        },
+        "per_subject": {
+          "1": {
+            "accuracy": 0.58125,
+            "balanced_accuracy": 0.58125,
+            "itr_bits_per_minute": 63.833961849365096
+          },
+          "2": {
+            "accuracy": 0.375,
+            "balanced_accuracy": 0.375,
+            "itr_bits_per_minute": 31.923531155204774
+          },
+          "3": {
+            "accuracy": 0.2875,
+            "balanced_accuracy": 0.2875,
+            "itr_bits_per_minute": 20.718273495582523
+          },
+          "4": {
+            "accuracy": 0.2625,
+            "balanced_accuracy": 0.2625,
+            "itr_bits_per_minute": 17.803453079186227
+          },
+          "5": {
+            "accuracy": 0.35625,
+            "balanced_accuracy": 0.35625,
+            "itr_bits_per_minute": 29.39772310583443
+          },
+          "6": {
+            "accuracy": 0.45625,
+            "balanced_accuracy": 0.45625,
+            "itr_bits_per_minute": 43.605615730512206
+          },
+          "7": {
+            "accuracy": 0.675,
+            "balanced_accuracy": 0.675,
+            "itr_bits_per_minute": 80.83308753677899
+          },
+          "8": {
+            "accuracy": 0.91875,
+            "balanced_accuracy": 0.91875,
+            "itr_bits_per_minute": 134.57762290904446
+          },
+          "9": {
+            "accuracy": 0.75625,
+            "balanced_accuracy": 0.75625,
+            "itr_bits_per_minute": 96.97170969566737
+          },
+          "10": {
+            "accuracy": 0.2,
+            "balanced_accuracy": 0.2,
+            "itr_bits_per_minute": 11.150346747306026
+          },
+          "11": {
+            "accuracy": 0.25625,
+            "balanced_accuracy": 0.25625,
+            "itr_bits_per_minute": 17.096265370946107
+          },
+          "12": {
+            "accuracy": 0.6125,
+            "balanced_accuracy": 0.6125,
+            "itr_bits_per_minute": 69.32002469959076
+          },
+          "13": {
+            "accuracy": 0.2,
+            "balanced_accuracy": 0.2,
+            "itr_bits_per_minute": 11.150346747306026
+          },
+          "14": {
+            "accuracy": 0.075,
+            "balanced_accuracy": 0.075,
+            "itr_bits_per_minute": 1.458584949398558
+          },
+          "15": {
+            "accuracy": 0.6625,
+            "balanced_accuracy": 0.6625,
+            "itr_bits_per_minute": 78.47095752786845
+          },
+          "16": {
+            "accuracy": 0.5625,
+            "balanced_accuracy": 0.5625,
+            "itr_bits_per_minute": 60.625956475398944
+          },
+          "17": {
+            "accuracy": 0.1375,
+            "balanced_accuracy": 0.1375,
+            "itr_bits_per_minute": 5.568443332953308
+          },
+          "18": {
+            "accuracy": 0.20625,
+            "balanced_accuracy": 0.20625,
+            "itr_bits_per_minute": 11.771602380635349
+          },
+          "19": {
+            "accuracy": 0.36875,
+            "balanced_accuracy": 0.36875,
+            "itr_bits_per_minute": 31.074314168473663
+          },
+          "20": {
+            "accuracy": 0.2375,
+            "balanced_accuracy": 0.2375,
+            "itr_bits_per_minute": 15.028524373562648
+          },
+          "21": {
+            "accuracy": 0.4375,
+            "balanced_accuracy": 0.4375,
+            "itr_bits_per_minute": 40.80569815466552
+          },
+          "22": {
+            "accuracy": 0.575,
+            "balanced_accuracy": 0.575,
+            "itr_bits_per_minute": 62.757716677431624
+          },
+          "23": {
+            "accuracy": 0.45625,
+            "balanced_accuracy": 0.45625,
+            "itr_bits_per_minute": 43.605615730512206
+          },
+          "24": {
+            "accuracy": 0.25,
+            "balanced_accuracy": 0.25,
+            "itr_bits_per_minute": 16.397949188446283
+          },
+          "25": {
+            "accuracy": 0.30625,
+            "balanced_accuracy": 0.30625,
+            "itr_bits_per_minute": 22.991493231149516
+          },
+          "26": {
+            "accuracy": 0.16875,
+            "balanced_accuracy": 0.16875,
+            "itr_bits_per_minute": 8.20800588213614
+          },
+          "27": {
+            "accuracy": 0.7625,
+            "balanced_accuracy": 0.7625,
+            "itr_bits_per_minute": 98.27360932064305
+          },
+          "28": {
+            "accuracy": 0.75625,
+            "balanced_accuracy": 0.75625,
+            "itr_bits_per_minute": 96.97170969566737
+          },
+          "29": {
+            "accuracy": 0.35625,
+            "balanced_accuracy": 0.35625,
+            "itr_bits_per_minute": 29.39772310583443
+          },
+          "30": {
+            "accuracy": 0.04375,
+            "balanced_accuracy": 0.04375,
+            "itr_bits_per_minute": 0.25599091883529823
+          },
+          "31": {
+            "accuracy": 0.18125,
+            "balanced_accuracy": 0.18125,
+            "itr_bits_per_minute": 9.351032135465838
+          },
+          "32": {
+            "accuracy": 0.5625,
+            "balanced_accuracy": 0.5625,
+            "itr_bits_per_minute": 60.625956475398944
+          },
+          "33": {
+            "accuracy": 0.375,
+            "balanced_accuracy": 0.375,
+            "itr_bits_per_minute": 31.923531155204774
+          },
+          "34": {
+            "accuracy": 0.31875,
+            "balanced_accuracy": 0.31875,
+            "itr_bits_per_minute": 24.546926622233652
+          },
+          "35": {
+            "accuracy": 0.8875,
+            "balanced_accuracy": 0.8875,
+            "itr_bits_per_minute": 126.59728144801987
+          },
+          "36": {
+            "accuracy": 0.1125,
+            "balanced_accuracy": 0.1125,
+            "itr_bits_per_minute": 3.7116798594725964
+          },
+          "37": {
+            "accuracy": 0.0375,
+            "balanced_accuracy": 0.0375,
+            "itr_bits_per_minute": 0.12055510622915655
+          },
+          "38": {
+            "accuracy": 0.875,
+            "balanced_accuracy": 0.875,
+            "itr_bits_per_minute": 123.53065122989955
+          },
+          "39": {
+            "accuracy": 0.60625,
+            "balanced_accuracy": 0.60625,
+            "itr_bits_per_minute": 68.20872020331085
+          },
+          "40": {
+            "accuracy": 0.3875,
+            "balanced_accuracy": 0.3875,
+            "itr_bits_per_minute": 33.64355972227055
+          },
+          "41": {
+            "accuracy": 0.8125,
+            "balanced_accuracy": 0.8125,
+            "itr_bits_per_minute": 109.04108756176636
+          },
+          "42": {
+            "accuracy": 0.075,
+            "balanced_accuracy": 0.075,
+            "itr_bits_per_minute": 1.458584949398558
+          },
+          "43": {
+            "accuracy": 0.24375,
+            "balanced_accuracy": 0.24375,
+            "itr_bits_per_minute": 15.708650580660306
+          },
+          "44": {
+            "accuracy": 0.14375,
+            "balanced_accuracy": 0.14375,
+            "itr_bits_per_minute": 6.069790569520386
+          },
+          "45": {
+            "accuracy": 0.45625,
+            "balanced_accuracy": 0.45625,
+            "itr_bits_per_minute": 43.605615730512206
+          },
+          "46": {
+            "accuracy": 0.4875,
+            "balanced_accuracy": 0.4875,
+            "itr_bits_per_minute": 48.40831040685635
+          },
+          "47": {
+            "accuracy": 0.15625,
+            "balanced_accuracy": 0.15625,
+            "itr_bits_per_minute": 7.113227024967541
+          },
+          "48": {
+            "accuracy": 0.39375,
+            "balanced_accuracy": 0.39375,
+            "itr_bits_per_minute": 34.514281058064014
+          },
+          "49": {
+            "accuracy": 0.38125,
+            "balanced_accuracy": 0.38125,
+            "itr_bits_per_minute": 32.779961870972784
+          },
+          "50": {
+            "accuracy": 0.5625,
+            "balanced_accuracy": 0.5625,
+            "itr_bits_per_minute": 60.625956475398944
+          },
+          "51": {
+            "accuracy": 0.74375,
+            "balanced_accuracy": 0.74375,
+            "itr_bits_per_minute": 94.3952728218065
+          },
+          "52": {
+            "accuracy": 0.1375,
+            "balanced_accuracy": 0.1375,
+            "itr_bits_per_minute": 5.568443332953308
+          },
+          "53": {
+            "accuracy": 0.03125,
+            "balanced_accuracy": 0.03125,
+            "itr_bits_per_minute": 0.032171131555349675
+          },
+          "54": {
+            "accuracy": 0.41875,
+            "balanced_accuracy": 0.41875,
+            "itr_bits_per_minute": 38.06762603241162
+          },
+          "55": {
+            "accuracy": 0.30625,
+            "balanced_accuracy": 0.30625,
+            "itr_bits_per_minute": 22.991493231149516
+          },
+          "56": {
+            "accuracy": 0.5125,
+            "balanced_accuracy": 0.5125,
+            "itr_bits_per_minute": 52.372362071003046
+          },
+          "57": {
+            "accuracy": 0.68125,
+            "balanced_accuracy": 0.68125,
+            "itr_bits_per_minute": 82.02567575236063
+          },
+          "58": {
+            "accuracy": 0.2125,
+            "balanced_accuracy": 0.2125,
+            "itr_bits_per_minute": 12.403186385035845
+          },
+          "59": {
+            "accuracy": 0.23125,
+            "balanced_accuracy": 0.23125,
+            "itr_bits_per_minute": 14.357734830926479
+          }
+        }
+      }
+    }
+  }
+}

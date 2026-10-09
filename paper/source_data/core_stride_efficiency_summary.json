@@ -1,0 +1,403 @@
+{
+  "status": "complete",
+  "sessions": 5,
+  "windows_seconds": [
+    0.4,
+    0.8,
+    1.2
+  ],
+  "graph": "folded deployment graph",
+  "batch_size": 1,
+  "results": {
+    "1": {
+      "0.4": {
+        "spectral_token_count": 157,
+        "parameters": 435043,
+        "operation_count": {
+          "torch_counted_flops": 41564512,
+          "mac_equivalent": 20782256.0,
+          "convention": "one multiply-add equals two FLOPs",
+          "counter": "torch.utils.flop_counter.FlopCounterMode"
+        },
+        "cpu": {
+          "p50_ms_median": 2.91625,
+          "p50_ms_range": [
+            2.6957000000000004,
+            3.0159000000000002
+          ],
+          "p95_ms_median": 3.912635000000001,
+          "p95_ms_range": [
+            3.3873450000000003,
+            4.206055
+          ]
+        },
+        "cuda": {
+          "p50_ms_median": 3.0988160371780396,
+          "p50_ms_range": [
+            2.909775972366333,
+            3.2971839904785156
+          ],
+          "p95_ms_median": 6.7924542427063,
+          "p95_ms_range": [
+            5.270180678367615,
+            6.873220825195314
+          ]
+        }
+      },
+      "0.8": {
+        "spectral_token_count": 157,
+        "parameters": 435043,
+        "operation_count": {
+          "torch_counted_flops": 43750112,
+          "mac_equivalent": 21875056.0,
+          "convention": "one multiply-add equals two FLOPs",
+          "counter": "torch.utils.flop_counter.FlopCounterMode"
+        },
+        "cpu": {
+          "p50_ms_median": 2.78575,
+          "p50_ms_range": [
+            2.7590500000000002,
+            2.96715
+          ],
+          "p95_ms_median": 3.824505,
+          "p95_ms_range": [
+            3.50544,
+            4.149400000000001
+          ]
+        },
+        "cuda": {
+          "p50_ms_median": 2.9481760263442993,
+          "p50_ms_range": [
+            2.899264097213745,
+            3.3337440490722656
+          ],
+          "p95_ms_median": 6.564540624618531,
+          "p95_ms_range": [
+            5.2671425342559814,
+            7.1072752475738525
+          ]
+        }
+      },
+      "1.2": {
+        "spectral_token_count": 157,
+        "parameters": 435043,
+        "operation_count": {
+          "torch_counted_flops": 45935712,
+          "mac_equivalent": 22967856.0,
+          "convention": "one multiply-add equals two FLOPs",
+          "counter": "torch.utils.flop_counter.FlopCounterMode"
+        },
+        "cpu": {
+          "p50_ms_median": 2.83805,
+          "p50_ms_range": [
+            2.82135,
+            3.0335
+          ],
+          "p95_ms_median": 3.8756050000000006,
+          "p95_ms_range": [
+            3.6966400000000004,
+            4.081505000000001
+          ]
+        },
+        "cuda": {
+          "p50_ms_median": 3.0085760354995728,
+          "p50_ms_range": [
+            2.863568067550659,
+            3.034224033355713
+          ],
+          "p95_ms_median": 6.342206239700319,
+          "p95_ms_range": [
+            3.078822338581085,
+            7.003212857246399
+          ]
+        }
+      }
+    },
+    "2": {
+      "0.4": {
+        "spectral_token_count": 79,
+        "parameters": 435043,
+        "operation_count": {
+          "torch_counted_flops": 36345376,
+          "mac_equivalent": 18172688.0,
+          "convention": "one multiply-add equals two FLOPs",
+          "counter": "torch.utils.flop_counter.FlopCounterMode"
+        },
+        "cpu": {
+          "p50_ms_median": 2.6102499999999997,
+          "p50_ms_range": [
+            2.6064,
+            2.7107
+          ],
+          "p95_ms_median": 3.2780600000000004,
+          "p95_ms_range": [
+            2.872265,
+            3.8004049999999996
+          ]
+        },
+        "cuda": {
+          "p50_ms_median": 2.8898240327835083,
+          "p50_ms_range": [
+            2.8540639877319336,
+            3.0629119873046875
+          ],
+          "p95_ms_median": 5.994782471656801,
+          "p95_ms_range": [
+            3.0899887442588807,
+            6.981232047080994
+          ]
+        }
+      },
+      "0.8": {
+        "spectral_token_count": 79,
+        "parameters": 435043,
+        "operation_count": {
+          "torch_counted_flops": 38530976,
+          "mac_equivalent": 19265488.0,
+          "convention": "one multiply-add equals two FLOPs",
+          "counter": "torch.utils.flop_counter.FlopCounterMode"
+        },
+        "cpu": {
+          "p50_ms_median": 2.703,
+          "p50_ms_range": [
+            2.6456,
+            2.79185
+          ],
+          "p95_ms_median": 3.6537,
+          "p95_ms_range": [
+            2.986945,
+            3.971660000000001
+          ]
+        },
+        "cuda": {
+          "p50_ms_median": 2.9245439767837524,
+          "p50_ms_range": [
+            2.880720019340515,
+            3.087167978286743
+          ],
+          "p95_ms_median": 6.533660650253296,
+          "p95_ms_range": [
+            3.125195300579071,
+            7.292267084121704
+          ]
+        }
+      },
+      "1.2": {
+        "spectral_token_count": 79,
+        "parameters": 435043,
+        "operation_count": {
+          "torch_counted_flops": 40716576,
+          "mac_equivalent": 20358288.0,
+          "convention": "one multiply-add equals two FLOPs",
+          "counter": "torch.utils.flop_counter.FlopCounterMode"
+        },
+        "cpu": {
+          "p50_ms_median": 2.76845,
+          "p50_ms_range": [
+            2.6539,
+            2.9465500000000002
+          ],
+          "p95_ms_median": 3.7061550000000003,
+          "p95_ms_range": [
+            2.7738,
+            4.2552200000000004
+          ]
+        },
+        "cuda": {
+          "p50_ms_median": 2.9298880100250244,
+          "p50_ms_range": [
+            2.8519359827041626,
+            3.220896005630493
+          ],
+          "p95_ms_median": 6.491995406150818,
+          "p95_ms_range": [
+            3.015939104557037,
+            7.143270325660706
+          ]
+        }
+      }
+    },
+    "4": {
+      "0.4": {
+        "spectral_token_count": 40,
+        "parameters": 435043,
+        "operation_count": {
+          "torch_counted_flops": 33735808,
+          "mac_equivalent": 16867904.0,
+          "convention": "one multiply-add equals two FLOPs",
+          "counter": "torch.utils.flop_counter.FlopCounterMode"
+        },
+        "cpu": {
+          "p50_ms_median": 2.59175,
+          "p50_ms_range": [
+            2.5026,
+            2.7793
+          ],
+          "p95_ms_median": 3.3755150000000005,
+          "p95_ms_range": [
+            2.6016,
+            4.068245
+          ]
+        },
+        "cuda": {
+          "p50_ms_median": 2.896512031555176,
+          "p50_ms_range": [
+            2.8205440044403076,
+            3.0204800367355347
+          ],
+          "p95_ms_median": 4.8320960283279435,
+          "p95_ms_range": [
+            3.0308494925498963,
+            6.399700713157655
+          ]
+        }
+      },
+      "0.8": {
+        "spectral_token_count": 40,
+        "parameters": 435043,
+        "operation_count": {
+          "torch_counted_flops": 35921408,
+          "mac_equivalent": 17960704.0,
+          "convention": "one multiply-add equals two FLOPs",
+          "counter": "torch.utils.flop_counter.FlopCounterMode"
+        },
+        "cpu": {
+          "p50_ms_median": 2.7273,
+          "p50_ms_range": [
+            2.601,
+            3.17255
+          ],
+          "p95_ms_median": 3.524135,
+          "p95_ms_range": [
+            2.71942,
+            4.363565000000001
+          ]
+        },
+        "cuda": {
+          "p50_ms_median": 2.9036160707473755,
+          "p50_ms_range": [
+            2.829584002494812,
+            3.4871840476989746
+          ],
+          "p95_ms_median": 5.451175808906556,
+          "p95_ms_range": [
+            3.0684672594070435,
+            6.751523351669311
+          ]
+        }
+      },
+      "1.2": {
+        "spectral_token_count": 40,
+        "parameters": 435043,
+        "operation_count": {
+          "torch_counted_flops": 38107008,
+          "mac_equivalent": 19053504.0,
+          "convention": "one multiply-add equals two FLOPs",
+          "counter": "torch.utils.flop_counter.FlopCounterMode"
+        },
+        "cpu": {
+          "p50_ms_median": 2.7036,
+          "p50_ms_range": [
+            2.59495,
+            2.7915
+          ],
+          "p95_ms_median": 3.6556650000000004,
+          "p95_ms_range": [
+            2.7989100000000002,
+            3.9656700000000007
+          ]
+        },
+        "cuda": {
+          "p50_ms_median": 2.86027193069458,
+          "p50_ms_range": [
+            2.8220319747924805,
+            2.9027678966522217
+          ],
+          "p95_ms_median": 3.374483287334442,
+          "p95_ms_range": [
+            3.018150293827057,
+            6.251843261718751
+          ]
+        }
+      }
+    }
+  },
+  "paired_relative_to_stride_2": {
+    "1": {
+      "0.4": {
+        "cpu": {
+          "candidate_minus_stride_2_p50_percent_median": 7.582912162909938,
+          "candidate_minus_stride_2_p95_percent_median": 21.12574046716025,
+          "paired_sessions": 5
+        },
+        "cuda": {
+          "candidate_minus_stride_2_p50_percent_median": 4.590308837820922,
+          "candidate_minus_stride_2_p95_percent_median": -1.534679940207706,
+          "paired_sessions": 5
+        }
+      },
+      "0.8": {
+        "cpu": {
+          "candidate_minus_stride_2_p50_percent_median": 5.297475052918066,
+          "candidate_minus_stride_2_p95_percent_median": 6.446342064208888,
+          "paired_sessions": 5
+        },
+        "cuda": {
+          "candidate_minus_stride_2_p50_percent_median": 1.9600222368586273,
+          "candidate_minus_stride_2_p95_percent_median": -2.2762734911327964,
+          "paired_sessions": 5
+        }
+      },
+      "1.2": {
+        "cpu": {
+          "candidate_minus_stride_2_p50_percent_median": 4.207304706945192,
+          "candidate_minus_stride_2_p95_percent_median": 8.125672023970964,
+          "paired_sessions": 5
+        },
+        "cuda": {
+          "candidate_minus_stride_2_p50_percent_median": -0.5816021901610569,
+          "candidate_minus_stride_2_p95_percent_median": -10.630739538653778,
+          "paired_sessions": 5
+        }
+      }
+    },
+    "4": {
+      "0.4": {
+        "cpu": {
+          "candidate_minus_stride_2_p50_percent_median": -1.9459918102335272,
+          "candidate_minus_stride_2_p95_percent_median": -4.103125747020819,
+          "paired_sessions": 5
+        },
+        "cuda": {
+          "candidate_minus_stride_2_p50_percent_median": -1.1744650237594523,
+          "candidate_minus_stride_2_p95_percent_median": -4.033082309164371,
+          "paired_sessions": 5
+        }
+      },
+      "0.8": {
+        "cpu": {
+          "candidate_minus_stride_2_p50_percent_median": 1.1703607530371807,
+          "candidate_minus_stride_2_p95_percent_median": -3.9300220810729924,
+          "paired_sessions": 5
+        },
+        "cuda": {
+          "candidate_minus_stride_2_p50_percent_median": -1.7751123504675004,
+          "candidate_minus_stride_2_p95_percent_median": -7.4153034469872425,
+          "paired_sessions": 5
+        }
+      },
+      "1.2": {
+        "cpu": {
+          "candidate_minus_stride_2_p50_percent_median": -2.3424660008308007,
+          "candidate_minus_stride_2_p95_percent_median": -2.5663830963422507,
+          "paired_sessions": 5
+        },
+        "cuda": {
+          "candidate_minus_stride_2_p50_percent_median": -2.2357153127784746,
+          "candidate_minus_stride_2_p95_percent_median": -15.826446840354036,
+          "paired_sessions": 5
+        }
+      }
+    }
+  }
+}

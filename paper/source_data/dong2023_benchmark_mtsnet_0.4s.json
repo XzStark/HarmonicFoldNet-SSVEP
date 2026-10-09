@@ -1,0 +1,46 @@
+{
+  "architecture": "mtsnet_external_protocol_reconstruction",
+  "protocol_status": "reconstruction_not_exact_published_reproduction",
+  "upstream": "https://github.com/lanzhen19/MTSNet",
+  "upstream_commit": "890b0a4f93c3affd50741a1f1d036fb74a30a062",
+  "source_path": "D:\\HarmonicFoldNet_PaperBackup_20261008\\public_source_tools\\HarmonicFoldNet-SSVEP-main\\.research_refs\\MTSNet-pinned-890b0a4\\MTSNet.py",
+  "dataset_shape_reference": "dong2023",
+  "window_seconds": 0.4,
+  "batch_size": 1,
+  "dtype": "float32",
+  "spectral_preprocessing_included": true,
+  "model_parameters": 8718800,
+  "compute": {
+    "torch_counted_flops": 257918720,
+    "mac_equivalent": 128959360.0,
+    "convention": "one multiply-add equals two FLOPs",
+    "counter": "torch.utils.flop_counter.FlopCounterMode"
+  },
+  "environment": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.9",
+    "torch": "2.11.0+cu128",
+    "cpu_threads_timed": 1,
+    "cuda": "12.8",
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU"
+  },
+  "cpu": {
+    "iterations": 1000,
+    "mean_ms": 5.6559687,
+    "standard_deviation_ms": 0.6052997207022255,
+    "p50_ms": 5.47225,
+    "p95_ms": 6.890685,
+    "minimum_ms": 4.904,
+    "maximum_ms": 8.2443
+  },
+  "cuda": {
+    "iterations": 1000,
+    "mean_ms": 3.1636794526576995,
+    "standard_deviation_ms": 0.6390806247109153,
+    "p50_ms": 2.9315199851989746,
+    "p95_ms": 4.39665458202362,
+    "minimum_ms": 2.3392319679260254,
+    "maximum_ms": 5.6763200759887695,
+    "peak_allocated_bytes": 45357056
+  }
+}

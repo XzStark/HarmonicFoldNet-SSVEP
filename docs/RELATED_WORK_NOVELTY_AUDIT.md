@@ -106,7 +106,7 @@ contribution.
 ## Evidence gate before paper drafting
 
 - complete fixed five-fold subject-disjoint out-of-fold evaluation for three
-  training seeds on all four datasets;
+  training seeds on all five datasets;
 - compare FBCCA, EEGNet, an explicitly labelled SSVEPformer reproduction and
   a clean-room MTSNet reproduction (or another licensed modern lightweight
   network) under identical channels, windows and participant splits;

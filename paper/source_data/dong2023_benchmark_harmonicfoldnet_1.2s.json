@@ -1,0 +1,93 @@
+{
+  "checkpoint": "D:\\HarmonicFoldNet_PaperBackup_20261008\\public_source_tools\\HarmonicFoldNet-SSVEP-main\\runs\\dong2023_external_validation_20261009\\harmonic_fold_v4_1__seed-20260929__fold-0\\model.pt",
+  "window_seconds": 1.2,
+  "architecture": "harmonic_fold_v4_1",
+  "architecture_revision": "harmonic_fold_v4_1",
+  "mode": "full",
+  "batch_size": 1,
+  "dtype": "float32",
+  "graph_order": "training_first",
+  "metadata_source": "dataset_shards",
+  "benchmark_graphs": "deployment",
+  "spectral_token_stride": 2,
+  "spectral_token_count": 79,
+  "equivalence_max_abs_error": 2.1457672119140625e-06,
+  "parameters": {
+    "training_graph": 435139,
+    "deployment_graph": 435043
+  },
+  "module_inventory": {
+    "training_graph": {
+      "leaf_module_count": 79,
+      "by_type": {
+        "BatchNorm1d": 11,
+        "ComplexSpectrumFrontEnd": 1,
+        "Conv1d": 11,
+        "Dropout": 9,
+        "GELU": 14,
+        "LayerNorm": 9,
+        "Linear": 21,
+        "ModuleList": 2,
+        "NonDynamicallyQuantizableLinear": 1
+      }
+    },
+    "deployment_graph": {
+      "leaf_module_count": 71,
+      "by_type": {
+        "BatchNorm1d": 5,
+        "ComplexSpectrumFrontEnd": 1,
+        "Conv1d": 9,
+        "Dropout": 9,
+        "GELU": 14,
+        "LayerNorm": 9,
+        "Linear": 21,
+        "ModuleList": 2,
+        "NonDynamicallyQuantizableLinear": 1
+      }
+    }
+  },
+  "operation_count": {
+    "training_graph": {
+      "torch_counted_flops": 40726176,
+      "mac_equivalent": 20363088.0,
+      "convention": "one multiply-add equals two FLOPs",
+      "counter": "torch.utils.flop_counter.FlopCounterMode"
+    },
+    "deployment_graph": {
+      "torch_counted_flops": 40716576,
+      "mac_equivalent": 20358288.0,
+      "convention": "one multiply-add equals two FLOPs",
+      "counter": "torch.utils.flop_counter.FlopCounterMode"
+    }
+  },
+  "environment": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.9",
+    "torch": "2.11.0+cu128",
+    "cpu_threads_timed": 1,
+    "cuda": "12.8",
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU"
+  },
+  "training_graph": {},
+  "deployment_graph": {
+    "cpu": {
+      "iterations": 1000,
+      "mean_ms": 2.9893961,
+      "standard_deviation_ms": 0.45198223070344445,
+      "p50_ms": 2.7733,
+      "p95_ms": 3.907444999999999,
+      "minimum_ms": 2.5531,
+      "maximum_ms": 5.1534
+    },
+    "cuda": {
+      "iterations": 1000,
+      "mean_ms": 4.382208669424057,
+      "standard_deviation_ms": 0.6711304410289753,
+      "p50_ms": 4.346976041793823,
+      "p95_ms": 5.356297492980957,
+      "minimum_ms": 2.6510720252990723,
+      "maximum_ms": 8.21884822845459,
+      "peak_allocated_bytes": 15122944
+    }
+  }
+}

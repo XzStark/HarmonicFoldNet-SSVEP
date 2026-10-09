@@ -93,7 +93,7 @@ def main() -> None:
                 ],
             ),
             "",
-            "Wet and dry Wearable recordings came from the same participants and therefore count once, giving 247 unique participants across the four datasets. Benchmark and BETA were later used to accept or reject follow-up variants while retaining the reported architecture; their intervals and tests are therefore selection-aware descriptive evidence rather than untouched confirmatory inference. Wearable remained the external electrode-condition evaluation.",
+            "Wet and dry Wearable recordings came from the same participants and therefore count once, giving 306 unique participants across five datasets. Benchmark and BETA were later used to accept or reject follow-up variants while retaining the reported architecture; their intervals and tests are therefore selection-aware descriptive evidence rather than untouched confirmatory inference. Dong2023 remained independently reserved until the architecture and analysis contract were frozen, and Wearable remained the external electrode-condition evaluation.",
             "",
         ]
     )

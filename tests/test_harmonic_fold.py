@@ -413,9 +413,37 @@ class HarmonicFoldNetTests(unittest.TestCase):
             x = torch.randn(2, 8, samples)
             for classes in (12, 40):
                 model = self._model(classes).eval()
-                for mode in ("full", "no_attention", "no_local", "no_harmonic_bias"):
+                for mode in (
+                    "full", "no_attention", "no_local", "no_harmonic_bias",
+                    "no_temporal_candidate", "no_spectral_candidate",
+                ):
                     with self.subTest(samples=samples, classes=classes, mode=mode):
                         self.assertEqual(tuple(model.forward_mode(x, mode).shape), (2, classes))
+
+    def test_spectral_token_stride_controls_reduced_sequence_length(self):
+        x = torch.randn(2, 8, 250)
+        lengths = {}
+        for stride in (1, 2, 4):
+            model = HarmonicFoldNet(
+                channels=8,
+                sample_rate=250,
+                class_frequencies=[8.0 + 0.5 * index for index in range(9)],
+                class_phases=[0.0] * 9,
+                width=16,
+                local_depths=(1, 1),
+                heads=4,
+                harmonics=2,
+                neighborhood_bins=1,
+                spectral_token_stride=stride,
+                dropout=0.0,
+            ).eval()
+            spectrum, features = model.spectrum(x)
+            del spectrum
+            tokens = model._spectral_tokens(features, use_local=True)
+            lengths[stride] = tokens.shape[1]
+            self.assertEqual(tuple(model(x).shape), (2, 9))
+        self.assertGreater(lengths[1], lengths[2])
+        self.assertGreater(lengths[2], lengths[4])
 
     def test_folded_deployment_graph_is_equivalent(self):
         torch.manual_seed(41)

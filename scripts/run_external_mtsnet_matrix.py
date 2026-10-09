@@ -18,6 +18,11 @@ def main() -> None:
     parser.add_argument("--root", required=True)
     parser.add_argument("--config", default="configs/paper_multidataset.yaml")
     parser.add_argument("--device", default="cuda")
+    parser.add_argument(
+        "--source",
+        default=".research_refs/MTSNet/MTSNet.py",
+        help="Pinned path to the authors' unmodified MTSNet.py.",
+    )
     args = parser.parse_args()
 
     jobs = [
@@ -50,6 +55,8 @@ def main() -> None:
             str(args.folds),
             "--device",
             args.device,
+            "--source",
+            args.source,
             "--run-dir",
             str(run_dir),
         ]

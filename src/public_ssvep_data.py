@@ -21,6 +21,9 @@ WEARABLE_PHASES = np.asarray(
     [0.0, 0.0, 0.0, 0.5, 0.5, 0.5, 1.0, 1.0, 1.0, 1.5, 1.5, 1.5],
     dtype=np.float32,
 ) * np.pi
+DONG2023_CHANNELS = ("POz", "PO3", "PO4", "PO7", "PO8", "Oz", "O1", "O2")
+DONG2023_FREQUENCIES = np.arange(8.0, 16.0, 0.2, dtype=np.float32)
+DONG2023_PHASES = (np.arange(40, dtype=np.float32) % 4) * (0.5 * np.pi)
 
 
 def _canonical(name: str) -> str:
@@ -194,19 +197,126 @@ def preprocess_wearable(root: Path, output_dir: Path, *, force: bool = False) ->
     return manifest
 
 
+def preprocess_dong2023(
+    root: Path,
+    output_dir: Path,
+    *,
+    force: bool = False,
+    subjects: list[int] | tuple[int, ...] | range = range(1, 60),
+) -> dict[str, object]:
+    """Convert Dong2023 MATLAB records to the common posterior-eight contract.
+
+    The public epochs contain 0.5 s before stimulation, 4 s of stimulation and
+    0.5 s after stimulation at 250 Hz.  Dong and Tian report a mean visual
+    latency of approximately 160 ms and use it for offline analysis.  The model
+    shards therefore start 160 ms after stimulus onset and stop at stimulus
+    offset; no post-stimulus sample is retained.
+    """
+    rows: list[dict[str, object]] = []
+    expected_shape = (8, 1250, 40, 4)
+    response_start = int(round((0.5 + 0.16) * 250))
+    response_stop = int(round((0.5 + 4.0) * 250))
+    channel_indices = _indices(DONG2023_CHANNELS, POSTERIOR_8)
+    for subject in map(int, subjects):
+        source = root / f"S{subject}.mat"
+        destination = output_dir / f"sub-{subject}.npz"
+        if destination.exists() and not force:
+            rows.append({"subject": str(subject), "status": "existing"})
+            continue
+        if not source.exists():
+            raise FileNotFoundError(source)
+        raw = np.asarray(loadmat(source, variable_names=["eegdata"])["eegdata"])
+        if raw.shape != expected_shape:
+            raise RuntimeError(f"{source}: unexpected eegdata shape {raw.shape}")
+        epochs = raw[channel_indices].transpose(2, 3, 0, 1).reshape(160, 8, 1250)
+        epochs = _causal_bandpass(epochs)[..., response_start:response_stop]
+        labels = np.repeat(np.arange(40, dtype=np.int64), 4)
+        blocks = np.tile(np.arange(4, dtype=np.int16), 40)
+        _atomic_savez(
+            destination,
+            x=epochs,
+            y=labels,
+            frequency_hz=DONG2023_FREQUENCIES[labels],
+            phase_rad=DONG2023_PHASES[labels],
+            block=blocks,
+            channels=np.asarray(POSTERIOR_8),
+            sample_rate=np.asarray(250, dtype=np.int32),
+            subject=np.asarray(str(subject)),
+            dataset=np.asarray("Dong2023"),
+            filter_mode=np.asarray("causal_sos_order4_6_45Hz"),
+        )
+        rows.append(
+            {
+                "subject": str(subject),
+                "trials": 160,
+                "samples": int(epochs.shape[-1]),
+                "status": "built",
+            }
+        )
+        print(json.dumps(rows[-1], ensure_ascii=False), flush=True)
+
+    manifest_rows: list[dict[str, object]] = []
+    existing_paths = sorted(
+        output_dir.glob("sub-*.npz"),
+        key=lambda path: int(path.stem.split("-", 1)[1]),
+    )
+    for path in existing_paths:
+        with np.load(path, allow_pickle=False) as shard:
+            manifest_rows.append(
+                {
+                    "subject": str(np.asarray(shard["subject"]).item()),
+                    "trials": int(np.asarray(shard["y"]).size),
+                    "samples": int(np.asarray(shard["x"]).shape[-1]),
+                    "status": "processed",
+                }
+            )
+    manifest = {
+        "dataset": "Dong2023",
+        "source_doi": "10.26599/BSA.2023.9050020",
+        "source_record": "https://zenodo.org/records/18847318",
+        "license": "CC BY-NC 4.0; research use only",
+        "participants_expected": 59,
+        "participants_processed": len(existing_paths),
+        "classes": 40,
+        "trials_per_participant": 160,
+        "channels": list(POSTERIOR_8),
+        "sample_rate": 250,
+        "response_latency_seconds": 0.16,
+        "usable_response_seconds": (response_stop - response_start) / 250,
+        "filter": "causal SOS order 4, 6-45 Hz",
+        "note": (
+            "The source paper reports significantly lower SNR than the Tsinghua "
+            "Benchmark; this is a practical low-SNR external domain, not an "
+            "SNR-matched laboratory replication."
+        ),
+        "subjects": manifest_rows,
+    }
+    _write_manifest(output_dir, manifest)
+    return manifest
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("dataset", choices=("benchmark", "beta", "wearable"))
+    parser.add_argument(
+        "dataset", choices=("benchmark", "beta", "wearable", "dong2023")
+    )
     parser.add_argument("--root", type=Path, required=True)
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--force", action="store_true")
+    parser.add_argument("--subjects", nargs="+", type=int)
     args = parser.parse_args()
     builders = {
         "benchmark": preprocess_benchmark,
         "beta": preprocess_beta,
         "wearable": preprocess_wearable,
+        "dong2023": preprocess_dong2023,
     }
-    result = builders[args.dataset](args.root, args.output_dir, force=args.force)
+    options: dict[str, object] = {"force": args.force}
+    if args.subjects is not None:
+        if args.dataset != "dong2023":
+            parser.error("--subjects is currently supported only for dong2023")
+        options["subjects"] = args.subjects
+    result = builders[args.dataset](args.root, args.output_dir, **options)
     print(json.dumps({key: value for key, value in result.items() if key != "subjects"}, indent=2))
 
 

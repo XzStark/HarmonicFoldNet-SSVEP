@@ -8,7 +8,7 @@ from pathlib import Path
 import torch
 import yaml
 
-from .benchmark_deployment import benchmark_cpu, benchmark_cuda
+from .benchmark_deployment import _count_flops, benchmark_cpu, benchmark_cuda
 from .external_mtsnet import MTSNET_COMMIT, MTSNET_UPSTREAM, ExternalMTSNetAdapter
 from .paper_metrics import atomic_write_json
 
@@ -53,6 +53,7 @@ def main() -> None:
         "dtype": "float32",
         "spectral_preprocessing_included": True,
         "model_parameters": sum(parameter.numel() for parameter in model.parameters()),
+        "compute": _count_flops(model, x),
         "environment": {
             "platform": platform.platform(),
             "python": platform.python_version(),

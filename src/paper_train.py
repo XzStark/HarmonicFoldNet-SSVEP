@@ -264,6 +264,21 @@ def run(args: argparse.Namespace) -> dict[str, object]:
         if width <= 0:
             raise ValueError("model width must be positive")
         config[architecture_config_key(args.architecture)]["width"] = width
+    if getattr(args, "spectral_token_stride", None) is not None:
+        if args.architecture not in {
+            "harmonic_fold_v4", "harmonic_fold_v4_1", "harmonic_fold_v4_2",
+            "harmonic_fold_v4_3", "harmonic_fold_v4_4", "harmonic_fold_v4_5",
+            "harmonic_fold_v4_6", "harmonic_fold_v4_7",
+        }:
+            raise ValueError(
+                "spectral_token_stride is supported only by HarmonicFold v4 architectures"
+            )
+        stride = int(args.spectral_token_stride)
+        if stride <= 0:
+            raise ValueError("spectral_token_stride must be positive")
+        config[architecture_config_key(args.architecture)][
+            "spectral_token_stride"
+        ] = stride
     if getattr(args, "temporal_segments", None) is not None:
         if args.architecture not in {
             "harmonic_fold_v4", "harmonic_fold_v4_1", "harmonic_fold_v4_2",
@@ -773,7 +788,10 @@ def run(args: argparse.Namespace) -> dict[str, object]:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", default="configs/paper_multidataset.yaml")
-    parser.add_argument("--dataset", required=True, choices=("kim2025", "benchmark", "beta", "wearable"))
+    parser.add_argument(
+        "--dataset", required=True,
+        choices=("kim2025", "benchmark", "beta", "wearable", "dong2023"),
+    )
     parser.add_argument("--mode", default="full", choices=MODES)
     parser.add_argument(
         "--architecture", default="legacy_fusion",
@@ -817,6 +835,10 @@ def main() -> None:
     parser.add_argument("--attention-depth", type=int)
     parser.add_argument("--dropout", type=float)
     parser.add_argument("--model-width", type=int)
+    parser.add_argument(
+        "--spectral-token-stride", type=int,
+        help="Registered token-compression stride override for HarmonicFold v4.",
+    )
     parser.add_argument("--temporal-segments", type=int)
     parser.add_argument("--temporal-phase-dynamics", action="store_true")
     parser.add_argument("--align-spectral-grid-to-classes", action="store_true")

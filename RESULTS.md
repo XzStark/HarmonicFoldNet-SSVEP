@@ -1,45 +1,72 @@
-# Reproducible result snapshot
+# Reproducible paper result snapshot
 
-This file records the first complete subject-disjoint experiment. It is an
-engineering and research checkpoint, not a final paper result.
+This file summarizes the frozen paper evidence. It is an offline research record,
+not a clinical, online-BCI, or target-device result. Exact participant-level data,
+split assignments, uncertainty estimates, adjusted tests, and hashes are stored in
+`paper/source_data/`.
 
-## Dataset and split
+## Evidence scope
 
-- Dataset: Kim2025BetaRange / NEMAR `nm000127` v1.0.2, CC BY 4.0.
-- 40 participants, six sessions per participant, 40 classes per session.
-- Input: PO7, PO3, POz, PO4, PO8, O1, Oz, and O2.
-- Window: the complete five-second stimulation interval, resampled to 250 Hz.
-- Train: participants 1-32, validation: 33-36, held-out test: 37-40.
-- No participant occurs in more than one split.
+- Five public datasets and 306 unique participants
+- Participant-disjoint five-fold evaluation
+- Three fitted seeds for the headline neural comparisons
+- One HarmonicFoldNet checkpoint per dataset, fold, and seed covers the registered
+  observation windows
+- Benchmark and BETA are selection-aware; Dong2023 was independently reserved
+  until the architecture and six-window analysis contract were frozen
+- Wearable supplies a frozen dry/wet electrode-condition analysis
 
-## Accuracy
+## Main selection-aware results
 
-| Method | Validation Top-1 | Test Top-1 | Test Top-5 |
-| --- | ---: | ---: | ---: |
-| Fixed two-harmonic power | 52.40% | 79.06% | not measured |
-| Learned candidate-frequency evidence | 66.25% | 88.23% | 95.73% |
-| Full time/frequency fusion model | 71.46% | 88.65% | 95.73% |
+| Dataset | Window | HarmonicFoldNet | Protocol-adapted SSVEPformer | Difference |
+| --- | ---: | ---: | ---: | ---: |
+| Benchmark | 0.8 s | 69.53% | 65.42% | +4.11 points |
+| Benchmark | 1.2 s | 78.30% | 73.88% | +4.42 points |
+| BETA | 0.8 s | 59.77% | 56.95% | +2.82 points |
+| BETA | 1.2 s | 68.70% | 63.08% | +5.62 points |
+| BETA | 1.5 s | 73.23% | 65.20% | +8.03 points |
 
-The held-out test set contains 960 trials. Per-participant fusion accuracies are
-80.83%, 99.58%, 85.00%, and 89.17%. The spread is material and must be reported;
-the aggregate alone is not sufficient evidence of universal performance.
+The strongest references remained preferable at 0.4 s. Against the MTSNet
+protocol reconstruction, the 1.2 s differences on Benchmark and BETA were not
+significant after multiplicity correction.
 
-## Size and latency
+## Independently reserved external-dataset result
 
-- Train graph: 890,570 trainable parameters.
-- Reparameterized deploy graph: 888,266 trainable parameters.
-- NVIDIA RTX 5060 Laptop GPU, batch 1: 8.01 ms -> 5.20 ms.
-- AMD Ryzen 9 8945HX, one CPU thread, batch 1: 8.37 ms -> 6.01 ms.
-- Reparameterized and training-graph outputs passed numerical equivalence tests.
+| Window | HarmonicFoldNet | SSVEPformer | MTSNet | CCA | FBCCA |
+| ---: | ---: | ---: | ---: | ---: | ---: |
+| 0.4 s | 15.99% | 17.93% | 17.33% | 6.42% | 4.94% |
+| 0.6 s | 23.81% | 24.64% | - | 11.41% | 9.11% |
+| 0.8 s | 32.98% | 30.84% | 32.31% | 18.28% | 15.41% |
+| 1.0 s | 38.68% | 33.38% | - | 25.08% | 22.09% |
+| 1.2 s | 43.62% | 34.58% | 41.74% | 31.89% | 29.74% |
+| 1.5 s | 48.29% | 36.45% | - | 40.59% | 40.05% |
 
-Latency is model compute time for an already available five-second EEG window;
-it does not include signal acquisition time. Results are machine-specific and
-must not be presented as phone or glasses latency.
+Relative to SSVEPformer, HarmonicFoldNet was 1.95 points lower at 0.4 s,
+showed no detected difference at 0.6 or 0.8 s, and was 5.29, 9.04, and 11.84
+points higher at 1.0, 1.2, and 1.5 s after Holm correction. Its MTSNet
+differences at 0.4, 0.8, and 1.2 s were -1.35, +0.67, and +1.88 points; none
+survived Holm correction. Each neural model was refitted inside each outer fold,
+so this is external-dataset validation rather than zero-shot weight transfer.
 
-## Current interpretation
+## Mechanism and deployment evidence
 
-The result supports continued research on physics-guided evidence fusion and
-local-to-global structural reparameterization for efficient SSVEP decoding.
-It does not yet establish a paper-level state of the art. Repeated participant
-folds, FBCCA/TRCA and deep-learning baselines, shorter-window experiments,
-statistical tests, and device-side benchmarks are still required.
+- Spectral-token counts were 157, 79, and 40 for strides 1, 2, and 4.
+- Stride 2 stayed within 0.20 points of no reduction at 0.4, 0.8, and 1.2 s,
+  while reducing counted MACs by 11.4--12.6% and median single-thread CPU P50
+  latency by 4.2--7.6%.
+- The temporal candidate path contributed 1.30--2.64 points across all six BETA
+  windows after Holm correction.
+- The spectral-neighbourhood path had a weaker independent contribution; only
+  the 1.5 s contrast was detected after correction.
+- The folded graph contains 435,043 parameters versus 435,139 in the training
+  graph and preserved every label across 49,000 held-out paired predictions.
+- Five fresh-process timing sessions supported repeatable folding speedups only
+  for CPU at 0.8 s and GPU at 0.8 and 1.2 s. Numerical equivalence is the
+  unconditional result; runtime improvement is backend and window dependent.
+
+## Interpretation boundary
+
+The evidence supports a compact multi-window accuracy-resource trade-off from
+approximately 0.8 s onward. It does not establish universal superiority,
+cross-dataset zero-shot decoding, online communication rate, clinical utility,
+or performance on glasses-mounted or peri-auricular electrodes.

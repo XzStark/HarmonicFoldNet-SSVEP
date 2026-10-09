@@ -27,24 +27,40 @@ def summarize(values: np.ndarray, *, seed: int, bootstrap_samples: int = 10_000)
     }
 
 
-def paired_test(model: np.ndarray, baseline: np.ndarray) -> dict[str, float | int | None]:
+def paired_test(
+    model: np.ndarray,
+    baseline: np.ndarray,
+    *,
+    seed: int = 20260929,
+    bootstrap_samples: int = 10_000,
+) -> dict[str, float | int | None]:
     differences = np.asarray(model, dtype=np.float64) - np.asarray(baseline, dtype=np.float64)
+    rng = np.random.default_rng(seed)
+    indices = rng.integers(
+        0, len(differences), size=(bootstrap_samples, len(differences)),
+    )
+    bootstrap_means = differences[indices].mean(axis=1)
+    common = {
+        "participants": int(len(differences)),
+        "mean_difference": float(differences.mean()),
+        "median_difference": float(np.median(differences)),
+        "bootstrap_mean_difference_ci95_low": float(
+            np.quantile(bootstrap_means, 0.025)
+        ),
+        "bootstrap_mean_difference_ci95_high": float(
+            np.quantile(bootstrap_means, 0.975)
+        ),
+    }
     nonzero = differences != 0
     if not nonzero.any():
-        return {"participants": len(differences), "p_value": 1.0, "rank_biserial": 0.0}
+        return {**common, "p_value": 1.0, "rank_biserial": 0.0}
     test = wilcoxon(differences, zero_method="wilcox", alternative="two-sided", method="auto")
     absolute_ranks = rankdata(np.abs(differences[nonzero]))
     positive = absolute_ranks[differences[nonzero] > 0].sum()
     negative = absolute_ranks[differences[nonzero] < 0].sum()
     denominator = positive + negative
     effect = (positive - negative) / denominator if denominator else 0.0
-    return {
-        "participants": int(len(differences)),
-        "mean_difference": float(differences.mean()),
-        "median_difference": float(np.median(differences)),
-        "p_value": float(test.pvalue),
-        "rank_biserial": float(effect),
-    }
+    return {**common, "p_value": float(test.pvalue), "rank_biserial": float(effect)}
 
 
 def holm_adjust(p_values: list[float]) -> list[float]:

@@ -1,0 +1,472 @@
+{
+  "status": "complete",
+  "sessions": 5,
+  "windows_seconds": [
+    0.4,
+    0.8,
+    1.2
+  ],
+  "decision_rule": "deployment p50 and p95 must both be lower in at least four of five fresh-process runs for a backend/window speedup claim",
+  "equivalence": {
+    "maximum_abs_error": 2.9802322387695312e-06,
+    "all_passed": true
+  },
+  "results": {
+    "0.4": {
+      "cpu": {
+        "paired_runs_with_both_lower": 3,
+        "speedup_claim_supported": false,
+        "median_deployment_change_p50_percent": -4.865299557700043,
+        "median_deployment_change_p95_percent": -6.260844930769505,
+        "runs": [
+          {
+            "graph_order": "training_first",
+            "training_p50_ms": 2.8449,
+            "training_p95_ms": 3.1500049999999997,
+            "deployment_p50_ms": 2.66455,
+            "deployment_p95_ms": 2.89461,
+            "deployment_change_p50_percent": -6.339414390663989,
+            "deployment_change_p95_percent": -8.107764908309656,
+            "deployment_faster_on_both": true
+          },
+          {
+            "graph_order": "deployment_first",
+            "training_p50_ms": 3.1087499999999997,
+            "training_p95_ms": 4.377045000000001,
+            "deployment_p50_ms": 2.9574999999999996,
+            "deployment_p95_ms": 4.1030050000000005,
+            "deployment_change_p50_percent": -4.865299557700043,
+            "deployment_change_p95_percent": -6.260844930769505,
+            "deployment_faster_on_both": true
+          },
+          {
+            "graph_order": "training_first",
+            "training_p50_ms": 3.06425,
+            "training_p95_ms": 4.24782,
+            "deployment_p50_ms": 2.9598500000000003,
+            "deployment_p95_ms": 4.3702499999999995,
+            "deployment_change_p50_percent": -3.4070327159990033,
+            "deployment_change_p95_percent": 2.882184273344901,
+            "deployment_faster_on_both": false
+          },
+          {
+            "graph_order": "deployment_first",
+            "training_p50_ms": 2.8064,
+            "training_p95_ms": 3.2812900000000007,
+            "deployment_p50_ms": 2.6315,
+            "deployment_p95_ms": 3.007605,
+            "deployment_change_p50_percent": -6.232183580387685,
+            "deployment_change_p95_percent": -8.340774512463112,
+            "deployment_faster_on_both": true
+          },
+          {
+            "graph_order": "training_first",
+            "training_p50_ms": 2.9019,
+            "training_p95_ms": 3.584255,
+            "deployment_p50_ms": 2.90325,
+            "deployment_p95_ms": 3.889735,
+            "deployment_change_p50_percent": 0.04652124470174712,
+            "deployment_change_p95_percent": 8.522831104371754,
+            "deployment_faster_on_both": false
+          }
+        ]
+      },
+      "cuda": {
+        "paired_runs_with_both_lower": 3,
+        "speedup_claim_supported": false,
+        "median_deployment_change_p50_percent": -8.045665848622585,
+        "median_deployment_change_p95_percent": -8.588137239048221,
+        "runs": [
+          {
+            "graph_order": "training_first",
+            "training_p50_ms": 3.1418399810791016,
+            "training_p95_ms": 3.4403535366058353,
+            "deployment_p50_ms": 2.948751926422119,
+            "deployment_p95_ms": 5.8087471485137945,
+            "deployment_change_p50_percent": -6.145699838941643,
+            "deployment_change_p95_percent": 68.84157650392395,
+            "deployment_faster_on_both": false
+          },
+          {
+            "graph_order": "deployment_first",
+            "training_p50_ms": 3.5886878967285156,
+            "training_p95_ms": 8.219934654235841,
+            "deployment_p50_ms": 3.31550395488739,
+            "deployment_p95_ms": 7.5139953851699826,
+            "deployment_change_p50_percent": -7.612362782792081,
+            "deployment_change_p95_percent": -8.588137239048221,
+            "deployment_faster_on_both": true
+          },
+          {
+            "graph_order": "training_first",
+            "training_p50_ms": 3.2422560453414917,
+            "training_p95_ms": 5.903494238853456,
+            "deployment_p50_ms": 2.932592034339905,
+            "deployment_p95_ms": 4.4898382186889645,
+            "deployment_change_p50_percent": -9.5508808271486,
+            "deployment_change_p95_percent": -23.94608960335065,
+            "deployment_faster_on_both": true
+          },
+          {
+            "graph_order": "deployment_first",
+            "training_p50_ms": 3.1740798950195312,
+            "training_p95_ms": 4.838193392753601,
+            "deployment_p50_ms": 2.918704032897949,
+            "deployment_p95_ms": 6.533436751365662,
+            "deployment_change_p50_percent": -8.045665848622585,
+            "deployment_change_p95_percent": 35.03876800689925,
+            "deployment_faster_on_both": false
+          },
+          {
+            "graph_order": "training_first",
+            "training_p50_ms": 3.525887966156006,
+            "training_p95_ms": 8.027857398986816,
+            "deployment_p50_ms": 3.198496103286743,
+            "deployment_p95_ms": 7.031511950492859,
+            "deployment_change_p50_percent": -9.285373387124151,
+            "deployment_change_p95_percent": -12.411100483918712,
+            "deployment_faster_on_both": true
+          }
+        ]
+      },
+      "parameters": {
+        "training_graph": 435139,
+        "deployment_graph": 435043
+      },
+      "module_inventory": {
+        "training_graph": {
+          "leaf_module_count": 79,
+          "by_type": {
+            "BatchNorm1d": 11,
+            "ComplexSpectrumFrontEnd": 1,
+            "Conv1d": 11,
+            "Dropout": 9,
+            "GELU": 14,
+            "LayerNorm": 9,
+            "Linear": 21,
+            "ModuleList": 2,
+            "NonDynamicallyQuantizableLinear": 1
+          }
+        },
+        "deployment_graph": {
+          "leaf_module_count": 71,
+          "by_type": {
+            "BatchNorm1d": 5,
+            "ComplexSpectrumFrontEnd": 1,
+            "Conv1d": 9,
+            "Dropout": 9,
+            "GELU": 14,
+            "LayerNorm": 9,
+            "Linear": 21,
+            "ModuleList": 2,
+            "NonDynamicallyQuantizableLinear": 1
+          }
+        }
+      }
+    },
+    "0.8": {
+      "cpu": {
+        "paired_runs_with_both_lower": 4,
+        "speedup_claim_supported": true,
+        "median_deployment_change_p50_percent": -5.79830479155855,
+        "median_deployment_change_p95_percent": -4.502741192255321,
+        "runs": [
+          {
+            "graph_order": "training_first",
+            "training_p50_ms": 3.2941,
+            "training_p95_ms": 4.39551,
+            "deployment_p50_ms": 2.9099500000000003,
+            "deployment_p95_ms": 4.03488,
+            "deployment_change_p50_percent": -11.661758902279818,
+            "deployment_change_p95_percent": -8.204508691824152,
+            "deployment_faster_on_both": true
+          },
+          {
+            "graph_order": "deployment_first",
+            "training_p50_ms": 3.27215,
+            "training_p95_ms": 4.635825,
+            "deployment_p50_ms": 2.9088000000000003,
+            "deployment_p95_ms": 3.778055,
+            "deployment_change_p50_percent": -11.10431978974068,
+            "deployment_change_p95_percent": -18.503071190133358,
+            "deployment_faster_on_both": true
+          },
+          {
+            "graph_order": "training_first",
+            "training_p50_ms": 2.8905,
+            "training_p95_ms": 3.9800200000000006,
+            "deployment_p50_ms": 2.7229,
+            "deployment_p95_ms": 3.8008100000000002,
+            "deployment_change_p50_percent": -5.79830479155855,
+            "deployment_change_p95_percent": -4.502741192255321,
+            "deployment_faster_on_both": true
+          },
+          {
+            "graph_order": "deployment_first",
+            "training_p50_ms": 2.8766,
+            "training_p95_ms": 3.0718500000000004,
+            "deployment_p50_ms": 2.7186500000000002,
+            "deployment_p95_ms": 4.151845000000002,
+            "deployment_change_p50_percent": -5.4908572620454565,
+            "deployment_change_p95_percent": 35.157803929228336,
+            "deployment_faster_on_both": false
+          },
+          {
+            "graph_order": "training_first",
+            "training_p50_ms": 3.06815,
+            "training_p95_ms": 3.900355000000001,
+            "deployment_p50_ms": 2.9004,
+            "deployment_p95_ms": 3.831735,
+            "deployment_change_p50_percent": -5.467464107035191,
+            "deployment_change_p95_percent": -1.7593270356160096,
+            "deployment_faster_on_both": true
+          }
+        ]
+      },
+      "cuda": {
+        "paired_runs_with_both_lower": 4,
+        "speedup_claim_supported": true,
+        "median_deployment_change_p50_percent": -7.327266185392101,
+        "median_deployment_change_p95_percent": -12.802882469375277,
+        "runs": [
+          {
+            "graph_order": "training_first",
+            "training_p50_ms": 3.7872639894485474,
+            "training_p95_ms": 7.808918571472171,
+            "deployment_p50_ms": 3.5740479230880737,
+            "deployment_p95_ms": 8.032804727554321,
+            "deployment_change_p50_percent": -5.629817909564827,
+            "deployment_change_p95_percent": 2.867057122353134,
+            "deployment_faster_on_both": false
+          },
+          {
+            "graph_order": "deployment_first",
+            "training_p50_ms": 3.4599519968032837,
+            "training_p95_ms": 7.646515274047852,
+            "deployment_p50_ms": 3.2064321041107178,
+            "deployment_p95_ms": 5.8158735752105715,
+            "deployment_change_p50_percent": -7.327266185392101,
+            "deployment_change_p95_percent": -23.940862382769946,
+            "deployment_faster_on_both": true
+          },
+          {
+            "graph_order": "training_first",
+            "training_p50_ms": 3.119328022003174,
+            "training_p95_ms": 3.712401580810548,
+            "deployment_p50_ms": 2.885807991027832,
+            "deployment_p95_ms": 3.2371071696281435,
+            "deployment_change_p50_percent": -7.486228743118195,
+            "deployment_change_p95_percent": -12.802882469375277,
+            "deployment_faster_on_both": true
+          },
+          {
+            "graph_order": "deployment_first",
+            "training_p50_ms": 3.1738240718841553,
+            "training_p95_ms": 4.585822510719299,
+            "deployment_p50_ms": 2.9333438873291016,
+            "deployment_p95_ms": 3.207099270820618,
+            "deployment_change_p50_percent": -7.5769853371958185,
+            "deployment_change_p95_percent": -30.064906277465685,
+            "deployment_faster_on_both": true
+          },
+          {
+            "graph_order": "training_first",
+            "training_p50_ms": 3.3951200246810913,
+            "training_p95_ms": 7.806545829772951,
+            "deployment_p50_ms": 3.1987040042877197,
+            "deployment_p95_ms": 7.204102253913879,
+            "deployment_change_p50_percent": -5.785245262774508,
+            "deployment_change_p95_percent": -7.717159278838093,
+            "deployment_faster_on_both": true
+          }
+        ]
+      },
+      "parameters": {
+        "training_graph": 435139,
+        "deployment_graph": 435043
+      },
+      "module_inventory": {
+        "training_graph": {
+          "leaf_module_count": 79,
+          "by_type": {
+            "BatchNorm1d": 11,
+            "ComplexSpectrumFrontEnd": 1,
+            "Conv1d": 11,
+            "Dropout": 9,
+            "GELU": 14,
+            "LayerNorm": 9,
+            "Linear": 21,
+            "ModuleList": 2,
+            "NonDynamicallyQuantizableLinear": 1
+          }
+        },
+        "deployment_graph": {
+          "leaf_module_count": 71,
+          "by_type": {
+            "BatchNorm1d": 5,
+            "ComplexSpectrumFrontEnd": 1,
+            "Conv1d": 9,
+            "Dropout": 9,
+            "GELU": 14,
+            "LayerNorm": 9,
+            "Linear": 21,
+            "ModuleList": 2,
+            "NonDynamicallyQuantizableLinear": 1
+          }
+        }
+      }
+    },
+    "1.2": {
+      "cpu": {
+        "paired_runs_with_both_lower": 3,
+        "speedup_claim_supported": false,
+        "median_deployment_change_p50_percent": -5.493290966549813,
+        "median_deployment_change_p95_percent": -5.3477412640956175,
+        "runs": [
+          {
+            "graph_order": "training_first",
+            "training_p50_ms": 3.1684,
+            "training_p95_ms": 4.21851,
+            "deployment_p50_ms": 2.9795999999999996,
+            "deployment_p95_ms": 3.992915,
+            "deployment_change_p50_percent": -5.9588435803560325,
+            "deployment_change_p95_percent": -5.3477412640956175,
+            "deployment_faster_on_both": true
+          },
+          {
+            "graph_order": "deployment_first",
+            "training_p50_ms": 3.11265,
+            "training_p95_ms": 4.071705,
+            "deployment_p50_ms": 3.0389,
+            "deployment_p95_ms": 4.095845,
+            "deployment_change_p50_percent": -2.3693637254429523,
+            "deployment_change_p95_percent": 0.5928720278114419,
+            "deployment_faster_on_both": false
+          },
+          {
+            "graph_order": "training_first",
+            "training_p50_ms": 2.89535,
+            "training_p95_ms": 3.2686850000000005,
+            "deployment_p50_ms": 2.7363,
+            "deployment_p95_ms": 3.155135,
+            "deployment_change_p50_percent": -5.493290966549813,
+            "deployment_change_p95_percent": -3.4738740502679333,
+            "deployment_faster_on_both": true
+          },
+          {
+            "graph_order": "deployment_first",
+            "training_p50_ms": 3.24065,
+            "training_p95_ms": 4.929340000000001,
+            "deployment_p50_ms": 3.35935,
+            "deployment_p95_ms": 4.3351000000000015,
+            "deployment_change_p50_percent": 3.6628454168145197,
+            "deployment_change_p95_percent": -12.055163571593742,
+            "deployment_faster_on_both": false
+          },
+          {
+            "graph_order": "training_first",
+            "training_p50_ms": 3.346,
+            "training_p95_ms": 4.65185,
+            "deployment_p50_ms": 3.02455,
+            "deployment_p95_ms": 4.1114299999999995,
+            "deployment_change_p50_percent": -9.606993424985056,
+            "deployment_change_p95_percent": -11.61731354192418,
+            "deployment_faster_on_both": true
+          }
+        ]
+      },
+      "cuda": {
+        "paired_runs_with_both_lower": 5,
+        "speedup_claim_supported": true,
+        "median_deployment_change_p50_percent": -6.3076301094918685,
+        "median_deployment_change_p95_percent": -9.293729277654862,
+        "runs": [
+          {
+            "graph_order": "training_first",
+            "training_p50_ms": 3.3853760957717896,
+            "training_p95_ms": 7.855187225341798,
+            "deployment_p50_ms": 3.1779359579086304,
+            "deployment_p95_ms": 7.125147390365602,
+            "deployment_change_p50_percent": -6.127535966306496,
+            "deployment_change_p95_percent": -9.293729277654862,
+            "deployment_faster_on_both": true
+          },
+          {
+            "graph_order": "deployment_first",
+            "training_p50_ms": 3.4433120489120483,
+            "training_p95_ms": 7.825696134567261,
+            "deployment_p50_ms": 3.1431360244750977,
+            "deployment_p95_ms": 7.075958585739138,
+            "deployment_change_p50_percent": -8.717653822045968,
+            "deployment_change_p95_percent": -9.580458222961418,
+            "deployment_faster_on_both": true
+          },
+          {
+            "graph_order": "training_first",
+            "training_p50_ms": 3.1405760049819946,
+            "training_p95_ms": 3.472457706928253,
+            "deployment_p50_ms": 2.9424800872802734,
+            "deployment_p95_ms": 3.338711953163147,
+            "deployment_change_p50_percent": -6.3076301094918685,
+            "deployment_change_p95_percent": -3.851616493363086,
+            "deployment_faster_on_both": true
+          },
+          {
+            "graph_order": "deployment_first",
+            "training_p50_ms": 3.1630239486694336,
+            "training_p95_ms": 7.479312205314637,
+            "deployment_p50_ms": 2.9392160177230835,
+            "deployment_p95_ms": 3.7057040452957164,
+            "deployment_change_p50_percent": -7.0757583432303095,
+            "deployment_change_p95_percent": -50.453946251066725,
+            "deployment_faster_on_both": true
+          },
+          {
+            "graph_order": "training_first",
+            "training_p50_ms": 3.493504047393799,
+            "training_p95_ms": 8.029157209396363,
+            "deployment_p50_ms": 3.4644320011138916,
+            "deployment_p95_ms": 7.958833742141724,
+            "deployment_change_p50_percent": -0.8321743981260177,
+            "deployment_change_p95_percent": -0.8758511686922876,
+            "deployment_faster_on_both": true
+          }
+        ]
+      },
+      "parameters": {
+        "training_graph": 435139,
+        "deployment_graph": 435043
+      },
+      "module_inventory": {
+        "training_graph": {
+          "leaf_module_count": 79,
+          "by_type": {
+            "BatchNorm1d": 11,
+            "ComplexSpectrumFrontEnd": 1,
+            "Conv1d": 11,
+            "Dropout": 9,
+            "GELU": 14,
+            "LayerNorm": 9,
+            "Linear": 21,
+            "ModuleList": 2,
+            "NonDynamicallyQuantizableLinear": 1
+          }
+        },
+        "deployment_graph": {
+          "leaf_module_count": 71,
+          "by_type": {
+            "BatchNorm1d": 5,
+            "ComplexSpectrumFrontEnd": 1,
+            "Conv1d": 9,
+            "Dropout": 9,
+            "GELU": 14,
+            "LayerNorm": 9,
+            "Linear": 21,
+            "ModuleList": 2,
+            "NonDynamicallyQuantizableLinear": 1
+          }
+        }
+      }
+    }
+  }
+}
